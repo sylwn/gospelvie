@@ -1,0 +1,210 @@
+/*  001  ============================  OUTLINES  ============================= */
+
+
+.cro_inv-container{
+	
+}
+
+
+.cro_invhead{
+	overflow: auto;
+}
+
+
+
+.cro_invhead_left{
+	float: left; 
+	width: 50%;
+	text-align: center;
+}
+
+.cro_invhead_left img{
+	width: 75px;
+	height: auto;
+}
+
+#poststuff .cro_invhead_left h2{
+	margin: 0;
+	padding: 0;
+}
+
+.cro_invhead_right{
+	float: left; 
+	width: 50%;
+}
+
+.cro_invhead_right .panel-heading{
+	border: 1px solid #eee;
+	text-align: left;
+	padding: 5px 0;
+	text-align: center;
+	background: #f9f9f9;
+}
+
+.cro_invhead_right .panel-heading h4{
+	font-size: 20px;
+}
+
+.cro_invhead_right .panel-body{
+	border: 1px solid #eee;
+	text-align: left;
+	padding: 5px 0;
+	text-align: center;
+	background: #f9f9f9;
+	margin: 5px 0 20px 0;
+}
+
+
+
+.cro_inv-container table{
+	width: 100%;
+	border: 1px solid #eee;
+	text-align: left;
+}
+
+.cro_inv-container table th{
+	background: #f9f9f9;
+	border: 1px solid #eee;
+}
+
+.cro_inv-container table td{
+	border: 1px solid #eee;
+	font-size: 15px;
+	line-height: 2;
+}
+
+.cro_inv-container table td a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #428bca;
+}
+
+.cro_inv-container table th h4{
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.cro_totalscreen{
+	overflow: auto;
+}
+
+
+.cro_margin_screen{
+	margin-left: 50%;
+}
+
+
+.cro_total_halfscreen{
+	float: left;
+	width: 25%;
+}
+
+
+.cro_total_halfscreen p{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+input.cro_moneyinput{
+	float: right;
+	display :block;
+	border: none;
+	text-align: right;
+	color: #343434;
+	-webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+	box-shadow: 0 0 0 0 rgba(0,0,0,0);
+	max-width: 100%;
+	width: 100%;
+}
+
+
+.cro_total_halfscreen input.cro_moneyinput{
+	font-size: 20px;
+}
+
+
+.cro_namesinput{
+	text-align: center;
+}
+
+.cro_quantitiesinput {
+	width: 50px;
+	text-align: right;
+}
+
+
+
+
+
+.cro_paymentscreen{
+	text-align: center;
+	background: #F9F9F9;
+	border: 1px solid #ddd;
+	margin: 10px;
+	text-align: center;
+	padding: 20px;
+	overflow: auto;
+}
+
+.cro_paymentscreen h4{
+	font-size: 21px;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+
+.cro_paymentscreen input{
+	border: 1px solid #ddd;
+	font-size: 19px;
+	text-align: center;
+	height: 35px;
+}
+
+.cro_notescreen{
+	text-align: center;
+	background: #F9F9F9;
+	border: 1px solid #ddd;
+	margin: 10px;
+	text-align: center;
+	padding: 20px;
+	overflow: auto;
+}
+
+.cro_notescreen h4{
+	font-size: 21px;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+
+.cro_notescreen textarea{
+	border: 1px solid #ddd;
+	font-size: 19px;
+	text-align: center;
+	min-height: 150px;
+	width: 90%;
+}
+
+
+input.cro_class_units{
+	text-align: right;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07) inset;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.07) inset;
+	border: 1px solid #ddd;
+	width: 70%;
+	background: #fff;
+}
+
+
+
+
+
+
+
+
+
+

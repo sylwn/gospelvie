@@ -1,0 +1,932 @@
+/*! ====================[ 01. Outer ]=========== */
+/*! ====================[ 02. Pagebuilder ]===== */
+/*! ====================[ 03. UIslider ]======== */
+
+
+
+@import url("font-awesome.min.css");
+
+
+/*! ====================[ 01. Outer ]=========== */
+
+.cromax_metabox_box{
+	background: #FEFEFE;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	padding-bottom: 10px; 
+}
+
+.cromax_metabox_box h2{
+	text-align: center;
+	border-bottom: 1px dashed #ddd;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 12px !important;
+	margin: 0 10% 10px 10%;
+}
+
+
+
+.cromax_metabox_box input{
+	margin-left: 10%;
+	width: 80%;
+	padding: 10px;
+}
+
+.cromax_metabox_box textarea{
+	margin-left: 10%;
+	width: 80%;
+	padding: 10px;
+}
+
+
+#cromax_metas .inside{
+	background: #F3F4F7;
+	margin: 5px;
+	border: 1px solid #d4d9e2;
+	padding: 10px;
+}
+
+
+
+
+
+/*! ====================[ 02. Pagebuilder ]===== */
+
+
+.cromax_main_section{
+	margin-top: 10px;
+	background: none repeat scroll 0 0 #fdfdfe;
+    border: 1px solid #d4d9e2;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    margin-left: 15px;
+   margin-right: 15px;
+}
+
+.cromax_pagebuilder_clicktoadd{
+  background: none repeat scroll 0 0 #fdfdfe;
+  border: 1px solid #d4d9e2;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  color: #4a556e;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 42px;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.cromax_pagebuilder_clicktoadd i{
+	margin-right: 10px;
+	visibility: hidden;
+}
+
+.cromax_sectionholder{
+	margin: 0px 0px;
+}
+
+.cromax-section_header{
+	background: #A4DF45;
+	padding: 10px 0;
+}
+
+.cromax_sectionheader{
+	background: #f6f7f8;
+	border-bottom: 1px solid #d4d9e2;
+	padding: 0px 10px;
+	overflow: auto;
+}
+
+.cromax_section_adder{
+	cursor: pointer;
+	font-size: 15px;
+	margin: 10px 0;
+	float: left;
+	line-height: 20px;
+	background: #fff;
+	padding: 5px 15px 2px 15px;
+	background: #FDFDFE;
+	border: 1px solid #d4d9e2;
+	color: #4a556e;
+	text-transform: uppercase;
+}
+
+.cromax_section_deleter{
+	cursor: pointer;
+	font-size: 20px;
+	margin: 10px 0;
+	float: right;
+	line-height: 20px;
+	background: #FDFDFE;
+    border: 1px solid #dfe2e9;
+    color: #4a556e;
+	padding: 3px 8px;
+}
+
+.cromax_section_deleter:hover{
+	color: #352E4B;
+}
+
+.cromax_section_adder:hover{
+	color: #352E4B;
+}
+
+.cromax_section_adder i{
+	margin-right: 5px;
+	padding: 2px 3px 1px 3px;
+	font-size: 17px;
+	line-height: 20px;
+}
+
+
+.cromax_sectionbody{
+  background: none repeat scroll 0 0 #fff;
+  padding: 10px 5px 0 5px;
+  overflow: auto;
+
+}
+
+.cromax_shortcode_list{
+	display: none;
+}
+
+
+ul.cromax_choose_shortcode{
+  background: #FDFDFE;
+  border: 1px solid #d4d9e2;
+  color: #4a556e;
+  padding: 5px 5px 0 5px;
+  margin-top: 0;
+  text-align: center;
+}
+
+ul.cromax_choose_shortcode li{
+  display: inline-block;
+  width: 21%;
+  font-size: 12px;
+  padding: 8px 10px 4px 10px;
+  line-height: 20px;
+  vertical-align: middle;
+  margin: 0;
+  cursor: pointer;
+  background: #F6F7F8;
+  border: 1px solid #d4d9e2;
+  color: #4a556e;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+ul.cromax_choose_shortcode li:hover{
+  color: #afafaf;
+}
+
+ul.cromax_choose_shortcode li i{
+  margin-right: 5px;
+  color: #777;
+}
+
+
+.cromax_shortcode_handler{
+	height: 40px;
+	background: #F6F7F8;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; 
+	position: relative;
+	float: left;
+	margin: 0 0.5%;
+	margin-bottom: 10px;
+	border: 1px solid #CFCFCF;
+	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+}
+
+.cromax-width-1-4{
+	width: 23.5%;
+}
+
+.cromax-width-1-3{
+	width: 31.5%;	
+}
+
+.cromax-width-1-2{
+	width: 48.5%;	
+}
+
+.cromax-width-2-3{
+	width: 65%;	
+}
+
+.cromax-width-3-4{
+	width: 72%;	
+}
+
+.cromax-width-1-1{
+	width: 98.5%;
+}
+
+
+
+
+.cromax_size_manager{
+	background: #DFE2E9;
+	width: 40px;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	border-right: 1px solid #c0c6d5;
+	top: 0;
+	left: 0;
+}
+
+.cromax-sizedash{
+	position: absolute;
+	width: 40px;
+	height: 20px;
+	color: #4a556e;
+	line-height: 20px;
+	text-align: center;
+	top: 0;
+	left: 0;
+}
+
+.cromax-sizespinner{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid #c0c6d5;
+	width: 40px;
+	height: 20px;
+}
+
+.cromax_size_increase{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-right: 1px solid #c0c6d5;
+	text-align: center;
+	line-height: 20px;
+	color: #4a556e;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.cromax_size_decrease{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	border-right: 1px solid rgba(0,0,0,0.05);
+	text-align: center;
+	line-height: 20px;
+	color: #444;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.cromax_size_increase:hover, .cromax_size_decrease:hover{
+	color: #afafaf;
+}
+
+.cromax_handler_name{
+	margin-left: 60px;
+	line-height: 40px;
+	color: #4a556e;
+}
+
+.cromax_handler_controller{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 100%;
+	background: #DFE2E9;
+	border-left: 1px solid #c0c6d5;
+	color: #4a556e;
+}
+
+.cromax-handler-editer{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 20px;
+	width: 20px;
+	color: #4a556e;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+.cromax-handler-deleter{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 20px;
+	width: 20px;
+	color: #4a556e;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	border-top: 1px solid #c0c6d5;
+}
+
+.cromax-handler-editer:hover, .cromax-handler-deleter:hover{
+	color: #afafaf;
+}
+
+
+.cromax_form_holder{
+	display: none;
+}
+
+
+#cro_pagebuilder_popup{
+	position: fixed;
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: none;
+}
+
+.cro_pagebuilder_formblock{
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 80px;
+	background: #FDFDFE;
+	min-height: 350px;
+	position: relative;
+	min-width: 400px;
+}
+
+.cro_pagebuilder_formblock h2{
+	padding: 10px 10px 10px 220px !important;
+	background: #EFEFEF;
+	color: #4a556e;
+	font-weight: bold;
+	font-size: 14px !important;
+	text-transform: uppercase;
+	background: none repeat scroll 0 0 #f6f7f8;
+    border-bottom: 1px solid #d4d9e2;
+	text-shadow: 1px 1px 1px #fff;
+	margin: 0 !important;
+}
+
+
+.popupform_footer{
+	background: none repeat scroll 0 0 #f6f7f8;
+	border-top: 1px solid #fff;
+	padding: 10px 0;
+	text-align: center;
+}
+
+span.cromax-savecl{
+	background: #4FC178;
+	color: #fff;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; 
+	padding: 10px 20px;
+	text-transform: uppercase;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.cro_popupformouter{
+	height: 400px;
+	overflow: scroll;
+	border-bottom: 1px solid #ddd;
+}
+
+.cro_popupform_box{
+	padding: 20px;
+	border-top: 1px solid #fff;
+}
+
+.cro_popupform_box p{
+	margin: 0px;
+	padding: 15px 0;
+	border-bottom: 1px solid #eee;
+
+}
+
+.cro_popupform_box p label{
+	display: block;
+	padding-bottom: 5px;
+	color: #4a556e;
+	font-size: 12px;
+	text-transform: uppercase;
+	width: 30%;
+	float: left;
+	padding-top: 10px;
+}
+
+.cro_popupform_box p input{
+	background: #fff;
+	border: 1px solid #c0c6d5;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; 
+	text-indent: 10px;
+	padding: 10px 0;
+	width: 65%;
+	color: #4a556e;
+	
+}
+
+
+.cro_popupform_box p input.cromax-pickme{
+	width: 42%;	
+	margin: -2px 0 0 0;
+	padding: 5px 0;
+
+}
+
+.cro_popupform_box p input.cromax-imgmng{
+	width: 53%;
+	-webkit-border-radius: 3px 0px 0px 3px;
+	border-radius: 3px 0px 0px 3px; 
+	border: 1px solid #c0c6d5;
+
+}
+
+
+.cro_popupform_box .wp-picker-input-wrap input.wp-picker-clear{
+	width: 42%;
+	text-align: center;
+	height: 24px;
+	padding-top: 4px;
+}
+
+.cro_popupform_box p textarea{
+	background: #fff;
+	border: 1px solid #c0c6d5;
+	padding: 10px;
+	width: 65%;
+	min-height: 200px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; 
+	color: #4a556e;
+	
+}
+
+.cro_popupcloser{
+	width: 32px;
+	height: 32px;
+	line-height: 29px !important;
+	text-align: center;
+	position: absolute;
+	top: -16px;
+	right: -16px;
+	color: #fff;
+	font-size: 20px;
+	-webkit-border-radius: 32px;
+	border-radius: 32px; 
+	background: #4FC178;
+	cursor: pointer;
+}
+
+.cro_popupcloser i{
+	line-height: 32px;
+}
+
+.cro_popupcloser:hover{
+	background: #000;
+}
+
+
+.cromax-clearimginput, .cromax-cleariconinput{
+	margin-left: 10px;
+	padding: 8px 10px 8px 10px;
+	margin-left: -10px;
+	cursor: pointer;
+	-webkit-border-radius: 0px 3px 3px 0px;
+	border-radius: 0px 3px 3px 0px;
+	color: #4a556e;
+  	background: #DFE2E9;
+  	font-weight: bold;
+  	border: 1px solid #c0c6d5;
+  	margin-top: -1px;
+  	display: inline-block;
+}
+
+.cromax-clearimginput:hover{
+	border: 1px solid #aaa;
+}
+
+
+.cromax_iconcollection{
+	display: block;
+	overflow: auto;
+	display: none;
+}
+
+.cromax_iconcollection i{
+	padding: 10px;
+	text-align: center;
+	color: #999;
+	display: block;
+	width: 20px;
+	height: 20px;
+	float: left;
+	line-height: 20px;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+
+.cromax_iconcollection i:hover{
+
+	color: #95CA40;
+}
+
+.cromax-iconinput{
+	width: 305px !important;
+}
+
+.cromax-select{
+	width: 65%;
+	background: #fff;
+	border: 1px solid #c0c6d5;
+	padding: 10px !important;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; 
+	height: 40px !important;
+	color: #4a556e;
+}
+
+.tabpartholder, .tabspartholder{
+	display: block;
+	margin-left: 200px;
+
+}
+
+.tabpartfooter, .tabspartfooter{
+	display: block;
+	text-align: right;
+	margin-top: 10px;
+}
+
+.tabpartfooter i, .tabspartfooter i{
+	padding: 6px 8px;
+	background: none repeat scroll 0 0 #dfe2e9;
+    border: 1px solid #c0c6d5;
+    color: #4a556e;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; 
+	cursor: pointer;
+	margin-right: 60px;
+	font-size: 20px;
+}
+
+.tabpartfooter i:hover, .tabspartfooter i:hover{
+	color: #AFAFAF;
+}
+
+.tabpartcontent, .tabpartcontent{
+	display: block;
+}
+
+.cromax_tabitem, .cromax_tabsitem{
+	display: block;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+
+.cromax-deleter, .cromax-deleters{
+	padding: 4px 10px;
+	background: none repeat scroll 0 0 #dfe2e9;
+    border: 1px solid #c0c6d5;
+    color: #4a556e;
+	cursor: pointer;
+	position: absolute;
+	bottom: 13px;
+	left: -36px;
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 24px;
+}
+
+.cromax-deleter:hover, .cromax-deleters:hover{
+	color: #AFAFAF;
+}
+
+/*! ====================[ 03. UIslider ]======== */
+
+
+
+/*===========  4. UIslider =============== */
+
+/*  General CSS resets;
+ *    The target itself is not affected, allowing
+ *    the remainder of the document to use an
+ *    alternate box-sizing model;
+ *    Support for box-sizing is wide spread:
+ *    http://caniuse.com/#search=box-sizing
+ */
+  .noUi-target * {
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+    box-sizing: border-box;
+-webkit-touch-callout: none;
+    -ms-touch-action: none;
+-webkit-user-select: none;
+   -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+  }
+
+
+.noUiSlider{
+  width: 260px;
+  display: inline-block;
+}
+
+
+.cromax-uiblock .noUiSlider{
+	width: 50%;
+
+}
+
+#show-serialization-field{
+  width: 15%;
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+  border: 1px solid #eee;
+  height: 28px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+  text-align: center;
+}
+
+.sliderouter{
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
+/*  Main slider bar;
+ *    Use box-shadow instead of border to keep absolute
+ *    positioning unrelated to the styling.
+ */
+  .noUi-base {
+    width: 100%;
+    margin: 1px;
+    height: 35px;
+    margin-top: 1px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; 
+    position: relative;
+  }
+
+/*  Handles + active state;
+ */
+  .noUi-handle {
+    top: 2px;
+    left: -17px;
+    width: 29px;
+    height: 29px;
+    z-index: 1;
+    position: relative;
+    background: #2C404A;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; 
+  }
+  .noUi-active {
+    background: #F16A5B;
+  }
+
+/*  Styling-only classes;
+ *    Structured to prevent double declarations
+ *    for various states of the slider.
+ */
+  .noUi-connect {
+    background: Teal;
+-webkit-transition: background 0.6s;
+    transition: background 0.6s;
+  }
+  .noUi-background {
+    background: #FFFFFF;
+  }
+
+/*  Functional styles for handle positioning;
+ *    Note that the origins will inherit border radius
+ *    from the parent, even though the default theme
+ *    doesn't use curved borders.
+ */
+  .noUi-origin {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: inherit;
+  }
+  .noUi-origin + .noUi-origin {
+    background: inherit !important;
+  }
+  .noUi-z-index {
+    z-index: 10;
+  }
+
+/*  Adaptations for the vertical slider;
+ *    Some standard styles have been extended to keep
+ *    exceptions for the vertical slider as minimal as possible.
+ */
+  .noUi-vertical {
+    width: 38px;
+    height: 100%;
+  }
+  .noUi-vertical .noUi-origin {
+    bottom: 0;
+    left: 0;
+  }
+  .noUi-vertical .noUi-handle  {
+    top: -23px;
+    left: -3px;
+  }
+
+/*  Slider disabled state;
+ */
+  [disabled] .noUi-base {
+    background: #DDD;
+  }
+  [disabled] .noUi-handle {
+    background: #F7F7F7;
+    cursor: not-allowed;
+  }
+  [disabled] .noUi-connect {
+    background: #EEE;
+  }
+
+/*  Transition states;
+ *    Support for transition is widely available,
+ *    Only IE7, IE8 and IE9 will ignore these rules.
+ *    Since this is merely a progressive enhancement,
+ *    this is no problem at all.
+ *    http://caniuse.com/#search=transition
+ */
+  .noUi-state-tap .noUi-origin {
+    -webkit-transition: left 0.3s, top 0.3s;
+    transition: left 0.3s, top 0.3s;
+  }
+  .noUi-state-blocked .noUi-connect {
+    background: #7f8c8d;
+  }
+
+  p.cromax-uiblock input{
+  	width: 10%;
+  	text-align: center;
+  	vertical-align: top;
+  	text-indent: 0;
+  	color: #4a556e;
+  	background: #DFE2E9;
+  	padding: 9px 0 10px 0;
+  	font-weight: bold;
+  	border: 1px solid #c0c6d5;
+
+  }
+
+
+  .cro_prebuilder{
+  	text-align: center;
+  }
+
+
+  .cro_prebuilderpart{
+  	display: inline-block;
+  	width: 47.5%;
+  	height: 230px;
+  	margin-bottom: 10px;
+  	border: 1px solid #d4d9e2;
+  	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  	vertical-align: top;
+  	min-width: 200px;
+  	background: #FDFDFE;
+  }
+
+
+  .cro_prebuilderpart h2{
+  	font-size: 18px;
+  	 color: #4a556e;
+  }
+
+  .cro_sidebarsel{
+  	width: 60px;
+  	height: 60px;
+  	background: #F3F4F7;
+  	display: inline-block;
+  	margin: 0 5px;
+  	border: 1px solid #d4d9e2;
+  	cursor: pointer;
+  	position: relative;
+  }
+
+.cro_sb_active{
+	border: 1px solid #2C404A;
+}
+
+.cro_sb_left .cro_sbbar{
+	background: #2C404A;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 20px;
+	height: 52px;
+}
+
+.cro_sb_right .cro_sbbar{
+	background: #2C404A;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	width: 20px;
+	height: 52px;
+}
+
+.cro_sidebarsel_select{
+	padding: 10px !important;
+	height: 40px !important;
+	width: 50%;
+	margin-top: 10px;
+	border: 1px solid #d4d9e2 !important;
+}
+
+
+
+
+
+.cro_yesnoouter{
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background: #fff;
+  display: inline-block;
+  -webkit-border-radius: 30px;
+  border-radius: 30px; 
+}
+
+.cro_yesnohandler{
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background: #2C404A;
+  display: inline-block;
+  -webkit-border-radius: 30px;
+  border-radius: 30px; 
+  cursor: pointer;
+}
+
+.cro_nonohandler{
+  background: #d4d9e2;
+}
+
+.cro_yesnohandler:after{
+  content: "1";
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.cro_nonohandler:after{
+  left: 45px;
+  content: "0";
+  top: 6px;
+}
+
+
+.cro_yesnohandler .cro_yesno_knob{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 2px;
+  right: 4px;
+  background: #fff;
+  -webkit-border-radius: 30px;
+  border-radius: 30px; 
+}
+
+.cro_nonohandler .cro_yesno_knob{
+  right: 42px;
+  background: #A7B0BF;
+}
+
+.cro_yesnomargin{
+	margin-top: 30px;
+}
+
+
+
+
+
+

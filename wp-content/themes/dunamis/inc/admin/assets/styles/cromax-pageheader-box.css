@@ -1,0 +1,266 @@
+/*   001 =================  WRAPPER ========================= */
+/*   002 =================  NOUISLIDER:  ==================== */
+
+
+
+/*   001 =================  WRAPPER ========================= */
+
+.custheaderwrap{
+  display: none;
+}
+
+.cro_clickexpand{
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  background: #2C404A;
+  color: #fff;
+  line-height: 30px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+
+span.cro_showheadimg{
+  display: block;
+  background: rgba(0,0,0,0.03);
+  border: 1px dashed rgba(0,0,0,0.1);
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+  border-bottom: none;
+  position: relative;
+  margin: 0 auto;
+}
+
+span.cro_clearimginput{
+  text-align: center;
+  padding: 5px 0;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.03);
+  text-transform: uppercase;
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.custheaderwrap .cro_formpartselect{
+ padding: 5px;
+ border: 1px solid rgba(0,0,0,0.1);
+ background: rgba(0,0,0,0.03);
+ width: 100%;
+ height: 30px;
+}
+
+.cro_txtlabel{
+  display: block;
+}
+
+.header-noUiSlider{
+  display: block;
+}
+
+.cro_header-sliderp{
+  height: 50px;
+}
+
+
+.cro_header-sliderp .noUi-base{
+  border: none;
+}
+
+.uibox1, .uibox2{
+  width: 75%;
+  display: inline-block;
+}
+
+
+
+
+
+/*   002 =================  NOUISLIDER:  ==================== */
+
+/*  General CSS resets;
+ *    The target itself is not affected, allowing
+ *    the remainder of the document to use an
+ *    alternate box-sizing model;
+ *    Support for box-sizing is wide spread:
+ *    http://caniuse.com/#search=box-sizing
+ */
+  .noUi-target * {
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+    box-sizing: border-box;
+-webkit-touch-callout: none;
+    -ms-touch-action: none;
+-webkit-user-select: none;
+   -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+  }
+
+
+.noUiSlider{
+  width: 75%;
+  display: inline-block;
+}
+
+.noUi-target{
+  background: #FEFEFE;
+  border: 1px solid #c0c6d5;
+   -webkit-border-radius: 3px;
+  border-radius: 3px; 
+}
+
+
+.cromatic_pagemakerlist .noUiSlider{
+  width: 73%;
+  background: none repeat scroll 0 0 #fff;
+  border: 1px solid #d8d8d8;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; 
+
+}
+
+#show-serialization-field{
+  width: 15%;
+  display: inline-block;
+  vertical-align: top;
+  background: none repeat scroll 0 0 #fff;
+  border: 1px dashed #d8d8d8;
+  height: 26px;
+  -webkit-border-radius: 3px;
+  margin-left: 5px;
+  border-radius: 3px; 
+  text-align: center;
+  color: #2C404A;
+}
+
+.sliderouter{
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
+/*  Main slider bar;
+ *    Use box-shadow instead of border to keep absolute
+ *    positioning unrelated to the styling.
+ */
+  .noUi-base {
+    width: 91%;
+    margin: 1px;
+    height: 33px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; 
+    position: relative;
+    margin-left: 5%;
+  }
+
+/*  Handles + active state;
+ */
+  .noUi-handle {
+    top: 2px;
+    left: -17px;
+    width: 29px;
+    height: 29px;
+    z-index: 1;
+    position: relative;
+    background: #2C404A;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; 
+  }
+  .noUi-active {
+    background: #F16A5B;
+  }
+
+/*  Styling-only classes;
+ *    Structured to prevent double declarations
+ *    for various states of the slider.
+ */
+  .noUi-connect {
+    background: Teal;
+-webkit-transition: background 0.6s;
+    transition: background 0.6s;
+  }
+  .noUi-background {
+
+  }
+
+/*  Functional styles for handle positioning;
+ *    Note that the origins will inherit border radius
+ *    from the parent, even though the default theme
+ *    doesn't use curved borders.
+ */
+  .noUi-origin {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    border-radius: inherit;
+  }
+  .noUi-origin + .noUi-origin {
+    background: inherit !important;
+  }
+  .noUi-z-index {
+    z-index: 10;
+  }
+
+/*  Adaptations for the vertical slider;
+ *    Some standard styles have been extended to keep
+ *    exceptions for the vertical slider as minimal as possible.
+ */
+  .noUi-vertical {
+    width: 38px;
+    height: 100%;
+  }
+  .noUi-vertical .noUi-origin {
+    bottom: 0;
+    left: 0;
+  }
+  .noUi-vertical .noUi-handle  {
+    top: -23px;
+    left: -3px;
+  }
+
+/*  Slider disabled state;
+ */
+  [disabled] .noUi-base {
+    background: #DDD;
+  }
+  [disabled] .noUi-handle {
+    background: #F7F7F7;
+    cursor: not-allowed;
+  }
+  [disabled] .noUi-connect {
+    background: #EEE;
+  }
+
+/*  Transition states;
+ *    Support for transition is widely available,
+ *    Only IE7, IE8 and IE9 will ignore these rules.
+ *    Since this is merely a progressive enhancement,
+ *    this is no problem at all.
+ *    http://caniuse.com/#search=transition
+ */
+  .noUi-state-tap .noUi-origin {
+    -webkit-transition: left 0.3s, top 0.3s;
+    transition: left 0.3s, top 0.3s;
+  }
+  .noUi-state-blocked .noUi-connect {
+    background: #7f8c8d;
+  }
+
+
+
+
+.cro_mapdetails input{
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+}
+

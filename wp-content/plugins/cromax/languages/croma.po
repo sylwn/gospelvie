@@ -1,0 +1,1738 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cromax v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-22 13:18+0200\n"
+"PO-Revision-Date: 2014-08-22 13:19+0200\n"
+"Last-Translator: aj_croma_1969 <aj@cro.ma>\n"
+"Language-Team: \n"
+"Language: af_ZA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ croma
+#: cromax-functions.php:319
+msgid "year"
+msgstr ""
+
+# @ croma
+#: cromax-functions.php:320
+msgid "month"
+msgstr ""
+
+# @ croma
+#: cromax-functions.php:321
+msgid "day"
+msgstr ""
+
+# @ croma
+#: cromax-functions.php:322
+msgid "hour"
+msgstr ""
+
+# @ croma
+#: cromax-functions.php:323
+msgid "minute"
+msgstr ""
+
+# @ croma
+#: cromax-functions.php:324
+msgid "second"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:28 cromax-metaboxes.php:46
+#: calendars/cromax-calendar-metaboxes.php:28
+#: mediacast/cromax-mediacast-metaboxes.php:28
+msgid "General"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:30 cromax-metaboxes.php:48
+msgid "Page builder"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:38 cromax-metaboxes.php:56
+msgid "Page Builder"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:40 cromax-metaboxes.php:58
+msgid "Pagebuilder"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:79 cromax-metaboxes.php:82 templates/crx-scode.php:21
+msgid "Accordion"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:88 cromax-metaboxes.php:284 cromax-metaboxes.php:411
+msgid "Title for the featured block"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:89 cromax-metaboxes.php:117 cromax-metaboxes.php:159
+#: cromax-metaboxes.php:208 cromax-metaboxes.php:285 cromax-metaboxes.php:334
+#: cromax-metaboxes.php:412 cromax-metaboxes.php:441 cromax-metaboxes.php:584
+#: cromax-metaboxes.php:643 cromax-metaboxes.php:957
+#: widgets/cromax-widgets.php:127 widgets/cromax-widgets.php:537
+#: widgets/cromax-widgets.php:675 widgets/cromax-widgets.php:844
+#: widgets/cromax-widgets.php:936 widgets/cromax-widgets.php:1034
+#: widgets/cromax-widgets.php:1136 widgets/cromax-widgets.php:1278
+msgid "Title"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:94
+msgid "Accordion component builder"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:95
+msgid "Accordions"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:101 cromax-metaboxes.php:104 cromax-metaboxes.php:111
+msgid "Calendar"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:109 cromax-metaboxes.php:110
+msgid "Type of Calendar ot add"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:111
+msgid "Agenda Calendar"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:111
+msgid "Upcoming Events"
+msgstr ""
+
+#: cromax-metaboxes.php:116 cromax-metaboxes.php:583
+msgid "Text for the title"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:122 cromax-metaboxes.php:164 cromax-metaboxes.php:589
+msgid "Text for the button"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:123 cromax-metaboxes.php:165 cromax-metaboxes.php:590
+msgid "Button Label text"
+msgstr ""
+
+#: cromax-metaboxes.php:128 cromax-metaboxes.php:595
+msgid "Button link"
+msgstr ""
+
+#: cromax-metaboxes.php:129 cromax-metaboxes.php:596
+msgid "Link the button"
+msgstr ""
+
+#: cromax-metaboxes.php:134 cromax-metaboxes.php:135 cromax-metaboxes.php:601
+#: cromax-metaboxes.php:602
+msgid "Button text color"
+msgstr ""
+
+#: cromax-metaboxes.php:141 cromax-metaboxes.php:142 cromax-metaboxes.php:608
+#: cromax-metaboxes.php:609
+msgid "Button background color"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:149
+msgid "Call to action"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:152
+msgid "Call ot action"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:158
+msgid "Text for the call to action"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:170
+msgid "text color"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:171 cromax-metaboxes.php:452
+msgid "Text color"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:177 cromax-metaboxes.php:178
+msgid "Background color"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:184
+msgid "Call to action link"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:185
+msgid "Link the call to action"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:190 cromax-metaboxes.php:191 cromax-metaboxes.php:314
+#: cromax-metaboxes.php:315 cromax-metaboxes.php:423 cromax-metaboxes.php:424
+msgid "Link Target"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:192 cromax-metaboxes.php:316 cromax-metaboxes.php:425
+msgid "Open in...."
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:192 cromax-metaboxes.php:316 cromax-metaboxes.php:425
+msgid "Same window"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:192 cromax-metaboxes.php:316 cromax-metaboxes.php:425
+msgid "New window"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:198 cromax-metaboxes.php:201
+msgid "Contacts"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:207
+msgid "Title for the contacts block"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:213
+msgid "Contact component builder"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:214
+msgid "Details"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:221 cromax-metaboxes.php:224
+msgid "Directions"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:230
+msgid "Address for Driving Directions"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:231 cromax-metaboxes.php:531
+msgid "Address"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:236 cromax-metaboxes.php:242 cromax-metaboxes.php:536
+#: cromax-metaboxes.php:542
+msgid "Overwrite if needed (see helpfile)"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:237 cromax-metaboxes.php:537
+msgid "Lattitude overwrite"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:243 cromax-metaboxes.php:543
+msgid "Longitude overwrite"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:249
+msgid "Featured Box"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:252
+msgid "Feature box with image or icon"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:258 cromax-metaboxes.php:405 cromax-metaboxes.php:482
+msgid "background image for the block"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:259 cromax-metaboxes.php:406
+msgid "Featured image"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:264
+msgid "Icon to use"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:265
+msgid "Icon"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:270
+msgid "Icon image color"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:271
+msgid "Icon Color"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:277
+msgid "background color for the icon"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:278
+msgid "Icon Background"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:290
+msgid "Sub Title for the featured block"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:291
+msgid "Subtitle"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:296
+msgid "content for the featured block"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:297 cromax-metaboxes.php:665 cromax-metaboxes.php:941
+#: cromax-metaboxes.php:957
+msgid "Content"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:302 cromax-metaboxes.php:417
+msgid "Address to link to"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:303 cromax-metaboxes.php:418
+msgid "Link address"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:308 cromax-metaboxes.php:309
+msgid "Link label"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:322
+msgid "Form"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:325
+msgid "Form with the Contact form 7 plugin"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:333
+msgid "Title for the form"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:339
+msgid "Form to select"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:340
+msgid "From"
+msgstr ""
+
+#: cromax-metaboxes.php:347 cromax-metaboxes.php:350
+msgid "Give Online"
+msgstr ""
+
+#: cromax-metaboxes.php:356 cromax-metaboxes.php:357
+msgid "Minimum amount"
+msgstr ""
+
+#: cromax-metaboxes.php:364 cromax-metaboxes.php:365
+msgid "Maximum amount"
+msgstr ""
+
+#: cromax-metaboxes.php:372 cromax-metaboxes.php:373
+msgid "Default amount"
+msgstr ""
+
+#: cromax-metaboxes.php:380
+msgid "Increments"
+msgstr ""
+
+#: cromax-metaboxes.php:381
+msgid "increments"
+msgstr ""
+
+#: cromax-metaboxes.php:388
+msgid "Repeat Donation"
+msgstr ""
+
+#: cromax-metaboxes.php:389
+msgid "Enable repeat Donations"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:390
+msgid "Yes"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:390 cromax-metaboxes.php:672
+msgid "No"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:396 cromax-metaboxes.php:399
+msgid "Image Banner"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:431
+msgid "Header Block"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:434
+msgid "Headerblock with background or image"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:440
+msgid "Title for the header block"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:446
+msgid "content for the header block"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:447
+msgid "Sub Title"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:453
+msgid "Text Color"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:459
+msgid "background color for the block"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:460
+msgid "Background-color"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:466 cromax-metaboxes.php:467
+msgid "Title font size"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:474
+msgid "Sub-title font size"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:475
+msgid "Sub title size"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:483
+msgid "Background-image"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:488
+msgid "mask for the image"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:489
+msgid "Image-mask"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:496
+msgid "Padding between message and image edge"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:497
+msgid "Block padding"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:505
+msgid "Streetmap"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:508
+msgid "Google Streetmap"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:514
+msgid "Height of the map"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:515
+msgid "Map Height"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:522 cromax-metaboxes.php:523
+msgid "Map Zoom"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:530
+msgid "Street address for map"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:549 templates/crx-scode.php:25
+msgid "Seperator"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:552
+msgid "Seperator with padding and lines"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:558
+msgid "Height for the seperator"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:559
+msgid "Seperator height"
+msgstr ""
+
+#: cromax-metaboxes.php:568 cromax-metaboxes.php:571
+msgid "Mediacast"
+msgstr ""
+
+#: cromax-metaboxes.php:576 cromax-metaboxes.php:577
+msgid "Type of media to add"
+msgstr ""
+
+#: cromax-metaboxes.php:578
+msgid "Latest mediacast"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:616 cromax-metaboxes.php:619 cromax-metaboxes.php:626
+msgid "Page content"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:625
+msgid "Add a content of page editor"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:627
+msgid ""
+"This component adds the content of the post editor to your page builder and "
+"does not have any editable options"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:633 cromax-metaboxes.php:636 cromax-metaboxes.php:649
+msgid "Tabs"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:642
+msgid "Title for the tab block"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:648
+msgid "Tab component builder"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:655
+msgid "Text blocks"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:658
+msgid "Text box wit hcustom code"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:664
+msgid "content for the text block"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:670
+msgid "Make Paragraphs"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:671
+msgid "Make paragraphs"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:672
+msgid "Tes"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:678 cromax-metaboxes.php:681
+msgid "Video"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:687
+msgid "Video link to the youtube or vimeo video"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:688
+msgid "Video link"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:754
+msgid "Click to add a Section"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:788
+msgid "Main Sidebar"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:806
+msgid "Select Sidebar"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:820
+msgid "Select sidebar to show..."
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:825
+msgid "Insert Pagebuilder"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:885
+msgid "Clear"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:905
+msgid "Select a item ..."
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:941
+msgid "title"
+msgstr ""
+
+# @ croma
+#: cromax-metaboxes.php:957
+msgid "Sub title"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-init.php:623
+#: calendars/cromax-calendar-init.php:836
+#: mediacast/templates/latest-mediacasts.php:57
+msgid "More Info"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-init.php:964
+msgid "Every day from"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-init.php:970
+#: calendars/cromax-calendar-init.php:986
+#: calendars/cromax-calendar-init.php:1002
+#: calendars/cromax-calendar-init.php:1038
+msgid "To"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-init.php:979
+#: calendars/cromax-calendar-init.php:984
+#: calendars/cromax-calendar-init.php:995
+#: calendars/cromax-calendar-init.php:1000
+#: calendars/cromax-calendar-init.php:1031
+#: calendars/cromax-calendar-init.php:1036
+msgid "Every"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-init.php:979
+#: calendars/cromax-calendar-init.php:984
+#: calendars/cromax-calendar-init.php:995
+#: calendars/cromax-calendar-init.php:1000
+#: calendars/cromax-calendar-init.php:1031
+#: calendars/cromax-calendar-init.php:1036
+msgid "from"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-init.php:1011
+#: calendars/templates/calendarpack.php:80
+msgid "First"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-init.php:1012
+#: calendars/templates/calendarpack.php:81
+msgid "Second"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-init.php:1013
+#: calendars/templates/calendarpack.php:82
+msgid "Third"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-init.php:1014
+#: calendars/templates/calendarpack.php:83
+msgid "Fourth"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-init.php:1015
+#: calendars/templates/calendarpack.php:84
+msgid "Last"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-init.php:1058
+#: calendars/cromax-calendar-init.php:1061
+msgid "time"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-metaboxes.php:30
+msgid "Calendar additional content"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-metaboxes.php:37
+msgid "Calendar Select Date and time"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-metaboxes.php:39
+msgid "Add the introduction quote"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-metaboxes.php:45
+msgid "Event Description"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-metaboxes.php:47
+msgid "Add the event description"
+msgstr ""
+
+#: calendars/cromax-calendar-metaboxes.php:52
+msgid "Event Location"
+msgstr ""
+
+#: calendars/cromax-calendar-metaboxes.php:54
+msgid "Add the event Location"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:50
+msgctxt "post type general name"
+msgid "Calendar"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:51
+msgctxt "post type singular name"
+msgid "Calendar Item"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:52
+msgctxt "Portfolio Item"
+msgid "Add New"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:53
+msgid "Add New Calendar item"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:54
+msgid "Edit Calendar item"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:55
+msgid "New Calendar item"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:56
+msgid "All Calendar items"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:57
+msgid "View Calendar item"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:58
+msgid "Search Calendar item"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:59
+msgid "No Calendar item found"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:60
+msgid "No Calendar item found in Trash"
+msgstr ""
+
+# @ croma
+#: calendars/cromax-calendar-posttype.php:62
+msgctxt "Calendar"
+msgid "Calendar"
+msgstr ""
+
+# @ croma
+#: calendars/templates/calendarpack.php:33
+msgid "Hours"
+msgstr ""
+
+# @ croma
+#: calendars/templates/calendarpack.php:40
+msgid "Minutes"
+msgstr ""
+
+# @ croma
+#: calendars/templates/calendarpack.php:48
+msgid "Type of event"
+msgstr ""
+
+# @ croma
+#: calendars/templates/calendarpack.php:53
+msgid "Single day event"
+msgstr ""
+
+# @ croma
+#: calendars/templates/calendarpack.php:58
+msgid "Multiple day event"
+msgstr ""
+
+# @ croma
+#: calendars/templates/calendarpack.php:63
+msgid "Every week same day"
+msgstr ""
+
+# @ croma
+#: calendars/templates/calendarpack.php:68
+msgid "Every month same date."
+msgstr ""
+
+# @ croma
+#: calendars/templates/calendarpack.php:73
+msgid "Advanced configuration"
+msgstr ""
+
+# @ croma
+#: calendars/templates/calendarpack.php:76
+msgid "Select Configuration"
+msgstr ""
+
+# @ croma
+#: calendars/templates/calendarpack.php:145
+msgid "select the recurring type of this event"
+msgstr ""
+
+# @ croma
+#: classes/class-cromax-shortcodes.php:242
+msgid "To:"
+msgstr ""
+
+# @ croma
+#: classes/class-cromax-shortcodes.php:244
+msgid "From:"
+msgstr ""
+
+# @ croma
+#: classes/class-cromax-shortcodes.php:247
+msgid "Calculate:"
+msgstr ""
+
+# @ croma
+#: classes/class-cromax-shortcodes.php:373
+msgid "Error retrieving tweets"
+msgstr ""
+
+# @ croma
+#: classes/class-cromax-shortcodes.php:388
+msgid "ago"
+msgstr ""
+
+# @ croma
+#: classes/class-cromax-shortcodes.php:389
+msgid "retweet"
+msgstr ""
+
+# @ croma
+#: classes/class-cromax-shortcodes.php:390
+msgid "reply"
+msgstr ""
+
+# @ croma
+#: classes/class-cromax-shortcodes.php:391
+msgid "favorite"
+msgstr ""
+
+#: classes/templates/paypalform.php:48
+msgid "Once off payment"
+msgstr ""
+
+#: classes/templates/paypalform.php:51
+msgid "Monthly payment"
+msgstr ""
+
+#: classes/templates/paypalform.php:54
+msgid "Annual payment"
+msgstr ""
+
+#: classes/templates/paypalform.php:73
+msgid "Add your name"
+msgstr ""
+
+#: classes/templates/paypalform.php:77
+msgid "Add your surname"
+msgstr ""
+
+#: classes/templates/paypalform.php:81
+msgid "Add your email"
+msgstr ""
+
+#: classes/templates/paypalform.php:88
+msgid "Please fill all the fields"
+msgstr ""
+
+#: classes/templates/paypalform.php:93
+msgid "Process donation"
+msgstr ""
+
+#: classes/templates/paypalform.php:114
+msgid "Setting up a secure payment through Paypal"
+msgstr ""
+
+# @ croma
+#: emails/cromax-email-init.php:48 emails/cromax-email-init.php:49
+msgid "Emails"
+msgstr ""
+
+#: emails/cromax-email-init.php:353 emails/cromax-email-init.php:450
+#: emails/cromax-email-init.php:509 emails/cromax-email-init.php:570
+#: emails/cromax-email-init.php:631
+msgid "Personal Details"
+msgstr ""
+
+#: emails/cromax-email-init.php:362 emails/cromax-email-init.php:459
+#: emails/cromax-email-init.php:518 emails/cromax-email-init.php:579
+#: emails/cromax-email-init.php:640
+msgid "NAME"
+msgstr ""
+
+#: emails/cromax-email-init.php:376 emails/cromax-email-init.php:473
+#: emails/cromax-email-init.php:532 emails/cromax-email-init.php:593
+#: emails/cromax-email-init.php:654
+msgid "EMAIL"
+msgstr ""
+
+#: emails/cromax-email-init.php:395
+msgid "Error details"
+msgstr ""
+
+#: emails/templates/croma-emailmess.php:28
+msgid "Donation started"
+msgstr ""
+
+#: emails/templates/croma-emailmess.php:29
+#: emails/templates/croma-emailmess.php:41
+#: emails/templates/croma-emailmess.php:65
+#: emails/templates/croma-emailmess.php:77
+msgid "Admin"
+msgstr ""
+
+#: emails/templates/croma-emailmess.php:34
+#: emails/templates/croma-emailmess.php:46
+#: emails/templates/croma-emailmess.php:58
+#: emails/templates/croma-emailmess.php:70
+#: emails/templates/croma-emailmess.php:82
+msgid "Title message"
+msgstr ""
+
+#: emails/templates/croma-emailmess.php:35
+#: emails/templates/croma-emailmess.php:47
+#: emails/templates/croma-emailmess.php:59
+#: emails/templates/croma-emailmess.php:71
+#: emails/templates/croma-emailmess.php:83
+msgid "Sub title message"
+msgstr ""
+
+#: emails/templates/croma-emailmess.php:36
+#: emails/templates/croma-emailmess.php:48
+#: emails/templates/croma-emailmess.php:60
+#: emails/templates/croma-emailmess.php:72
+#: emails/templates/croma-emailmess.php:84
+msgid "Body message"
+msgstr ""
+
+#: emails/templates/croma-emailmess.php:40
+msgid "Error warning"
+msgstr ""
+
+#: emails/templates/croma-emailmess.php:52
+#: emails/templates/croma-emailmess.php:64
+msgid "Donation just paid"
+msgstr ""
+
+#: emails/templates/croma-emailmess.php:53
+msgid "Customer"
+msgstr ""
+
+#: emails/templates/croma-emailmess.php:76
+msgid "Cancelled donation"
+msgstr ""
+
+#: emails/templates/croma-emailmess.php:96
+msgid "Email messages"
+msgstr ""
+
+#: emails/templates/croma-emailmess.php:108
+msgid "Save Values"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:30
+msgid "Mediacast additional content"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:43
+msgid "Mediacaster"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:44
+msgid "Person who is mediacasting"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:52
+msgid "Link to Youtube or Vimeo"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:53
+msgid "Add a link to a vimeo or youtube video"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:61
+msgid "Link to pdf notes"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:62
+msgid "Add a link to pdf sermon notes"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:82
+msgid "Mp3 from media manager"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:83
+msgid "Play a mp3 from the WordPress media manager"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:92
+msgid "Alternative link to mp3"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:93
+msgid "Link from alternative mp3 source"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:184
+msgid "No mediacaster"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:204
+msgid "Clear Mp3"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:207
+msgid "Choose MP3"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:230
+msgid "Clear document"
+msgstr ""
+
+#: mediacast/cromax-mediacast-metaboxes.php:233
+msgid "Choose document"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:49
+msgctxt "post type general name"
+msgid "Mediacast"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:50
+msgctxt "post type singular name"
+msgid "Mediacast Item"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:51
+msgctxt "Mediacast Item"
+msgid "Add New"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:52
+msgid "Add New Mediacast item"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:53
+msgid "Edit Mediacast item"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:54
+msgid "New Mediacast item"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:55
+msgid "All Mediacast items"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:56
+msgid "View Mediacast item"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:57
+msgid "Search Mediacast item"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:58
+msgid "No Mediacast item found"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:59
+msgid "No Mediacast item found in Trash"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:61
+msgctxt "Mediacast"
+msgid "Mediacast"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:89
+msgid "Mediacast Tags"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:90
+#: mediacast/cromax-mediacast-posttype.php:91
+msgid "Mediacast Tag"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:92
+msgid "All Mediacast "
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:93
+msgid "Add new Mediacast  tag"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:94
+msgid "New Mediacast  tag"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:111
+msgid " category"
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:112
+msgid "Search "
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:113
+msgid "All "
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:114
+#: mediacast/cromax-mediacast-posttype.php:115
+msgid "Parent "
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:116
+msgid "Edit "
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:117
+msgid "Update "
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:118
+msgid "Add new "
+msgstr ""
+
+#: mediacast/cromax-mediacast-posttype.php:119
+msgid "New "
+msgstr ""
+
+#: mediacast/cromax-mediacast-users.php:45
+msgid "Mediacast additional info"
+msgstr ""
+
+# @ croma
+#: mediacast/cromax-mediacast-users.php:52 paypal/cromax-paypal-init.php:248
+#: paypal/templates/invoicescreen.php:92
+msgid "Status"
+msgstr ""
+
+#: mediacast/cromax-mediacast-users.php:58
+msgid "Not a mediacaster or member"
+msgstr ""
+
+#: mediacast/cromax-mediacast-users.php:59
+msgid "Member and not mediacaster"
+msgstr ""
+
+#: mediacast/cromax-mediacast-users.php:60
+msgid "Member and Mediacaster"
+msgstr ""
+
+#: mediacast/cromax-mediacast-users.php:62
+msgid "Select this users status"
+msgstr ""
+
+#: mediacast/cromax-mediacast-users.php:69
+msgid "Thumbnail"
+msgstr ""
+
+#: mediacast/cromax-mediacast-users.php:74
+msgid "Choose thumbnail"
+msgstr ""
+
+#: mediacast/cromax-mediacast-users.php:82
+msgid "Clear Image"
+msgstr ""
+
+#: mediacast/cromax-mediacast-users.php:87
+msgid "Select a thumbnail"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:77 paypal/cromax-paypal-init.php:111
+msgid "donation"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:97 paypal/cromax-paypal-init.php:310
+#: paypal/templates/invoicescreen.php:44
+msgid "Monthly"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:101 paypal/templates/invoicescreen.php:48
+msgid "Anually"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:128
+msgid "Click the button to finalize the payment"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:129
+msgid "Make Paypal payment"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:132
+msgid "There was a payment error. An email was dispatched to the site admin."
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:163 paypal/templates/invoicescreen.php:59
+msgid "Donation details"
+msgstr ""
+
+# @ croma
+#: paypal/cromax-paypal-init.php:245
+msgctxt "column name"
+msgid "Gallery Name"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:246 paypal/templates/invoicescreen.php:83
+msgid "Amount"
+msgstr ""
+
+# @ croma
+#: paypal/cromax-paypal-init.php:247
+msgid "Date"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:249 paypal/templates/invoicescreen.php:101
+msgid "Frequency"
+msgstr ""
+
+# @ croma
+#: paypal/cromax-paypal-init.php:250 paypal/templates/invoicescreen.php:74
+msgid "Email"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:290 paypal/templates/invoicescreen.php:18
+msgid "Initiated"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:292 paypal/templates/invoicescreen.php:22
+msgid "Paid"
+msgstr ""
+
+# @ croma
+#: paypal/cromax-paypal-init.php:294 paypal/templates/invoicescreen.php:26
+msgid "Cancelled"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:296 paypal/templates/invoicescreen.php:30
+msgid "Error"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:308 paypal/templates/invoicescreen.php:40
+msgid "Once"
+msgstr ""
+
+#: paypal/cromax-paypal-init.php:312
+msgid "Annually"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:46
+msgctxt "post type general name"
+msgid "Donations"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:47
+msgctxt "post type singular name"
+msgid "Donations Item"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:48
+msgctxt "Donation Item"
+msgid "Add New"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:49
+msgid "Add New Donation"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:50
+msgid "Edit Donation"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:51
+msgid "New donation"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:52
+msgid "Donations"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:53
+msgid "View donations"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:54
+msgid "Search dontations"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:55
+msgid "No donations found"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:56
+msgid "No donations found in Trash"
+msgstr ""
+
+#: paypal/cromax-paypal-posttype.php:58
+msgctxt "Donations"
+msgid "Donation"
+msgstr ""
+
+#: paypal/templates/invoicescreen.php:65
+msgid "Donator"
+msgstr ""
+
+#: paypal/templates/invoicescreen.php:123
+msgid "Paypal payment details"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:18
+msgid "Layout"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:19
+msgid "Splash header with image"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:20
+msgid "Splash header with color"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:22
+msgid "Tab"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:23
+msgid "Icon textbox"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:24
+msgid "Image textbox"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:35
+msgid "Select a layout..."
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:36
+msgid "Halves"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:37
+msgid "Thirds"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:38
+msgid "2/3 and 1/3"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:39
+msgid "1/3 and 2/3"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:40
+msgid "quarters"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:41
+msgid "half & quarters"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:42
+msgid "quarters & half"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:46
+msgid "Insert layout Shortcode"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:49
+msgid "Insert a shortcode to add layouts to a page."
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:57
+msgid "Select a Mask..."
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:70 templates/crx-scode.php:80
+msgid "Insert splash header Shortcode"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:73
+msgid ""
+"Insert a shortcode to add a splash header with background.<br/><br/> After "
+"the shortcode is inserted you can modify the contents"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:83
+msgid ""
+"Insert a shortcode to add a splash header with color.<br/><br/> After the "
+"shortcode is inserted you can modify the contents"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:91 templates/crx-scode.php:109
+msgid "Select number of tabs..."
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:98
+msgid "Insert accordion Shortcode"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:101
+msgid ""
+"Insert a accodrion shortcode.<br/><br/> After the shortcode is inserted you "
+"can modify the contents"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:116
+msgid "Insert tab Shortcode"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:119
+msgid ""
+"Insert a tab shortcode.<br/><br/> After the shortcode is inserted you can "
+"modify the contents"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:127
+msgid "Select a icon..."
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:128
+msgid "none"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:141
+msgid "Insert icon textbox Shortcode"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:144
+msgid "Insert a textbox with an icon "
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:151
+msgid "Insert image textbox Shortcode"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:154
+msgid "Insert a textbox with an image "
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:162
+msgid "Padding top..."
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:177
+msgid "Padding bottom..."
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:191
+msgid "Insert seperator Shortcode"
+msgstr ""
+
+# @ croma
+#: templates/crx-scode.php:194
+msgid "Insert a shortcode to add seperator."
+msgstr ""
+
+# @ croma
+#: templates/pagebuilder/crx-newsection.php:28
+msgid "Add Item"
+msgstr ""
+
+# @ croma
+#: templates/pagebuilder/output-frm.php:20
+msgid "Contact form 7 plugin not installed or activated"
+msgstr ""
+
+# @ croma
+#: templates/pagebuilder/output-frm.php:24
+msgid "No form selected, please select a form"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:38
+msgid "Cromax video widget"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:116 widgets/cromax-widgets.php:528
+#: widgets/cromax-widgets.php:1269
+msgid "New title"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:138
+msgid "Video link:"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:150
+msgid "Video description:"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:261 widgets/cromax-widgets.php:263
+msgid "All catgories"
+msgstr ""
+
+#: widgets/cromax-widgets.php:291
+msgid "All mediacast Categories"
+msgstr ""
+
+#: widgets/cromax-widgets.php:293
+msgid "All Mediacast"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:448
+msgid "Cromax widget for displaying latest news"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:550 widgets/cromax-widgets.php:1291
+msgid "Number of posts"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:563 widgets/cromax-widgets.php:1304
+msgid "Category to show"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:598
+msgid "Cromax twitter widget"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:668
+msgid "Follow us on Twitter"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:686
+msgid "Number of tweets:"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:697
+msgid "Username:"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:708
+msgid "Consumer key:"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:719
+msgid "Consumer Secret:"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:730
+msgid "Access token:"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:741
+msgid "Access token secret:"
+msgstr ""
+
+# @ croma
+#: widgets/cromax-widgets.php:754
+msgid "Follow us label:"
+msgstr ""
+
+#: widgets/cromax-widgets.php:784
+msgid "Displays all the mediacast categories in a widget"
+msgstr ""
+
+#: widgets/cromax-widgets.php:877
+msgid "Displays all the mediacast tags in a widget"
+msgstr ""
+
+#: widgets/cromax-widgets.php:969
+msgid "Displays all the authors of a mediacast with counts"
+msgstr ""
+
+#: widgets/cromax-widgets.php:1067
+msgid "Displays all the archives of your mediacast with counts"
+msgstr ""
+
+#: widgets/cromax-widgets.php:1169
+msgid "Cromax widget for displaying latest mediacasts"
+msgstr ""

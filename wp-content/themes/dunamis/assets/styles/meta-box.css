@@ -1,0 +1,103 @@
+/*===========  PAGE INDEX ================
+ *
+ * -01- MAIN
+ * -02- INNER
+ * -03- DATEPICKER
+ * -04- SLIDER
+ * 
+ * */
+
+
+/*
+ * -01- MAIN
+ */
+#cromatheme_metas{
+	background:#F7F6F6 !important;
+}
+
+#cromatheme_metas .inside{
+	margin: 20px;
+	padding: 20px;
+	background: #fff !important;
+	-webkit-border-radius: 2px;
+	border-radius: 2px; 
+	border: 1px solid #eee;
+	padding-bottom: 0;
+}
+
+
+
+/*
+ * -02- INNER
+ */
+
+.cro_oneside{
+	float: left;
+	width: 50%;
+}
+
+
+.sideinner{
+	background: #Fff;
+	position: relative;
+	border: 1px solid #ddd;
+	margin: 0 10px 30px 0px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px; 
+}
+
+
+#poststuff .sideinner h2{
+	background: #FBFBFC;
+	color: #707677;
+	text-shadow: 1px 1px 0 #fff;
+	margin: 0 0 30px 0;
+	line-height: 30px;
+	font-weight: normal;
+	-webkit-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px; 
+	font-size: 16px;
+	padding-left: 20px;
+}
+
+.cro_sidebox{
+	padding: 0 10px 10px 10px;
+}
+
+#poststuff .cro_sidebox input[type="text"], #poststuff .cro_sidebox select{
+	width: 96%;
+	background: #f3f3f3;
+	border: 1px solid #e1e3e3;
+	padding: 5px;
+	position: relative;
+	height: 30px;
+	-webkit-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.05); 
+	-webkit-border-radius: 4px;
+	border-radius: 4px; 
+}
+
+span.optspan {
+  background: url(framework-images/input4.png) no-repeat scroll center center transparent;
+  display: block;
+  float: right;
+  height: 20px;
+  width: 20px;
+}
+
+span.optspanselected{
+	 background: url(framework-images/input3.png) no-repeat scroll center center transparent;
+}
+
+textarea.cro_mboxtextarea{
+	width: 100%;
+}
+
+p.cro_metaboxpdesc{
+	text-align: center;
+	font-style: italic;
+	color: #666;
+	font-size: 13px;
+	padding-top: 15px;
+	margin: 0;
+}

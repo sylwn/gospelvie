@@ -1,0 +1,2676 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Grill v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-22 13:17+0200\n"
+"PO-Revision-Date: 2014-08-22 13:17+0200\n"
+"Last-Translator: aj_croma_1969 <aj@cro.ma>\n"
+"Language-Team: \n"
+"Language: af_ZA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ croma
+#: 404.php:31
+msgid "we were unable to find what you were looking for."
+msgstr ""
+
+# @ croma
+#: 404.php:34
+msgid "You can access to the front-page "
+msgstr ""
+
+# @ croma
+#: 404.php:35
+msgid "here"
+msgstr ""
+
+# @ croma
+#: comments.php:30
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: comments.php:58
+msgid "Comment navigation"
+msgstr ""
+
+# @ croma
+#: comments.php:61
+msgid "&larr; Older Comments"
+msgstr ""
+
+# @ croma
+#: comments.php:64
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+# @ croma
+#: comments.php:74
+msgid "Comments are closed."
+msgstr ""
+
+# @ croma
+#: footer.php:74
+msgid "http://www.cro.ma"
+msgstr ""
+
+# @ croma
+#: footer.php:75
+#, php-format
+msgid "Proudly Designed by %s"
+msgstr ""
+
+# @ croma
+#: functions.php:79
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:80
+msgid "Colored Button"
+msgstr ""
+
+#: functions.php:81
+msgid "Next to logo"
+msgstr ""
+
+# @ croma
+#: functions.php:151
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+# @ croma
+#: single-mediacast.php:43 single.php:57 single.php:79 single.php:104
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+# @ croma
+#: single-mediacast.php:44 single.php:58 single.php:80 single.php:105
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: inc/croma-taxfields.php:17
+msgid "Sidebar"
+msgstr ""
+
+#: inc/croma-taxfields.php:19
+msgid "Sidebar for this category"
+msgstr ""
+
+#: inc/croma-taxfields.php:24
+msgid "Category page sidebar"
+msgstr ""
+
+#: inc/croma-taxfields.php:25
+msgid "right"
+msgstr ""
+
+#: inc/croma-taxfields.php:25
+msgid "left"
+msgstr ""
+
+#: inc/croma-taxfields.php:25
+msgid "none"
+msgstr ""
+
+#: inc/croma-taxfields.php:26
+msgid "Select page sidebar layout"
+msgstr ""
+
+#: inc/croma-taxfields.php:71 inc/croma-taxfields.php:150
+msgid "Standard Sidebar"
+msgstr ""
+
+# @ croma
+#: inc/cromafunctions.php:128
+msgid ""
+"Front page is currently set as a blog page.<br/> To make it look the theme "
+"you need to do the following:<br/><br/> 1. Create a front page<br/>2. Set "
+"the front page template as \"front page\"<br/>3.  Create a blog page.<br/>4. "
+"Set your \"frontpage displays\" in settings->reading.<br/><br/> You can view "
+"a short video on achieving these settings <a target=\"_blank\" href="
+"\"https://vimeo.com/70324939\">here</a>"
+msgstr ""
+
+#: inc/cromafunctions.php:554 inc/cromafunctions.php:588
+msgid "More Info"
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:77
+msgid "Add "
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:78 inc/cromaposttypes.php:170
+#: inc/cromax-mediacast-posttype.php:118
+msgid "Add new "
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:79 inc/cromaposttypes.php:168
+#: inc/cromax-mediacast-posttype.php:116
+msgid "Edit "
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:80 inc/cromaposttypes.php:171
+#: inc/cromax-mediacast-posttype.php:119
+msgid "New "
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:81
+msgid "View "
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:82 inc/cromaposttypes.php:164
+#: inc/cromax-mediacast-posttype.php:112
+msgid "Search "
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:83 inc/cromaposttypes.php:84
+msgid "No "
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:83
+msgid " found"
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:84
+msgid " found in trash"
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:128 inc/cromaposttypes.php:131
+msgid " updated."
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:129
+msgid "Custom field updated."
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:130
+msgid "Custom field deleted."
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:132
+msgid "Restored to Revision."
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:133
+msgid " published"
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:134
+msgid " saved."
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:135
+msgid " submitted."
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:136
+msgid " scheduled"
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:137
+msgid " draft updated."
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:163 inc/cromax-mediacast-posttype.php:111
+msgid " category"
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:165 inc/cromax-mediacast-posttype.php:113
+msgid "All "
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:166 inc/cromaposttypes.php:167
+#: inc/cromax-mediacast-posttype.php:114 inc/cromax-mediacast-posttype.php:115
+msgid "Parent "
+msgstr ""
+
+# @ croma
+#: inc/cromaposttypes.php:169 inc/cromax-mediacast-posttype.php:117
+msgid "Update "
+msgstr ""
+
+# @ croma
+#: inc/cromasidebars.php:38
+msgid "Main Sidebar"
+msgstr ""
+
+#: inc/cromasidebars.php:42
+msgid "Footer Left"
+msgstr ""
+
+#: inc/cromasidebars.php:46
+msgid "Footer Center"
+msgstr ""
+
+#: inc/cromasidebars.php:50
+msgid "Footer Right"
+msgstr ""
+
+#: inc/cromasidebars.php:54
+msgid "Mediacast"
+msgstr ""
+
+# @ croma
+#: inc/cromatheme.php:414 inc/installs/tgm_modified_plugin.php:164
+msgid "Install Required Plugins"
+msgstr ""
+
+# @ croma
+#: inc/cromatheme.php:415 inc/installs/tgm_modified_plugin.php:165
+msgid "Install Plugins"
+msgstr ""
+
+# @ croma
+#: inc/cromatheme.php:416 inc/installs/tgm_modified_plugin.php:166
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+# @ croma
+#: inc/cromatheme.php:417
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+# @ croma
+#: inc/cromatheme.php:418 inc/installs/tgm_modified_plugin.php:168
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/cromatheme.php:419 inc/installs/tgm_modified_plugin.php:169
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/cromatheme.php:420 inc/installs/tgm_modified_plugin.php:171
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/cromatheme.php:421 inc/installs/tgm_modified_plugin.php:172
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/cromatheme.php:422 inc/installs/tgm_modified_plugin.php:173
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/cromatheme.php:423 inc/installs/tgm_modified_plugin.php:174
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/cromatheme.php:424 inc/installs/tgm_modified_plugin.php:175
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/cromatheme.php:425 inc/installs/tgm_modified_plugin.php:176
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/cromatheme.php:426 inc/installs/tgm_modified_plugin.php:177
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/cromatheme.php:427 inc/installs/tgm_modified_plugin.php:179
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/cromatheme.php:428 inc/installs/tgm_modified_plugin.php:180
+#: inc/installs/tgm_modified_plugin.php:510
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+# @ croma
+#: inc/cromatheme.php:429 inc/installs/tgm_modified_plugin.php:181
+#: inc/installs/tgm_modified_plugin.php:1908
+msgid "Plugin activated successfully."
+msgstr ""
+
+# @ croma
+#: inc/cromatheme.php:430
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:49
+msgctxt "post type general name"
+msgid "Mediacast"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:50
+msgctxt "post type singular name"
+msgid "Mediacast Item"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:51
+msgctxt "Mediacast Item"
+msgid "Add New"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:52
+msgid "Add New Mediacast item"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:53
+msgid "Edit Mediacast item"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:54
+msgid "New Mediacast item"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:55
+msgid "All Mediacast items"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:56
+msgid "View Mediacast item"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:57
+msgid "Search Mediacast item"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:58
+msgid "No Mediacast item found"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:59
+msgid "No Mediacast item found in Trash"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:61
+msgctxt "Mediacast"
+msgid "Mediacast"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:89
+msgid "Mediacast Tags"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:90 inc/cromax-mediacast-posttype.php:91
+msgid "Mediacast Tag"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:92
+msgid "All Mediacast "
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:93
+msgid "Add new Mediacast  tag"
+msgstr ""
+
+#: inc/cromax-mediacast-posttype.php:94
+msgid "New Mediacast  tag"
+msgstr ""
+
+# @ croma
+#: inc/woo-functions.php:81 inc/templates/cromacart.php:73
+msgid "Quantity:"
+msgstr ""
+
+# @ croma
+#: inc/woo-functions.php:83 inc/templates/cromacart.php:77
+msgid "Remove this item"
+msgstr ""
+
+# @ croma
+#: inc/woo-functions.php:93 inc/templates/cromacart.php:89
+msgid "Cart subtotal"
+msgstr ""
+
+# @ croma
+#: inc/woo-functions.php:97 inc/templates/cromacart.php:95
+msgid "View Shopping Bag"
+msgstr ""
+
+# @ croma
+#: inc/woo-functions.php:100 inc/templates/cromacart.php:98
+msgid "Proceed to Checkout"
+msgstr ""
+
+# @ croma
+#: inc/woo-functions.php:106 inc/templates/cromacart.php:104
+msgid "No products in the shopping bag."
+msgstr ""
+
+# @ croma
+#: inc/woo-functions.php:106 inc/templates/cromacart.php:106
+msgid "Visit Shop"
+msgstr ""
+
+# @ croma
+#: inc/admin/croma-headers.php:45
+msgid "Custom Headers"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-init.php:29
+msgid "Pagebuilder"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-init.php:30
+msgid "croma.dash"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-init.php:41 inc/admin/cromatic-admin-init.php:42
+msgid "Front page"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-init.php:52 inc/admin/cromatic-admin-init.php:53
+msgid "Sidebars"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-init.php:63 inc/admin/cromatic-admin-init.php:64
+msgid "Theme options"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-init.php:342
+msgid "Upload or Choose Your Custom Image File"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-init.php:343
+msgid "Insert Image into Input Field"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:24
+msgid "Blog articles"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:29
+#: inc/admin/cromatic-admin-layouts.php:104
+#: inc/admin/cromatic-admin-layouts.php:195
+#: inc/admin/cromatic-admin-layouts.php:246
+#: inc/admin/cromatic-admin-layouts.php:306
+#: inc/admin/cromatic-admin-layouts.php:349
+#: inc/admin/cromatic-admin-layouts.php:601
+#: inc/admin/cromatic-admin-layouts.php:763
+#: inc/admin/cromatic-admin-layouts.php:819
+#: inc/admin/cromatic-admin-layouts.php:905
+msgid "Animation"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:31
+#: inc/admin/cromatic-admin-layouts.php:106
+#: inc/admin/cromatic-admin-layouts.php:197
+#: inc/admin/cromatic-admin-layouts.php:248
+#: inc/admin/cromatic-admin-layouts.php:308
+#: inc/admin/cromatic-admin-layouts.php:351
+#: inc/admin/cromatic-admin-layouts.php:603
+#: inc/admin/cromatic-admin-layouts.php:765
+#: inc/admin/cromatic-admin-layouts.php:821
+#: inc/admin/cromatic-admin-layouts.php:907
+msgid "Add Animations ot the section"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:37
+#: inc/admin/cromatic-admin-layouts.php:120
+#: inc/admin/cromatic-admin-layouts.php:827
+#: inc/admin/cromatic-admin-layouts.php:913
+msgid "Background Image"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:39
+#: inc/admin/cromatic-admin-layouts.php:122
+#: inc/admin/cromatic-admin-layouts.php:829
+#: inc/admin/cromatic-admin-layouts.php:915
+msgid ""
+"Select floating image for the layout or leave open if this section must not "
+"have a floating image"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:45
+#: inc/admin/cromatic-admin-layouts.php:128
+#: inc/admin/cromatic-admin-layouts.php:835
+#: inc/admin/cromatic-admin-layouts.php:929
+msgid "Mask"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:47
+#: inc/admin/cromatic-admin-layouts.php:130
+#: inc/admin/cromatic-admin-layouts.php:837
+#: inc/admin/cromatic-admin-layouts.php:931
+msgid "% mask for the image"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:53
+#: inc/admin/cromatic-admin-layouts.php:136
+#: inc/admin/cromatic-admin-layouts.php:843
+#: inc/admin/cromatic-admin-layouts.php:937
+msgid "Mask Color"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:55
+#: inc/admin/cromatic-admin-layouts.php:138
+#: inc/admin/cromatic-admin-layouts.php:146
+#: inc/admin/cromatic-admin-layouts.php:205
+#: inc/admin/cromatic-admin-layouts.php:213
+#: inc/admin/cromatic-admin-layouts.php:611
+#: inc/admin/cromatic-admin-layouts.php:845
+#: inc/admin/cromatic-admin-layouts.php:939
+msgid "Select color for the mask"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:61
+#: inc/admin/cromatic-admin-layouts.php:314
+#: inc/admin/cromatic-admin-layouts.php:357
+msgid "Main Title"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:63
+#: inc/admin/cromatic-admin-layouts.php:114
+#: inc/admin/cromatic-admin-layouts.php:316
+#: inc/admin/cromatic-admin-layouts.php:359
+#: inc/admin/cromatic-admin-layouts.php:1039
+msgid "Type the Title for the section"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:69
+msgid "Category to show"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:71
+msgid "Select the category to show"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:77
+#: inc/admin/cromatic-admin-layouts.php:168
+#: inc/admin/cromatic-admin-layouts.php:278
+#: inc/admin/cromatic-admin-layouts.php:413
+#: inc/admin/cromatic-admin-layouts.php:453
+#: inc/admin/cromatic-admin-layouts.php:493
+#: inc/admin/cromatic-admin-layouts.php:533
+#: inc/admin/cromatic-admin-layouts.php:573
+#: inc/admin/cromatic-admin-layouts.php:641
+#: inc/admin/cromatic-admin-layouts.php:689
+#: inc/admin/cromatic-admin-layouts.php:737
+#: inc/admin/cromatic-admin-layouts.php:867
+msgid "Link"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:79
+#: inc/admin/cromatic-admin-layouts.php:280
+#: inc/megamenu/cromatic-mm-layouts.php:47
+#: inc/megamenu/cromatic-mm-layouts.php:95
+#: inc/megamenu/cromatic-mm-layouts.php:143
+#: inc/megamenu/cromatic-mm-layouts.php:260
+#: inc/megamenu/cromatic-mm-layouts.php:308
+#: inc/megamenu/cromatic-mm-layouts.php:365
+#: inc/megamenu/cromatic-mm-layouts.php:433
+#: inc/megamenu/cromatic-mm-layouts.php:481
+msgid "Type the link or leave open"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:85
+#: inc/admin/cromatic-admin-layouts.php:176
+#: inc/admin/cromatic-admin-layouts.php:227
+#: inc/admin/cromatic-admin-layouts.php:286
+#: inc/admin/cromatic-admin-layouts.php:875
+msgid "Link label"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:87
+#: inc/admin/cromatic-admin-layouts.php:178
+#: inc/admin/cromatic-admin-layouts.php:229
+#: inc/admin/cromatic-admin-layouts.php:288
+msgid "Select the button label"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:99
+msgid "Call to action"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:112
+#: inc/admin/cromatic-admin-layouts.php:254
+#: inc/admin/cromatic-admin-layouts.php:625
+#: inc/admin/cromatic-admin-layouts.php:673
+#: inc/admin/cromatic-admin-layouts.php:721
+#: inc/admin/cromatic-admin-layouts.php:779
+#: inc/admin/cromatic-admin-layouts.php:851
+#: inc/admin/cromatic-admin-layouts.php:921
+#: inc/megamenu/cromatic-mm-layouts.php:339
+msgid "Title"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:144
+#: inc/admin/cromatic-admin-layouts.php:211
+#: inc/admin/cromatic-admin-layouts.php:381
+#: inc/admin/cromatic-admin-layouts.php:883
+msgid "Text Color"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:152
+msgid "Button background Color"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:154
+msgid "Select color for button background"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:160
+msgid "Button Color"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:162
+msgid "Select color for button"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:170
+#: inc/megamenu/cromatic-mm-layouts.php:571
+#: inc/megamenu/cromatic-mm-layouts.php:603
+#: inc/megamenu/cromatic-mm-layouts.php:635
+msgid "Type the link"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:190
+#: inc/megamenu/cromatic-mm-layouts.php:213
+msgid "Countdown timer"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:203
+#: inc/admin/cromatic-admin-layouts.php:373
+#: inc/admin/cromatic-admin-layouts.php:609
+msgid "Background Color"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:219
+msgid "Alternate Link"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:221
+msgid ""
+"Type the link ot link to if you do not want to link to the calendar post."
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:241
+msgid "Events"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:256
+#: inc/admin/cromatic-admin-layouts.php:627
+#: inc/admin/cromatic-admin-layouts.php:675
+#: inc/admin/cromatic-admin-layouts.php:723
+#: inc/admin/cromatic-admin-layouts.php:781
+#: inc/megamenu/cromatic-mm-layouts.php:39
+#: inc/megamenu/cromatic-mm-layouts.php:87
+#: inc/megamenu/cromatic-mm-layouts.php:135
+#: inc/megamenu/cromatic-mm-layouts.php:177
+#: inc/megamenu/cromatic-mm-layouts.php:193
+#: inc/megamenu/cromatic-mm-layouts.php:220
+#: inc/megamenu/cromatic-mm-layouts.php:252
+#: inc/megamenu/cromatic-mm-layouts.php:300
+#: inc/megamenu/cromatic-mm-layouts.php:341
+#: inc/megamenu/cromatic-mm-layouts.php:425
+#: inc/megamenu/cromatic-mm-layouts.php:473
+#: inc/megamenu/cromatic-mm-layouts.php:523
+#: inc/megamenu/cromatic-mm-layouts.php:555
+#: inc/megamenu/cromatic-mm-layouts.php:587
+#: inc/megamenu/cromatic-mm-layouts.php:619
+msgid "Type the title"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:262
+#: inc/admin/cromatic-admin-layouts.php:365
+msgid "Content 1"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:264
+#: inc/admin/cromatic-admin-layouts.php:367
+#: inc/megamenu/cromatic-mm-layouts.php:349
+msgid "Type the content"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:270
+msgid "Number of events to show"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:272
+msgid "Select number of events to show"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:300
+msgid "Gallery"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:322
+msgid "Gallery page"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:324
+msgid "Select the page containing the gallery that you want to show."
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:330
+msgid "Items to show"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:332
+#: inc/megamenu/cromatic-mm-layouts.php:55
+#: inc/megamenu/cromatic-mm-layouts.php:103
+#: inc/megamenu/cromatic-mm-layouts.php:151
+#: inc/megamenu/cromatic-mm-layouts.php:268
+#: inc/megamenu/cromatic-mm-layouts.php:316
+#: inc/megamenu/cromatic-mm-layouts.php:441
+#: inc/megamenu/cromatic-mm-layouts.php:489
+#: inc/megamenu/cromatic-mm-layouts.php:531
+msgid "Background mask"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:343
+msgid "Gridstack"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:375
+#: inc/admin/cromatic-admin-layouts.php:383
+#: inc/megamenu/cromatic-mm-layouts.php:63
+#: inc/megamenu/cromatic-mm-layouts.php:111
+#: inc/megamenu/cromatic-mm-layouts.php:159
+#: inc/megamenu/cromatic-mm-layouts.php:276
+#: inc/megamenu/cromatic-mm-layouts.php:324
+#: inc/megamenu/cromatic-mm-layouts.php:449
+#: inc/megamenu/cromatic-mm-layouts.php:497
+#: inc/megamenu/cromatic-mm-layouts.php:539
+msgid "Select color"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:397
+#: inc/admin/cromatic-admin-layouts.php:437
+#: inc/admin/cromatic-admin-layouts.php:477
+#: inc/admin/cromatic-admin-layouts.php:517
+#: inc/admin/cromatic-admin-layouts.php:557
+msgid "Image "
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:399
+#: inc/admin/cromatic-admin-layouts.php:439
+#: inc/admin/cromatic-admin-layouts.php:479
+#: inc/admin/cromatic-admin-layouts.php:519
+#: inc/admin/cromatic-admin-layouts.php:559
+msgid "Select image "
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:405
+#: inc/admin/cromatic-admin-layouts.php:445
+#: inc/admin/cromatic-admin-layouts.php:485
+#: inc/admin/cromatic-admin-layouts.php:525
+#: inc/admin/cromatic-admin-layouts.php:565
+#: inc/megamenu/cromatic-mm-layouts.php:355
+msgid "Label"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:407
+#: inc/admin/cromatic-admin-layouts.php:447
+#: inc/admin/cromatic-admin-layouts.php:487
+#: inc/admin/cromatic-admin-layouts.php:527
+#: inc/admin/cromatic-admin-layouts.php:567
+msgid "Type the swf_labelframe(name)"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:415
+#: inc/admin/cromatic-admin-layouts.php:455
+#: inc/admin/cromatic-admin-layouts.php:495
+#: inc/admin/cromatic-admin-layouts.php:535
+#: inc/admin/cromatic-admin-layouts.php:575
+#: inc/admin/cromatic-admin-layouts.php:643
+#: inc/admin/cromatic-admin-layouts.php:691
+#: inc/admin/cromatic-admin-layouts.php:739
+msgid "Type the link address"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:421
+#: inc/admin/cromatic-admin-layouts.php:461
+#: inc/admin/cromatic-admin-layouts.php:501
+#: inc/admin/cromatic-admin-layouts.php:541
+#: inc/admin/cromatic-admin-layouts.php:581
+#: inc/admin/cromatic-admin-layouts.php:649
+#: inc/admin/cromatic-admin-layouts.php:697
+#: inc/admin/cromatic-admin-layouts.php:745
+msgid "Link target"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:423
+#: inc/admin/cromatic-admin-layouts.php:463
+#: inc/admin/cromatic-admin-layouts.php:503
+#: inc/admin/cromatic-admin-layouts.php:543
+#: inc/admin/cromatic-admin-layouts.php:583
+#: inc/admin/cromatic-admin-layouts.php:651
+#: inc/admin/cromatic-admin-layouts.php:699
+#: inc/admin/cromatic-admin-layouts.php:747
+msgid "Open in a new or same window?"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:425
+#: inc/admin/cromatic-admin-layouts.php:465
+#: inc/admin/cromatic-admin-layouts.php:505
+#: inc/admin/cromatic-admin-layouts.php:545
+#: inc/admin/cromatic-admin-layouts.php:585
+#: inc/admin/cromatic-admin-layouts.php:653
+#: inc/admin/cromatic-admin-layouts.php:701
+#: inc/admin/cromatic-admin-layouts.php:749
+msgid "same window"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:425
+#: inc/admin/cromatic-admin-layouts.php:465
+#: inc/admin/cromatic-admin-layouts.php:505
+#: inc/admin/cromatic-admin-layouts.php:545
+#: inc/admin/cromatic-admin-layouts.php:585
+#: inc/admin/cromatic-admin-layouts.php:653
+#: inc/admin/cromatic-admin-layouts.php:701
+#: inc/admin/cromatic-admin-layouts.php:749
+msgid "new window"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:595
+msgid "Image Banner"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:617
+msgid "First banner"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:619
+msgid "Left fullheight banner image"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:633
+#: inc/admin/cromatic-admin-layouts.php:681
+#: inc/admin/cromatic-admin-layouts.php:729
+msgid "Sub-title"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:635
+#: inc/admin/cromatic-admin-layouts.php:683
+#: inc/admin/cromatic-admin-layouts.php:731
+msgid "Type the sub-title"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:665
+msgid "Second banner"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:667
+msgid "Left half height banner image"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:713
+msgid "Third banner"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:715
+msgid "Center fullheight banner image"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:758
+msgid "Page Content"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:771
+msgid "Page to show"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:773
+msgid "Select the page to show"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:794
+msgid "Revolution slider"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:800
+msgid "Select slider"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:802
+msgid "Select the Layerslider to show"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:814
+msgid "Text over image"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:853
+msgid "Select the title for the section"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:859
+#: inc/megamenu/cromatic-mm-layouts.php:347
+msgid "Content"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:861
+msgid "Select description"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:869
+msgid "Select the address to link"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:877
+msgid "Select the label of the \"readmore\" button"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:885
+msgid "Select text color for the layout"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:900
+#: inc/admin/cromatic-admin-layouts.php:1292
+msgid "Twitter"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:923
+msgid "Section Title"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:953
+msgid "Number tweets"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:955
+msgid "Number of tweets"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:961
+msgid "Twitter username"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:963
+msgid "Twitter username without the @"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:969
+msgid "Consumer key"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:971
+msgid "Add the twitter consumer key"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:977
+msgid "Consumer Secret"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:979
+msgid "Add the twitter consumer secret"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:985
+msgid "Access token"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:987
+msgid "Add the twitter access token"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:993
+msgid "Access secret"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:995
+msgid "Add the twitter access token secret"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1001
+msgid "Follow label"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1003
+msgid "Add the twitter follow label"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1016
+#: inc/admin/cromatic-admin-layouts.php:1045
+msgid "Welcome Message"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1021
+msgid "Image"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1023
+msgid "Select image for the welcome message"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1029
+msgid "Main title"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1031
+msgid "Type the subtitle for the section"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1037
+msgid "Sub title"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1047
+msgid "Select the page that holds your welcome message"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1066
+msgid "General & Logo"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1071
+msgid "Header type"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1073
+msgid "Type of header"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1075
+msgid "Minimal"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1075
+msgid "Standard"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1079
+msgid "Standard header background"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1081
+msgid ""
+"Background for the standard header. The minimal header has no background"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1087
+msgid "Main Color"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1089
+msgid "Select main color"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1095
+msgid "Main Font"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1097
+msgid "Select main font"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1103
+msgid "Logo"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1105
+msgid "Select the logo image"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1111
+msgid "Logo paddding top"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1113
+msgid "Padding above the logo"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1119
+msgid "Logo paddding bottom"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1121
+msgid "Padding below the logo"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1132
+msgid "Navigation"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1137
+msgid "Menu Font"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1139
+msgid "Select menu font"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1145
+msgid "Menu Font Size"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1147
+msgid "Font Size for the main menu"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1153
+msgid "Responsive After"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1155
+msgid ""
+"\"switch to responsive menu\" width. If the screen is smaller than this "
+"width the responsive menu will be added."
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1161
+msgid "Main menu Background"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1163
+msgid "Select main menu background"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1169
+msgid "Main menu color"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1171
+msgid "Select main menu color (give online in the demo)"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1177
+msgid "Colored Button Background"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1179
+msgid "Select colored button background (give online in the demo)"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1185
+msgid "Colored Button color"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1187
+msgid "Select colored button color (give online in the demo)"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1193
+msgid "Menu next to logo Padding top"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1195
+msgid ""
+"Top padding for the menu right next to the logo (showing the church times in "
+"the demo)"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1206
+msgid "Top Bar"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1211
+msgid "Top bar"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1213
+msgid "Activate or De-activate the topbar"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1215
+msgid "Yes"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1215
+msgid "No"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1219
+msgid "Top Bar Background"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1221
+msgid "Select top bar background"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1227
+msgid "Top Bar color"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1229
+msgid "Select top bar color"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1235
+msgid "Top Bar text"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1237
+msgid "Select the top bar left text"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1250
+msgid "Home Page"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1255
+msgid "Header Font"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1257
+msgid "Select header font"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1263
+msgid "Body Font"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1265
+msgid "Select body font"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1279
+msgid "Social"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1284
+msgid "Facebook"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1286
+#: inc/admin/cromatic-admin-layouts.php:1294
+#: inc/admin/cromatic-admin-layouts.php:1302
+#: inc/admin/cromatic-admin-layouts.php:1310
+#: inc/admin/cromatic-admin-layouts.php:1318
+#: inc/admin/cromatic-admin-layouts.php:1326
+#: inc/admin/cromatic-admin-layouts.php:1334
+#: inc/admin/cromatic-admin-layouts.php:1342
+#: inc/admin/cromatic-admin-layouts.php:1350
+msgid "Select the link to your profile"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1300
+msgid "Linkedin"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1308
+msgid "Flickr"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1316
+msgid "Foursquare"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1324
+msgid "Instagram"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1332
+msgid "Googleplus"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1340
+msgid "Pinterest"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1348
+msgid "Youtube"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1362
+msgid "Header"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1367
+msgid "Header Image"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1369
+msgid "Select the header default image for inner pages"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1375
+msgid "Header image tiling"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1377
+msgid "Type of tiling for the header image"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1379
+#: inc/admin/templates/customhead.php:83
+msgid "Tile vertical and horizontal"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1379
+#: inc/admin/templates/customhead.php:84
+msgid "Tile vertical"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1379
+#: inc/admin/templates/customhead.php:85
+msgid "Tile Horizontal"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1379
+#: inc/admin/templates/customhead.php:86
+msgid "Stretch over the area"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1379
+#: inc/admin/templates/customhead.php:87
+msgid "no tiling"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1383
+msgid "Header height"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1385
+msgid "Height of the headerspace"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1391
+#: inc/admin/templates/customhead.php:107
+msgid "Text color"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1393
+msgid "Select header text color"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1399
+#: inc/admin/templates/customhead.php:116
+msgid "Mask color"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1401
+msgid "Select header mask color"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1407
+msgid "Header mask"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1409
+msgid "Percentage of mask to apply"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1420
+msgid "Favicon"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1425
+msgid "Desktop Favicon"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1427
+msgid ""
+"Select tHe favicon file for desktop browsers (16pixels x 16pixels) ico format"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1433
+msgid "IOS 76px icon"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1435
+msgid "IOS 76px x 76px icon in png format"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1441
+msgid "IOS retina 120px icon"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1443
+msgid "IOS 120px x 120px icon in png format"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1449
+msgid "IOS retina 152px icon"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1451
+msgid "IOS 152px x 152px icon in png format"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1457
+msgid "WIN8 retina 144px icon"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1459
+msgid "IOS 144px x 144px icon in png format"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1465
+msgid "IE11 retina 70px icon"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1467
+msgid "IOS 70px x 70px icon in png format"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1473
+msgid "IE11 retina 150px icon"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1475
+msgid "IOS 150px x 150px icon in png format"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1481
+msgid "IE11 retina 310px icon"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1483
+msgid "IOS 310px x 310px icon in png format"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1494
+msgid "Utilities"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1499
+msgid "Google analytics"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1501
+msgid "Add your google analytics code here"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1507
+msgid "Additional style rules"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1509
+msgid "Add your additional style rules here"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1522
+msgid "Blog"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1527
+msgid "Excerpt Length"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1529
+msgid "Excerpt length"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1535
+msgid "Category sidebars"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1537
+msgid "Sedebar setup for the categories"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1539
+msgid "Sidebar left"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1539
+msgid "Fullwidth"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1539
+msgid "sidebar right"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1550
+msgid "Paypal"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1555
+msgid "Paypal API username"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1557
+msgid "Set the Paypal API username"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1563
+msgid "Paypal API password"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1565
+msgid "Set the Paypal API password"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1571
+msgid "Paypal API signature"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1573
+msgid "Set the Paypal API signature"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1579
+msgid "Paypal Currency"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1581
+msgid "Set the Paypal payment currency"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1587
+msgid "Paypal email recipient"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1589
+msgid "Set the recipient for paypal emails"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1595
+msgid "Paypal success page"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1597
+msgid "Select the Paypal success page."
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1603
+msgid "Paypal failure page"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1605
+msgid "Select the Paypal failure page."
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1611
+msgid "Paypal mode"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1613
+msgid "Select the paypal mode"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1615
+msgid "Sandbox"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1615
+msgid "Live"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1619
+msgid "Currency sign"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1621
+msgid "Select the sign for your currency"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1627
+msgid "Currency Position"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1629
+msgid "Position of the currency sign"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1631
+msgid "before"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1631
+msgid "after"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1635
+msgid "Global Minimum"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1637
+msgid "Global minimum value"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1643
+msgid "Global Maximum"
+msgstr ""
+
+#: inc/admin/cromatic-admin-layouts.php:1645
+msgid "Global maximum value"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1656
+msgid "Help"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1661
+msgid "Help Section"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-admin-layouts.php:1663
+msgid "Help section"
+msgstr ""
+
+#: inc/admin/cromatic-page-formpart.php:115
+#: inc/megamenu/cromatic-mm-formpart.php:130
+msgid "None Selected"
+msgstr ""
+
+# @ croma
+#: inc/admin/cromatic-page-formpart.php:193
+#: inc/megamenu/cromatic-mm-formpart.php:217
+msgid "All categories"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/customhead.php:63
+msgid "Disabled"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/customhead.php:64
+msgid "Enabled"
+msgstr ""
+
+#: inc/admin/templates/customhead.php:65
+msgid "Map"
+msgstr ""
+
+#: inc/admin/templates/customhead.php:66
+msgid "Slideshow"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/customhead.php:96
+msgid "Box height"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/customhead.php:126
+msgid "Mask opacity"
+msgstr ""
+
+#: inc/admin/templates/customhead.php:134
+msgid "Map address"
+msgstr ""
+
+#: inc/admin/templates/customhead.php:139
+msgid "Lattitude override"
+msgstr ""
+
+#: inc/admin/templates/customhead.php:145
+msgid "Longitude override"
+msgstr ""
+
+#: inc/admin/templates/customhead.php:160
+msgid "Select a slideshow"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/options.php:30
+msgid "Theme Options"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/options.php:38
+msgid "Theme options Updated"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/options.php:53
+msgid "Save"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/pagemaker.php:39
+msgid "Frontpage Composer"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/pagemaker.php:46
+#: inc/megamenu/templates/pagemaker.php:44
+msgid "Post deleted"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/pagemaker.php:49 inc/admin/templates/pagemanager.php:39
+#: inc/megamenu/templates/pagemaker.php:47
+#: inc/megamenu/templates/pagemanager.php:41
+msgid "Post updated"
+msgstr ""
+
+#: inc/admin/templates/pagemaker.php:64
+msgid "Click here to add a page element"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/pagemaker.php:110
+msgid "No frontpage elements"
+msgstr ""
+
+#: inc/admin/templates/pagemanager.php:31
+msgid "Frontpage Manager"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/pagemanager.php:78
+#: inc/megamenu/templates/pagemanager.php:76
+msgid "Save & continue"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/pagemanager.php:79
+#: inc/megamenu/templates/pagemanager.php:77
+msgid "Save & go to index"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/sidebars.php:29
+msgid "Sidebar Composer"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/sidebars.php:36
+msgid "Sidebar sucessfully updated"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/sidebars.php:39
+msgid "Sidebar sucessfully deleted"
+msgstr ""
+
+# @ croma
+#: inc/admin/templates/sidebars.php:54
+msgid "Type sidebar name and click create"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:167
+msgid "Something went wrong."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:170
+#, php-format
+msgid "There is a new update for %1$s."
+msgid_plural "There are several plugins updates available %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:178
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:182
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:537
+#: inc/installs/tgm_modified_plugin.php:2120
+msgid "Return to the Dashboard"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:565
+#, php-format
+msgid "The following plugin was activated successfully: %s."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:738
+msgid "Dismiss this notice"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1125
+msgid "External Link"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1130
+msgid "Private Repository"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1133
+msgid "Pre-Packaged"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1137
+msgid "WordPress Repository"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1140
+msgid "Required"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1140
+msgid "Recommended"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1143
+msgid "Not Installed"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1145
+msgid "Installed But Not Activated"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1147
+msgid "Not Updated"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1149
+msgid "Active"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1343
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1359
+msgid "Plugin"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1360
+msgid "Source"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1361
+msgid "Type"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1362
+msgid "Status"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1380
+msgid "Install"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1381
+msgid "Activate"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1606
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1891
+msgid "Install package not available."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1892
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1893
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1894
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1895
+msgid "Plugin install failed."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1896
+msgid "Plugin installed successfully."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:1907
+msgid "Plugin activation failed."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2017
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2018
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2018
+#: inc/installs/tgm_modified_plugin.php:2027
+msgid "Show Details"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2018
+#: inc/installs/tgm_modified_plugin.php:2027
+msgid "Hide Details"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2019
+msgid "All installations and activations have been completed."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2020
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2024
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2025
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2026
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2027
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2028
+msgid "All installations have been completed."
+msgstr ""
+
+# @ croma
+#: inc/installs/tgm_modified_plugin.php:2029
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/megamenu/croma_megamenu.php:135 inc/megamenu/croma_megamenu.php:159
+msgid "Select mega-menu part"
+msgstr ""
+
+#: inc/megamenu/croma_megamenu.php:137
+msgid "None"
+msgstr ""
+
+#: inc/megamenu/croma_megamenu.php:143
+msgid "Please note"
+msgstr ""
+
+#: inc/megamenu/croma_megamenu.php:143
+msgid ""
+"The mega menu must be a top level item and can not have children underneath "
+"or parents above."
+msgstr ""
+
+#: inc/megamenu/cromatic-megamenu-init.php:37
+#: inc/megamenu/cromatic-megamenu-init.php:38
+msgid "Mega menu"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:23
+#: inc/megamenu/templates/pagemaker.php:93
+msgid "3 Banners"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:29
+#: inc/megamenu/cromatic-mm-layouts.php:242
+#: inc/megamenu/cromatic-mm-layouts.php:415
+msgid "Banner 1 Image"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:31
+#: inc/megamenu/cromatic-mm-layouts.php:79
+#: inc/megamenu/cromatic-mm-layouts.php:127
+#: inc/megamenu/cromatic-mm-layouts.php:244
+#: inc/megamenu/cromatic-mm-layouts.php:292
+#: inc/megamenu/cromatic-mm-layouts.php:417
+#: inc/megamenu/cromatic-mm-layouts.php:465
+#: inc/megamenu/cromatic-mm-layouts.php:515
+msgid "Background image for banner 1"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:37
+#: inc/megamenu/cromatic-mm-layouts.php:250
+#: inc/megamenu/cromatic-mm-layouts.php:423
+#: inc/megamenu/cromatic-mm-layouts.php:521
+msgid "Banner 1 title"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:45
+#: inc/megamenu/cromatic-mm-layouts.php:258
+#: inc/megamenu/cromatic-mm-layouts.php:431
+msgid "Banner 1 link"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:53
+#: inc/megamenu/cromatic-mm-layouts.php:266
+#: inc/megamenu/cromatic-mm-layouts.php:439
+msgid "Banner 1 mask"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:61
+#: inc/megamenu/cromatic-mm-layouts.php:274
+#: inc/megamenu/cromatic-mm-layouts.php:447
+msgid "Banner 1 mask color"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:77
+#: inc/megamenu/cromatic-mm-layouts.php:290
+#: inc/megamenu/cromatic-mm-layouts.php:463
+msgid "Banner 2 Image"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:85
+#: inc/megamenu/cromatic-mm-layouts.php:298
+#: inc/megamenu/cromatic-mm-layouts.php:471
+msgid "Banner 2 title"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:93
+#: inc/megamenu/cromatic-mm-layouts.php:306
+#: inc/megamenu/cromatic-mm-layouts.php:479
+msgid "Banner 2 link"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:101
+#: inc/megamenu/cromatic-mm-layouts.php:314
+#: inc/megamenu/cromatic-mm-layouts.php:487
+msgid "Banner 2 mask"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:109
+#: inc/megamenu/cromatic-mm-layouts.php:322
+#: inc/megamenu/cromatic-mm-layouts.php:495
+msgid "Banner 2 mask color"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:125
+msgid "Banner 3 Image"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:133
+msgid "Banner 3 title"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:141
+msgid "Banner 3 link"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:149
+msgid "Banner 3 mask"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:157
+msgid "Banner 3 mask color"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:170
+msgid "2 Navigation columns"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:175
+#: inc/megamenu/cromatic-mm-layouts.php:191
+msgid "Navigation Title"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:183
+#: inc/megamenu/cromatic-mm-layouts.php:226
+msgid "Navigation left"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:185
+#: inc/megamenu/cromatic-mm-layouts.php:201
+#: inc/megamenu/cromatic-mm-layouts.php:228
+msgid "Select a navigaiotn name"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:199
+msgid "Navigation right"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:218
+msgid "Navigation title"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:334
+#: inc/megamenu/templates/pagemaker.php:96
+msgid "Intro text"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:357
+msgid "Type the label"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:363
+msgid "link"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:371
+msgid "Label text color"
+msgstr ""
+
+# @ croma
+#: inc/megamenu/cromatic-mm-layouts.php:373
+msgid "Select text color"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:380
+msgid "Label background color"
+msgstr ""
+
+# @ croma
+#: inc/megamenu/cromatic-mm-layouts.php:382
+msgid "Select background color"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:392
+msgid "Latest News"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:397
+msgid "Category"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:399
+msgid "Select the categories"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:410
+#: inc/megamenu/cromatic-mm-layouts.php:508
+msgid "2banners"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:513
+msgid "Banner  Image"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:529
+msgid "Banner  mask"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:537
+msgid "Banner mask color"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:553
+msgid "Title 1"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:561
+msgid "Info 1"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:563
+#: inc/megamenu/cromatic-mm-layouts.php:595
+#: inc/megamenu/cromatic-mm-layouts.php:627
+msgid "Type the info"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:569
+msgid "Link 1"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:585
+msgid "Title 2"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:593
+msgid "Info 2"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:601
+msgid "Link 2"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:617
+msgid "Title 3"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:625
+msgid "Info 3"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:633
+msgid "Link 3"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:646
+#: inc/megamenu/cromatic-mm-layouts.php:651
+msgid "Latest Events"
+msgstr ""
+
+#: inc/megamenu/cromatic-mm-layouts.php:653
+msgid "This section have no configurations"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:37
+msgid "Mega menu creator"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:63
+msgid "Click to add a mega menu"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:82
+msgid "Add a title here"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:86
+msgid "Create megamenu"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:90
+msgid "Drag elements below to empty megamenu position"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:94
+msgid "2 navigation"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:95
+msgid "1 navigation & 2 banners"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:97
+msgid "Latest news"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:98
+msgid "2 banners"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:99
+msgid "Info banner"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:100
+msgid "Upcomming Events"
+msgstr ""
+
+#: inc/megamenu/templates/pagemaker.php:127
+msgid "No mega menu elements"
+msgstr ""
+
+#: inc/megamenu/templates/pagemanager.php:33
+msgid "Mega menu manager"
+msgstr ""
+
+#: inc/megamenu/templates/pagemanager.php:68
+msgid "Left side"
+msgstr ""
+
+#: inc/megamenu/templates/pagemanager.php:72
+msgid "Right side"
+msgstr ""
+
+#: inc/templates/content-mediacast.php:71
+msgid "Read further"
+msgstr ""
+
+# @ croma
+#: inc/templates/content.php:118
+msgid "Pages:"
+msgstr ""
+
+# @ croma
+#: inc/templates/cromaheader.php:113
+msgid "Tag Archive: "
+msgstr ""
+
+#: inc/templates/cromaheader.php:116
+msgid "Category: "
+msgstr ""
+
+#: inc/templates/cromaheader.php:119
+msgid "Tag: "
+msgstr ""
+
+#: inc/templates/cromaheader.php:122
+msgid "Posts by : "
+msgstr ""
+
+# @ croma
+#: inc/templates/cromaheader.php:136
+msgid "blog"
+msgstr ""
+
+# @ croma
+#: inc/templates/cromaheader.php:142
+msgid "Search Results for: "
+msgstr ""
+
+# @ croma
+#: inc/templates/cromaheader.php:148
+msgid "Daily Archive: "
+msgstr ""
+
+# @ croma
+#: inc/templates/cromaheader.php:149
+msgid "Monthly Archive: "
+msgstr ""
+
+# @ croma
+#: inc/templates/cromaheader.php:149
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+# @ croma
+#: inc/templates/cromaheader.php:150
+msgid "Yearly Archive: "
+msgstr ""
+
+# @ croma
+#: inc/templates/cromaheader.php:150
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+# @ croma
+#: inc/templates/cromaheader.php:152
+msgid "Archives"
+msgstr ""
+
+# @ croma
+#: inc/templates/front-page/fp-cdt.php:53
+msgid "Read more"
+msgstr ""
+
+# @ croma
+#: inc/templates/front-page/fp-cdt.php:90
+msgid "Days"
+msgstr ""
+
+# @ croma
+#: inc/templates/front-page/fp-cdt.php:97
+msgid "Hours"
+msgstr ""
+
+# @ croma
+#: inc/templates/front-page/fp-cdt.php:104
+msgid "Minutes"
+msgstr ""
+
+# @ croma
+#: inc/templates/front-page/fp-cdt.php:111
+msgid "Seconds"
+msgstr ""

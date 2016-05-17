@@ -1,0 +1,137 @@
+
+@import url("font-awesome.min.css");
+
+/*! ====================[ 01. General ]============== */
+/*! ====================[ 02. Calendar ]============= */
+/*! ====================[ 03. UIslider ]============= */
+/*! ====================[ 04. yesno ]================ */
+
+
+
+
+/*! ====================[ 01. General ]============== */
+.cromax_metabox_box h2, h2.cro_sectionheading{
+	border-bottom: 1px dashed #d8d8d8;
+	padding-bottom: 5px;
+}
+
+
+h2.cro_sectionheading{
+  margin-top: 40px !important;
+
+}
+
+
+.cromax_sideinner{
+	padding: 0 20px;
+}
+
+
+.cromax_metabox_box h5{
+	font-size: 16px;
+	border-bottom: 1px dashed #d8d8d8;
+	padding-bottom: 5px;
+}
+
+.cromax_metabox_box .timeside{
+	width: 50%;
+	float: left;
+}
+
+
+.cromax_metabox_box .calendarside{
+	width: 50%;
+	float: left;
+}
+
+
+.cromax_metabox_box input{
+  padding: 5px;
+  width: 100%;
+}
+
+.cromax_metabox_box select{
+  padding: 5px;
+  width: 100%;
+  height: 33px;
+}
+
+.cromax_metabox_box select.adcalselect{
+  width: 20%;
+}
+
+
+.cro_onehalf {
+  float: left;
+  margin: 0 1%;
+  width: 48%;
+}
+
+
+
+
+/*! ====================[ 04. yesno ]================ */
+
+.cro_yesnoouter{
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background: #fff;
+  display: inline-block;
+  -webkit-border-radius: 30px;
+  border-radius: 30px; 
+}
+
+.cro_yesnohandler{
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background: #2C404A;
+  display: inline-block;
+  -webkit-border-radius: 30px;
+  border-radius: 30px; 
+  cursor: pointer;
+}
+
+.cro_nonohandler{
+  background: #d8d8d8;
+}
+
+.cro_yesnohandler:after{
+  content: "1";
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.cro_nonohandler:after{
+  left: 45px;
+  content: "0";
+}
+
+.cro_yesnohandler .cro_yesno_knob{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 2px;
+  right: 4px;
+  background: #fff;
+  -webkit-border-radius: 30px;
+  border-radius: 30px; 
+}
+
+.cro_nonohandler .cro_yesno_knob{
+  right: 42px;
+  background: #b6b6b6;
+}
+
+.wp-core-ui .cro_media_clear{
+  float: right;
+  display: inline-block;
+}
+
+.wp-core-ui .cro_media_clear_hide{
+  display: none;
+}

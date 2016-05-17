@@ -1,0 +1,225 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: Helvetica;
+}
+.phone-container{
+	float: left;
+	margin-right: 8px;
+}
+.iphone{
+	background: url('../images/iphone.jpg') no-repeat;
+	width: 397px;
+	height: 742px;
+	z-index: 40;
+}
+.iphone-box{
+	position: relative;
+	top: 157px;
+	left: 39px;
+	height: 416px;
+	width: 320px;
+}
+.tools-menu{
+	margin-top: 23px;
+}
+.tools-menu h2{
+	font-size: 28px;
+	padding: 0px 0px 10px;
+}
+.tools-container{
+	text-align: left;
+	padding-top: 10px;
+}
+.tools-box{
+
+}
+.tools-nav{
+	float: left;
+}
+.tools-nav-list{
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	border-top: 3px solid #999999;
+	border-right: 1px solid #999999;
+	min-height: 675px;
+}
+.tools-nav-list li{
+	padding: 5px;
+	margin: 0;
+	background-color: #dddddd;
+	border-left: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+}
+.tools-nav-list li a{
+	margin: 0;
+	color: #333333;
+	font-size: 14px;
+	text-decoration: none;
+}
+.tools-nav-list li a:hover{
+	color: #666666;
+}
+.tools-nav-list .selected{
+	background-color: #f1f1f1;
+	width: 190px;
+}
+.tools-work{
+	border-bottom: 1px solid #999999;
+	border-right: 1px solid #999999;
+	border-top: 3px solid #999999;
+	background-color: #f1f1f1;
+	float: left;
+	width: 500px;
+	min-height: 675px;
+}
+/*
+Verve Wireless Styles
+*/
+.container{
+	padding: 20px 0px 0px 40px;
+}
+.options{
+	float: left;
+	width: 60%;
+}
+.options-menu{
+	margin-top: 30px;
+}
+.options-menu ul{
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+.options-menu ul li{
+	display: inline;
+}
+.options-menu ul li a{
+	text-decoration: none;
+	padding: 8px 20px;
+	color: #1b79b8;
+	font: italic 22px Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+}
+.options-menu ul li a.selected{
+	color: #000;
+	border-top: 1px solid #cfcfcf;
+	border-left: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;
+	background-color: #f1f1f1;
+}
+.options-list{
+	margin: 6px 0px;
+	background-color: #f1f1f1;
+	border: 1px solid #cfcfcf;
+	padding: 0px 20px;
+}
+
+
+
+
+
+
+.tools-work-box{
+	display: none;
+	padding: 10px 0px;
+	margin: 10px 0px;
+}
+.tools-work-box h2{
+	font-size: 22px;
+	padding: 0px;
+	margin: 0px;
+}
+.tools-work-box .desc{
+	font: italic 15px Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+	margin-top: 5px;
+	padding: 0px;
+}
+.tools-work-box-sub{
+	padding: 10px;
+	background-color: #e4e4e4;
+	border: 1px solid #cccccc;
+	margin-bottom: 10px;
+}
+.tools-work-box-sub h2{
+	font-size: 16px;
+}
+.tools-work-box-other{
+	padding: 10px 0px;
+	margin-bottom: 10px;
+}
+.tools-work-box-other label{
+	font: italic 15px Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+	float: left;
+	width: 250px;
+}
+.tools-work-box-other .content{
+	margin-left: 250px;
+}
+.tools-work-box-other .save{
+	padding: 5px 10px;
+	background-color: #1b79b8;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 12px;
+}
+.tools-work-box h2{
+	margin-top: 15px;
+}
+.rounded-corners{
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
+.phone{
+	float: right;
+	width: 40%;
+}
+.tools-menu{
+	margin: 10px 0px 30px;
+}
+.tools-menu .logo{
+	float: left;
+	margin-right: 40px;
+}
+.tools-menu .tag_line{
+	font: italic 22px Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+	padding: 20px 0px 0px 0px;
+	margin: 0;
+	color: #666;
+}
+.iphone-box-verve{
+	position: relative;
+	top: 156px;
+	left: 32px;
+	height: 460px;
+	width: 320px;
+}
+.phone-container-verve{
+	float: left;
+	margin-left: 40px;
+}
+.iphone-verve{
+	background: url('../images/iphone_verve.png') no-repeat;
+	width: 397px;
+	height: 742px;
+	z-index: 40;
+}
+.tools-work-box-sub{
+	padding: 10px;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,302 @@
+
+@import url("font-awesome.min.css");
+
+/*! ====================[ 01. General ]============== */
+/*! ====================[ 02. Calendar ]============= */
+/*! ====================[ 03. UIslider ]======== */
+
+
+
+
+/*! ====================[ 01. General ]============== */
+.cromax_metabox_box h2{
+	border-bottom: 1px dashed #d8d8d8;
+	padding-bottom: 5px;
+}
+
+
+.cromax_sideinner{
+	padding: 0 20px;
+}
+
+
+.cromax_metabox_box h5{
+	font-size: 16px;
+	border-bottom: 1px dashed #d8d8d8;
+	padding-bottom: 5px;
+}
+
+.cromax_metabox_box .timeside{
+	width: 50%;
+	float: left;
+}
+
+
+.cromax_metabox_box .calendarside{
+	width: 50%;
+	float: left;
+}
+
+
+
+
+/*! ====================[ 02. Calendar ]============= */
+
+
+
+.cromax-cal-container{
+	background: rgba(0,0,0,0.01);
+	border-bottom: 1px dashed #d8d8d8;
+}
+
+.cromax-cal-container table tr.calhead{
+	background: rgba(0,0,0,0.03);
+}
+
+.cromax-cal-container table tr.calhead span{
+	display: block;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.cromax-cal-container table td.dayname{
+	width: 14.25%;
+
+}
+
+.cromax-cal-container table td.dayname span{
+	display: block;
+	text-align: center;
+	padding: 10px 0;
+}
+
+
+.cromax-cal-container table td.daynum span.daynumber{
+	display: block;
+	text-align: center;
+	padding: 10px 0;
+	border: 1px solid #d8d8d8;
+	cursor: pointer;
+}
+
+.cromax-cal-container table td .thisday span.daynumber{
+	color: #fff;
+	background: #3B424D;
+}
+
+.prevm, .nextm{
+	cursor: pointer;
+}
+
+.cromax_evtype{
+	padding: 0 20px;
+}
+
+span.optspan {
+  background: rgba(0,0,0,0.03);
+  display: block;
+  float: right;
+  height: 20px;
+  width: 20px;
+  border :1px solid #d8d8d8;
+  cursor: pointer;
+}
+
+span.optspanselected {
+  background: #3B424D;
+  border: 1px solid #3B424D;
+}
+
+.showadvconf, .showlastday, .cro_metaboxpdesc{
+	text-align: center;
+  display :none;
+}
+
+
+#cromax_calendar_metas textarea{
+  width: 100%;
+}
+
+
+
+
+
+
+/*! ====================[ 03. UIslider ]======== */
+
+
+
+/*===========  4. UIslider =============== */
+
+/*  General CSS resets;
+ *    The target itself is not affected, allowing
+ *    the remainder of the document to use an
+ *    alternate box-sizing model;
+ *    Support for box-sizing is wide spread:
+ *    http://caniuse.com/#search=box-sizing
+ */
+  .noUi-target * {
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+    box-sizing: border-box;
+-webkit-touch-callout: none;
+    -ms-touch-action: none;
+-webkit-user-select: none;
+   -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+  }
+
+
+.noUiSlider{
+  width: 80%;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#show-serialization-field{
+  width: 15%;
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+  border: 1px solid #eee;
+  height: 28px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+  text-align: center;
+}
+
+.sliderouter{
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
+/*  Main slider bar;
+ *    Use box-shadow instead of border to keep absolute
+ *    positioning unrelated to the styling.
+ */
+  .noUi-base {
+    width: 100%;
+    margin: 1px;
+    height: 35px;
+    margin-top: 1px;
+    border: 1px solid #eee;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; 
+    position: relative;
+  }
+
+/*  Handles + active state;
+ */
+  .noUi-handle {
+    top: 2px;
+    left: -17px;
+    width: 29px;
+    height: 29px;
+    z-index: 1;
+    position: relative;
+    background: #2C404A;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; 
+  }
+  .noUi-active {
+    background: #F16A5B;
+  }
+
+/*  Styling-only classes;
+ *    Structured to prevent double declarations
+ *    for various states of the slider.
+ */
+  .noUi-connect {
+    background: Teal;
+-webkit-transition: background 0.6s;
+    transition: background 0.6s;
+  }
+  .noUi-background {
+    background: rgba(0,0,0,0.02);
+  }
+
+/*  Functional styles for handle positioning;
+ *    Note that the origins will inherit border radius
+ *    from the parent, even though the default theme
+ *    doesn't use curved borders.
+ */
+  .noUi-origin {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: inherit;
+  }
+  .noUi-origin + .noUi-origin {
+    background: inherit !important;
+  }
+  .noUi-z-index {
+    z-index: 10;
+  }
+
+/*  Adaptations for the vertical slider;
+ *    Some standard styles have been extended to keep
+ *    exceptions for the vertical slider as minimal as possible.
+ */
+  .noUi-vertical {
+    width: 38px;
+    height: 100%;
+  }
+  .noUi-vertical .noUi-origin {
+    bottom: 0;
+    left: 0;
+  }
+  .noUi-vertical .noUi-handle  {
+    top: -23px;
+    left: -3px;
+  }
+
+/*  Slider disabled state;
+ */
+  [disabled] .noUi-base {
+    background: #DDD;
+  }
+  [disabled] .noUi-handle {
+    background: #F7F7F7;
+    cursor: not-allowed;
+  }
+  [disabled] .noUi-connect {
+    background: #EEE;
+  }
+
+/*  Transition states;
+ *    Support for transition is widely available,
+ *    Only IE7, IE8 and IE9 will ignore these rules.
+ *    Since this is merely a progressive enhancement,
+ *    this is no problem at all.
+ *    http://caniuse.com/#search=transition
+ */
+  .noUi-state-tap .noUi-origin {
+    -webkit-transition: left 0.3s, top 0.3s;
+    transition: left 0.3s, top 0.3s;
+  }
+  .noUi-state-blocked .noUi-connect {
+    background: #7f8c8d;
+  }
+
+
+  .cromax-uiblock label{
+  	display: block;
+  }
+
+   .cromax-uiblock input{
+  	width: 40px;
+  	display: inline-block;
+  	vertical-align: top;
+  	text-align: center;
+  	background: #3B424D;
+  	color: #fff;
+  	padding: 7px;
+  	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border :0px solid #000;
+  }
+
+
