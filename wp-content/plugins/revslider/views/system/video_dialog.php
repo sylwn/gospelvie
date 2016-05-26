@@ -119,7 +119,7 @@
 			<div id="video_size_wrapper" class="youtube-inputs-wrapper">
 			
 				<label for="input_video_fullwidth" class=" float_left mtop_10">
-					<?php _e("Full Width:",REVSLIDER_TEXTDOMAIN)?>
+					<?php _e("Full Screen:",REVSLIDER_TEXTDOMAIN)?>
 				</label>								
 				<input type="checkbox" class="checkbox_video_dialog float_left mtop_13 " id="input_video_fullwidth" ></input>
 				
@@ -133,7 +133,7 @@
 				
 				<div class="mtop_10">
 					<label for="input_video_cover" class="float_left">
-						<?php _e("Cover:",REVSLIDER_TEXTDOMAIN)?>
+						<?php _e("Force Cover:",REVSLIDER_TEXTDOMAIN)?>
 					</label>				
 					<input type="checkbox" class="checkbox_video_dialog float_left " id="input_video_cover" ></input>
 				</div>
@@ -262,6 +262,12 @@
 				<input type="button" id="" class="button-image-remove-video button-primary revblue" value="<?php _e("Remove",REVSLIDER_TEXTDOMAIN)?>">
 				<input type="hidden" class="checkbox_video_dialog float_left" id="input_video_preview">
 				<div class="clear"></div>
+				<label for="input_use_poster_on_mobile" class="float_left mtop_10" style="font-weight: 400 !important;">
+					<?php _e("Disable Video on Mobile and use Preview Image:",REVSLIDER_TEXTDOMAIN)?>
+				</label>
+				<input type="checkbox" class="checkbox_video_dialog float_left mtop_13" id="input_use_poster_on_mobile" ></input>
+				<div class="clear"></div>
+				
 				<div style="width:100%;height:10px"></div>
 			</div>
 			<div class="clear"></div>

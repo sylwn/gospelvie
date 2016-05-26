@@ -41,7 +41,7 @@
 		if($useStaticLayers == 'on'){
 			?>	
 			<span class="hor_sap_double"></span>
-			<a class='button-primary revgray' href='<?php echo self::getViewUrl(RevSliderAdmin::VIEW_SLIDE,"id=static"); ?>' style="width:150px; "><i style="color:#fff" class="eg-icon-lock"></i><?php _e("Edit Static Layers",REVSLIDER_TEXTDOMAIN)?></a>
+			<a class='button-primary revgray' href='<?php echo self::getViewUrl(RevSliderAdmin::VIEW_SLIDE,"id=static"); ?>' style="width:190px; "><i style="color:#fff" class="eg-icon-dribbble"></i><?php _e("Edit Static / Global Layers",REVSLIDER_TEXTDOMAIN)?></a>
 			<?php
 		}
 		?>

@@ -74,7 +74,7 @@
 			$isPutIn = self::isPutIn($putIn);
 			if($isPutIn == false)
 				return(false);
-
+			
 			//check if on mobile and if option hide on mobile is set
 
 			$output = new RevSliderOutput();
@@ -189,7 +189,7 @@
 			$mute = (UniteFunctionsRev::strToBool($videoData['mute'])) ? ' data-volume="mute"' : '';
 
 			if($videoData["type"] == "youtube"):	//youtube
-				?>	<div class="tp-caption fade fullscreenvideo fucker" data-nextslideatend="<?php echo $nextslide?>" data-autoplay="<?php echo $autoplay?>"<?php echo $autoplayonlyfirsttime; ?> <?php echo $htmlParams?><?php echo $mute; ?>><iframe src="<?php echo $setBase; ?>www.youtube.com/embed/<?php echo $videoID?>?enablejsapi=1&amp;version=3&amp;html5=1&amp;hd=1&amp;controls=1&amp;showinfo=0;" allowfullscreen="true" width="100%" height="100%"></iframe></div><?php
+				?>	<div class="tp-caption fade fullscreenvideo " data-nextslideatend="<?php echo $nextslide?>" data-autoplay="<?php echo $autoplay?>"<?php echo $autoplayonlyfirsttime; ?> <?php echo $htmlParams?><?php echo $mute; ?>><iframe src="<?php echo $setBase; ?>www.youtube.com/embed/<?php echo $videoID?>?enablejsapi=1&amp;version=3&amp;html5=1&amp;hd=1&amp;controls=1&amp;showinfo=0;" allowfullscreen="true" width="100%" height="100%"></iframe></div><?php
 			else:									//vimeo
 				?>	<div class="tp-caption fade fullscreenvideo" data-nextslideatend="<?php echo $nextslide?>" data-autoplay="<?php echo $autoplay?>"<?php echo $autoplayonlyfirsttime; ?> <?php echo $htmlParams?><?php echo $mute; ?>><iframe src="<?php echo $setBase; ?>player.vimeo.com/video/<?php echo $videoID?>?title=0&amp;byline=0&amp;portrait=0;api=1" width="100%" height="100%"></iframe></div><?php
 			endif;*/
@@ -257,10 +257,9 @@
 			}else{
 				$slides = $this->slider->getSlidesForOutput($publishedOnly,$this->sliderLang);
 			}
-
-
+			
 			$this->slidesNumIndex = $this->slider->getSlidesNumbersByIDs(true);
-
+			
 			if(empty($slides)){
 				?>
 				<div class="no-slides-text">
@@ -339,7 +338,7 @@
 				//check if date is set
 				$date_from = $slide->getParam("date_from","");
 				$date_to = $slide->getParam("date_to","");
-
+				
 				if($date_from != ""){
 					$date_from = strtotime($date_from);
 					if(time() < $date_from) continue;
@@ -380,7 +379,6 @@
 				$isExternal = $slide->getParam("background_type","image");
 				if($isExternal != "external"){
 					$urlSlideImage = $slide->getImageUrl();
-
 					//get image alt
 					$imageFilename = $slide->getImageFilename();
 					$info = pathinfo($imageFilename);
@@ -392,7 +390,9 @@
 					$info = '';
 					$alt = '';
 				}
-				
+				//echo '<pre>';
+				//var_dump();
+				//echo '</pre>';
 				if(isset($slide->ignore_alt)) $alt = '';
 
 				$bgType = $slide->getParam("background_type","image");
@@ -693,8 +693,9 @@
 				}
 			}
 
+
 			//add styles to the footer
-			add_action('wp_footer', array($this, 'add_inline_styles'));
+			//add_action('wp_footer', array($this, 'add_inline_styles'));
 
 		}
 
@@ -716,7 +717,7 @@
 			if(empty($layers))
 				return(false);
 
-			$zIndex = 2;
+			$zIndex = 5;
 
 			foreach($layers as $layer):
 
@@ -790,8 +791,11 @@
 
 
 				$text = UniteFunctionsRev::getVal($layer, "text");
-				if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) //use qTranslate
+				if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')){ //use qTranslate
 					$text = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($text);
+				}elseif(function_exists('ppqtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')){ //use qTranslate plus
+					$text = ppqtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($text);
+				}
 
 				$htmlVideoAutoplay = "";
 				$htmlVideoAutoplayOnlyFirstTime = "";
@@ -823,6 +827,8 @@
 				$layer_rotation = '';
 				$do_rotation = false;
 				$add_data = '';
+				$videoType = '';
+				$cover = false;
 				
 				//set html:
 				$html = "";
@@ -907,19 +913,9 @@
 						$rewind = UniteFunctionsRev::strToBool($rewind);
 						$htmlRewind = ($rewind == true) ? ' data-forcerewind="on"' : '';
 						
-						/*
-						$cover = UniteFunctionsRev::getVal($videoData, "cover");
-						$cover = UniteFunctionsRev::strToBool($cover);
-						if($cover == true){
-							$dotted = UniteFunctionsRev::getVal($videoData, "dotted");
-							if($dotted !== 'none')
-								$htmlDotted = ' data-dottedoverlay="'.$dotted.'"';
-								
-							$ratio = UniteFunctionsRev::getVal($videoData, "ratio");
-								if(!empty($ratio))
-									$htmlRatio = ' data-aspectratio="'.$ratio.'"';
-						}
-						*/
+						$only_poster_on_mobile = UniteFunctionsRev::getVal($layer, "use_poster_on_mobile");
+						$only_poster_on_mobile = UniteFunctionsRev::strToBool($only_poster_on_mobile);
+						
 						
 						if($isFullWidthVideo == true){ // || $cover == true
 							$videoWidth = "100%";
@@ -927,6 +923,9 @@
 						}
 
 						$setBase = (is_ssl()) ? "https://" : "http://";
+						
+						$cover = UniteFunctionsRev::getVal($videoData, "cover");
+						$cover = UniteFunctionsRev::strToBool($cover);
 						
 						switch($videoType){
 							case "youtube":
@@ -974,27 +973,20 @@
 								
 								
 								$add_data = ' data-videowidth="'.$videoWidth.'" data-videoheight="'.$videoHeight.'"';
-								
-								$cover = UniteFunctionsRev::getVal($videoData, "cover");
-								$cover = UniteFunctionsRev::strToBool($cover);
-								
-								if($cover == true){
-									$add_data .=  ' data-forceCover="1"';
-									$dotted = UniteFunctionsRev::getVal($videoData, "dotted");
-									if($dotted !== 'none')
-										$add_data .=  ' data-dottedoverlay="'.$dotted.'"';
 
-									$ratio = UniteFunctionsRev::getVal($videoData, "ratio");
-									if(!empty($ratio))
-										$add_data .=  ' data-aspectratio="'.$ratio.'"';
-								}
-								
 								$add_data .= ($v_controls) ? ' data-videocontrols="none"' : ' data-videocontrols="controls"';
 								if(!empty($urlPoster)) $add_data .= ' data-videoposter="'.$urlPoster.'"';
 								if(!empty($urlOgv)) $add_data .= ' data-videoogv="'.$urlOgv.'"';
 								if(!empty($urlWebm)) $add_data .= ' data-videowebm="'.$urlWebm.'"';
 								if(!empty($urlMp4)) $add_data .= ' data-videomp4="'.$urlMp4.'"';
-
+								
+								if(!empty($urlPoster)){
+									if($only_poster_on_mobile === true){
+										$add_data .= ' data-posterOnMObile="on"';
+									}else{
+										$add_data .= ' data-posterOnMObile="off"';
+									}
+								}
 
 								if(!empty($videopreload)) $add_data .= ' data-videopreload="'.$videopreload.'"';
 								if(UniteFunctionsRev::strToBool($videoloop) == true){ //fallback
@@ -1008,6 +1000,19 @@
 								UniteFunctionsRev::throwError("wrong video type: $videoType");
 							break;
 						}
+						
+						if($cover == true){
+							$dotted = UniteFunctionsRev::getVal($videoData, "dotted");
+							if($dotted !== 'none')
+								$add_data .= ' data-dottedoverlay="'.$dotted.'"';
+								
+							$add_data .=  ' data-forceCover="1"';
+								
+							$ratio = UniteFunctionsRev::getVal($videoData, "ratio");
+								if(!empty($ratio))
+									$add_data .= ' data-aspectratio="'.$ratio.'"';
+						}
+						
 
 						//set video autoplay, with backward compatability
 						if(array_key_exists("autoplay", $videoData))
@@ -1028,28 +1033,35 @@
 						$htmlMute = ($mute)	? ' data-volume="mute"' : '';
 
 						if($videoAutoplay == true)
-							$htmlVideoAutoplay = '			data-autoplay="true"'."\n";
+							$htmlVideoAutoplay = '			data-autoplay="true"'." \n";
 						else
-							$htmlVideoAutoplay = '			data-autoplay="false"'."\n";
+							$htmlVideoAutoplay = '			data-autoplay="false"'." \n";
 
 						if($videoAutoplayOnlyFirstTime == true && $videoAutoplay == true)
-							$htmlVideoAutoplayOnlyFirstTime = '			data-autoplayonlyfirsttime="true"'."\n";
+							$htmlVideoAutoplayOnlyFirstTime = '			data-autoplayonlyfirsttime="true"'." \n";
 						else
-							$htmlVideoAutoplayOnlyFirstTime = '			data-autoplayonlyfirsttime="false"'."\n";
+							$htmlVideoAutoplayOnlyFirstTime = '			data-autoplayonlyfirsttime="false"'." \n";
 
 						$videoNextSlide = UniteFunctionsRev::getVal($videoData, "nextslide");
 						$videoNextSlide = UniteFunctionsRev::strToBool($videoNextSlide);
 
 						if($videoNextSlide == true)
-							$htmlVideoNextSlide = '			data-nextslideatend="true"'."\n";
+							$htmlVideoNextSlide = '			data-nextslideatend="true"'." \n";
 
 						$videoThumbnail = @$videoData["previewimage"];
 
-						if(trim($videoThumbnail) !== '') $htmlVideoThumbnail = '			data-videoposter="'.$videoThumbnail.'"'."\n";
+						if(trim($videoThumbnail) !== '') $htmlVideoThumbnail = '			data-videoposter="'.$videoThumbnail.'"'." \n";
+						if(!empty($videoThumbnail)){
+							if($only_poster_on_mobile === true){
+								$htmlVideoThumbnail .= '			data-posterOnMObile="on"'." \n";
+							}else{
+								$htmlVideoThumbnail .= '			data-posterOnMObile="off"'." \n";
+							}
+						}
 						
 						$disable_on_mobile = UniteFunctionsRev::getVal($videoData, "disable_on_mobile");
 						$disable_on_mobile = UniteFunctionsRev::strToBool($disable_on_mobile);
-						$htmlDisableOnMobile = ($disable_on_mobile)	? '			data-disablevideoonmobile="1"'."\n" : '';
+						$htmlDisableOnMobile = ($disable_on_mobile)	? '			data-disablevideoonmobile="1"'." \n" : '';
 						
 					break;
 				}
@@ -1074,15 +1086,15 @@
 				$htmlEnd = "";
 				$customout = '';
 				if(!empty($endTime) && $endWithSlide !== true){
-					$htmlEnd = " data-end=\"$endTime\""."\n";
+					$htmlEnd = " data-end=\"$endTime\""." \n";
 				}
 
 				if(!empty($endSpeed))
-					$htmlEnd .= " data-endspeed=\"$endSpeed\""."\n";
+					$htmlEnd .= " data-endspeed=\"$endSpeed\""." \n";
 
 				$endEasing = trim(UniteFunctionsRev::getVal($layer, "endeasing"));
 				if(!empty($endSpeed) && $endEasing != "nothing")
-					 $htmlEnd .= "			data-endeasing=\"$endEasing\""."\n";
+					 $htmlEnd .= "			data-endeasing=\"$endEasing\""." \n";
 
 				//add animation to class
 				$endAnimation = trim(UniteFunctionsRev::getVal($layer, "endanimation"));
@@ -1110,7 +1122,7 @@
 						$slideLink = UniteFunctionsRev::getVal($this->slidesNumIndex, $slideLink);
 
 					if(!empty($slideLink))
-						$htmlLink = " data-linktoslide=\"$slideLink\""."\n";
+						$htmlLink = " data-linktoslide=\"$slideLink\""." \n";
 				}
 
 				//scroll under the slider
@@ -1118,14 +1130,14 @@
 					$outputClass .= " tp-scrollbelowslider";
 					$scrollUnderOffset = intval(UniteFunctionsRev::getVal($layer, "scrollunder_offset"));
 					
-					$htmlLink .= " data-scrolloffset=\"".$scrollUnderOffset."\""."\n";
+					$htmlLink .= " data-scrolloffset=\"".$scrollUnderOffset."\""." \n";
 				}
 
 				//hidden under resolution
 				$htmlHidden = "";
 				$layerHidden = UniteFunctionsRev::getVal($layer, "hiddenunder");
 				if($layerHidden == "true" || $layerHidden == "1")
-					$htmlHidden = '			data-captionhidden="on"'."\n";
+					$htmlHidden = '			data-captionhidden="on"'." \n";
 
 				$htmlParams = $add_data.$htmlEnd.$htmlLink.$htmlVideoAutoplay.$htmlVideoAutoplayOnlyFirstTime.$htmlVideoNextSlide.$htmlVideoThumbnail.$htmlHidden.$htmlMute.$htmlDisableOnMobile.$htmlCover.$htmlDotted.$htmlRatio.$htmlRewind."\n";
 
@@ -1200,6 +1212,7 @@
 					$htmlPosX = " data-x=\"0\"";
 					$htmlPosY = " data-y=\"0\"";
 					$outputClass .= " fullscreenvideo";
+					
 				}
 
 				//parallax part
@@ -1216,6 +1229,7 @@
 				$do_loop = UniteFunctionsRev::getVal($layer,"loop_animation","none");
 				$loop_data = '';
 				$loop_class = '';
+				
 				if($do_loop !== 'none'){
 					$loop_class = ' '.$do_loop;
 					switch($do_loop){
@@ -1226,6 +1240,14 @@
 							$loop_data.= ' data-speed="'.UniteFunctionsRev::getVal($layer,"loop_speed","2").'"';
 							$loop_data.= ' data-origin="'.UniteFunctionsRev::getVal($layer,"loop_xorigin","50").'% '.UniteFunctionsRev::getVal($layer,"loop_yorigin","50").'%"';
 						break;
+						case 'rs-rotate':
+							$loop_data.= ' data-easing="'.UniteFunctionsRev::getVal($layer,"loop_easing","Power3.easeInOut").'"';
+							$loop_data.= ' data-startdeg="'.UniteFunctionsRev::getVal($layer,"loop_startdeg","-20").'"';
+							$loop_data.= ' data-enddeg="'.UniteFunctionsRev::getVal($layer,"loop_enddeg","20").'"';
+							$loop_data.= ' data-speed="'.UniteFunctionsRev::getVal($layer,"loop_speed","2").'"';
+							$loop_data.= ' data-origin="'.UniteFunctionsRev::getVal($layer,"loop_xorigin","50").'% '.UniteFunctionsRev::getVal($layer,"loop_yorigin","50").'%"';
+						break;
+						
 						case 'rs-slideloop':
 							$loop_data.= ' data-easing="'.UniteFunctionsRev::getVal($layer,"loop_easing","Power3.easeInOut").'"';
 							$loop_data.= ' data-speed="'.UniteFunctionsRev::getVal($layer,"loop_speed","1").'"';
@@ -1252,7 +1274,7 @@
 
 
 				echo "\n		<!-- LAYER NR. ";
-				echo $zIndex - 1;
+				echo $zIndex - 4;
 				echo " -->\n";
 				echo "		<div class=\"".$outputClass;
 				echo ($classes != '') ? ' '.$classes : '';
@@ -1261,20 +1283,20 @@
 				
 				echo $videoclass;
 				
-				echo "\"\n";
-				echo ($ids != '') ? '			'.$ids."\n" : '';
-				echo ($title != '') ? '			'.$title."\n" : '';
-				echo ($rel != '') ? '			'.$rel."\n" : '';
-				if($htmlPosX != "") echo "			".$htmlPosX."\n";
-				if($htmlPosY != "") echo "			".$htmlPosY."\n";
-				if($customin != "") echo "			".$customin."\n";
-				if($customout != "") echo "			".$customout."\n";
-				echo "			data-speed=\"".$speed."\"\n";
-				echo "			data-start=\"".$time."\"\n";
-				echo "			data-easing=\"".$easing."\"\n";
+				echo "\" \n";
+				echo ($ids != '') ? '			'.$ids." \n" : '';
+				echo ($title != '') ? '			'.$title." \n" : '';
+				echo ($rel != '') ? '			'.$rel." \n" : '';
+				if($htmlPosX != "") echo "			".$htmlPosX." \n";
+				if($htmlPosY != "") echo "			".$htmlPosY." \n";
+				if($customin != "") echo "			".$customin." \n";
+				if($customout != "") echo "			".$customout." \n";
+				echo "			data-speed=\"".$speed."\" \n";
+				echo "			data-start=\"".$time."\" \n";
+				echo "			data-easing=\"".$easing."\" \n";
 				if($type == "text"){ //only output if we are a text layer
-					echo "			data-splitin=\"".$splitin."\"\n";
-					echo "			data-splitout=\"".$splitout."\"\n";
+					echo "			data-splitin=\"".$splitin."\" \n";
+					echo "			data-splitout=\"".$splitout."\" \n";
 				}
 				//check if static layer and if yes, set values for it.
 				if($static_slide){
@@ -1285,11 +1307,11 @@
 						$start_on_slide = '-1';
 						$end_on_slide = '-1';
 					}
-					echo '			data-startslide="'.$start_on_slide.'"'."\n";
-					echo '			data-endslide="'.$end_on_slide.'"'."\n";
+					echo '			data-startslide="'.$start_on_slide.'"'." \n";
+					echo '			data-endslide="'.$end_on_slide.'"'." \n";
 				}
-				echo "			data-elementdelay=\"".$elementdelay."\"\n";
-				echo "			data-endelementdelay=\"".$endelementdelay."\"\n";
+				echo "			data-elementdelay=\"".$elementdelay."\" \n";
+				echo "			data-endelementdelay=\"".$endelementdelay."\" \n";
 				if($htmlParams != "") echo "			".$htmlParams;
 				echo "			style=\"z-index: ".$zIndex.";".$inline_styles. "\"";
 				echo ">";
@@ -1307,11 +1329,11 @@
 				}elseif($layer_rotation != ''){
 					$rotationClass = trim($class);
 					$rotationClass = trim($rotationClass) . " ";
-					echo '<div class="tp-layer-inner-rotation '.$rotationClass.'" style="'.$layer_rotation.'">'."\n";
+					echo '<div class="tp-layer-inner-rotation '.$rotationClass.'" style="'.$layer_rotation.'">'." \n";
 				}
-				echo stripslashes($html)."\n";
+				echo stripslashes($html)." \n";
 				if($htmlCorners != ""){
-					echo $htmlCorners."\n";
+					echo $htmlCorners." \n";
 				}
 				if($do_loop !== 'none' || $layer_rotation != ''){
 					echo "				</div>\n";
@@ -1446,14 +1468,26 @@
 
 			$operations = new RevOperations();
 			$arrValues = $operations->getGeneralSettingsValues();
-
+			
+			$do_delay = $this->slider->getParam("start_js_after_delay","0");
+			
+			$do_delay = apply_filters('revslider_add_js_delay', $do_delay);
+			
+			$do_delay = intval($do_delay);
+			
 			$js_to_footer = (isset($arrValues['js_to_footer']) && $arrValues['js_to_footer'] == 'on') ? true : false;
-
+			
 			//add inline style into the footer
 			if($js_to_footer && $this->previewMode == false){
 				ob_start();
 			}
+			
+			?>
+			
 
+			<?php
+				// ADD SCOPED INLINE STYLES 			
+				$this->add_inline_styles();
 			?>
 
 			<script type="text/javascript">
@@ -1548,11 +1582,12 @@
 
 				tpj(document).ready(function() {
 
-				if(tpj('#<?php echo $this->sliderHtmlID?>').revolution == undefined)
+				if(tpj('#<?php echo $this->sliderHtmlID?>').revolution == undefined){
 					revslider_showDoubleJqueryError('#<?php echo $this->sliderHtmlID?>');
-				else
+				}else{
 				   revapi<?php echo $sliderID?> = tpj('#<?php echo $this->sliderHtmlID?>').show().revolution(
-					{
+					{	
+						<?php if($do_delay > 0){ ?>startDelay: <?php echo $do_delay; ?>,<?php } ?>
 						dottedOverlay:"<?php echo $this->slider->getParam("background_dotted_overlay","none");?>",
 						delay:<?php echo $this->slider->getParam("delay","9000",RevSlider::FORCE_NUMERIC)?>,
 						startwidth:<?php echo $this->slider->getParam("width","900")?>,
@@ -1564,9 +1599,11 @@
 						thumbAmount:<?php echo $thumbAmount?>,
 						
 						<?php
-						$minHeight = $this->slider->getParam("min_height","0",RevSlider::FORCE_NUMERIC);
-						if($minHeight > 0){ ?>minHeight:<?php echo $minHeight; ?>,
-							<?php
+						if($this->slider->getParam("slider_type") != "fullscreen"){
+							$minHeight = $this->slider->getParam("min_height","0",RevSlider::FORCE_NUMERIC);
+							if($minHeight > 0){ ?>minHeight:<?php echo $minHeight; ?>,
+								<?php
+							}
 						}
 						?>
 						
@@ -1633,7 +1670,17 @@
 						fullWidth:"<?php echo $optFullWidth?>",
 						fullScreen:"<?php echo $optFullScreen?>",
 
+						<?php 
+						if($use_spinner == '-1'){
+						?>
+						spinner:"off",
+						<?php
+						}else{
+						?>
 						spinner:"spinner<?php echo $use_spinner?>",
+						<?php
+						}
+						?>
 						
 						stopLoop:"<?php echo $stopSlider?>",
 						stopAfterLoops:<?php echo $stopAfterLoops?>,
@@ -1678,7 +1725,7 @@
 						echo stripslashes($this->slider->getParam("custom_javascript", ''));
 					}
 					?>
-
+				}
 				});	/*ready*/
 
 			</script>
@@ -1742,8 +1789,8 @@
 		 */
 		public function add_inline_styles(){
 		
-			echo '<div class="revsliderstyles">';
-			echo '<style type="text/css">';
+			//echo '<div class="revsliderstyles">';
+			echo '<style scoped>';
 
 			$db = new UniteDBRev();
 
@@ -1758,13 +1805,8 @@
 			$styles = UniteCssParserRev::compress_css($styles);
 			echo $styles;
 
-			// KRISZTIAN MODIFICATION FOR INNERLAYERS
-			$stylesinnerlayers = str_replace('.tp-caption', '',$styles);
-			echo $stylesinnerlayers;
-			// END MODIFICATION
-
 			echo '</style>'."\n";
-			echo '</div>';
+			//echo '</div>';
 
 		}
 
@@ -1936,9 +1978,7 @@
 		 * put html slider on the html page.
 		 * @param $data - mixed, can be ID ot Alias.
 		 */
-
 		//TODO: settings google font, position, margin, background color, alt image text
-
 		public function putSliderBase($sliderID){
 
 			try{
@@ -2129,8 +2169,6 @@
 
 				global $revSliderVersion;
 
-				echo "<!-- START REVOLUTION SLIDER ". $revSliderVersion ." ". $sliderType ." mode -->\n";
-
 					if($putResponsiveStyles == true)
 						$this->putResponsitiveStyles();
 
@@ -2139,7 +2177,27 @@
 				echo $this->sliderHtmlID_wrapper;
 				echo "\" ";
 				echo "class=\"". $sliderWrapperClass ."\"";
+				
+				$show_alternate = $this->slider->getParam("show_alternative_type","off");
+				if($show_alternate !== 'off'){
+					$show_alternate_image = $this->slider->getParam("show_alternate_image","");
+					echo ' data-aimg="'.$show_alternate_image.'" ';
+					if($show_alternate == 'mobile' || $show_alternate == 'mobile-ie8'){
+						echo ' data-amobile="enabled" ';
+					}else{
+						echo ' data-amobile="disabled" ';
+					}
+					if($show_alternate == 'mobile-ie8' || $show_alternate == 'ie8'){
+						echo ' data-aie8="enabled" ';
+					}else{
+						echo ' data-aie8="disabled" ';
+					}
+					
+				}
+				
 				echo " style=\"". $containerStyle ."\">\n";
+
+				echo "<!-- START REVOLUTION SLIDER ". $revSliderVersion ." ". $sliderType ." mode -->\n";
 
 				echo "	<div id=\"";
 				echo $this->sliderHtmlID;
@@ -2161,7 +2219,6 @@
 			}
 
 		}
-
 
 	}
 

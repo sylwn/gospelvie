@@ -1,6 +1,7 @@
 
 	<div class="edit_slide_wrapper<?php echo ($slide->isStaticSlide()) ? ' rev_static_layers' : ''; ?>">
 		<?php
+		
 		if(!$slide->isStaticSlide()){
 			?>
 			<div class="editor_buttons_wrapper  postbox unite-postbox" style="max-width:100% !important;">
@@ -12,7 +13,6 @@
 						<div class="editor_buttons_wrapper_top">
 							<h3 style="cursor:default !important; background:none !important;border:none;box-shadow:none !important;font-size:12px;padding:0px;margin:10px 0px 0px;"><?php _e("Background Source:",REVSLIDER_TEXTDOMAIN)?></h3>
 
-
 							<!-- IMAGE FROM MEDIAGALLERY -->
 							<input style="float:left" type="radio" name="radio_bgtype" class="bgsrcchanger" data-callid="tp-bgimagewpsrc" data-imgsettings="on" data-bgtype="image" id="radio_back_image" <?php if($bgType == "image") echo 'checked="checked"'?>>
 							<label style="float:left;margin-left:5px;margin-top:2px;"  for="radio_back_image"><?php _e("Image BG",REVSLIDER_TEXTDOMAIN)?></label>
@@ -20,7 +20,6 @@
 							<div id="tp-bgimagewpsrc" class="bgsrcchanger-div" style="display:none;float:left;margin-top:-7px;">
 								<a href="javascript:void(0)" id="button_change_image" class="button-primary revblue <?php if($bgType != "image") echo "button-disabled" ?>" style="margin-bottom:5px"><?php _e("Change Image",REVSLIDER_TEXTDOMAIN)?></a>
 							</div>
-
 
 							<!-- IMAGE FROM EXTERNAL -->
 							<input type="radio" name="radio_bgtype" style="float:left;margin-left:15px;" data-callid="tp-bgimageextsrc" data-imgsettings="on" class="bgsrcchanger" data-bgtype="external" id="radio_back_external" <?php if($bgType == "external") echo 'checked="solid"'?>>
@@ -31,11 +30,9 @@
 								<a href="javascript:void(0)" id="button_change_external" class="button-primary revblue <?php if($bgType != "external") echo "button-disabled" ?>" style="margin-bottom:5px"><?php _e("Get External",REVSLIDER_TEXTDOMAIN)?></a>
 							</div>
 
-
 							<!-- TRANSPARENT BACKGROUND -->
 							<input type="radio" name="radio_bgtype" style="float:left;margin-left:15px;" data-callid="" class="bgsrcchanger" data-bgtype="trans" id="radio_back_trans" <?php if($bgType == "trans") echo 'checked="checked"'?>>
 							<label style="float:left;margin-left:5px;margin-top:2px;"for="radio_back_trans"><?php _e("Transparent",REVSLIDER_TEXTDOMAIN)?></label>
-
 
 							<!-- COLORED BACKGROUND -->
 							<input type="radio" name="radio_bgtype" style="float:left;margin-left:15px;" data-callid="tp-bgcolorsrc" class="bgsrcchanger" data-bgtype="solid" id="radio_back_solid" <?php if($bgType == "solid") echo 'checked="solid"'?>>
@@ -45,13 +42,9 @@
 							<div id="tp-bgcolorsrc"  class="bgsrcchanger-div"  style="display:none;float:left;margin-top:-5px;">
 								<input type="text" name="bg_color" id="slide_bg_color" <?php echo $bgSolidPickerProps?> value="<?php echo $slideBGColor?>">
 							</div>
-
-							<!--<a href="javascript:void(0)" id="button_preview_slide" class="button-primary revbluedark" style="float:right;margin-top:-9px !important;" title="Preview Slide"><i class="revicon-search-1"></i><?php _e("Preview Slide",REVSLIDER_TEXTDOMAIN)?></a>
-	-->
+							
 							<div style="clear:both"></div>
-
 							<!-- PREVIEW BUTTON -->
-
 							<!-- THE BG IMAGE SETTINGS -->
 							<div id="tp-bgimagesettings" class="bgsrcchanger-div" style="margin-top:10px;display:none">
 								<div id="bg-setting-wrap">
@@ -215,7 +208,7 @@
 		?>
 		<div class="editor_buttons_wrapper  postbox unite-postbox" style="max-width:100% !important;">
 			<h3 class="box-closed tp-accordion">
-				<span><?php if($slide->isStaticSlide()){ _e("Static Layers",REVSLIDER_TEXTDOMAIN); }else{ ?><?php _e("Slide",REVSLIDER_TEXTDOMAIN); }?></span>
+				<span><?php if($slide->isStaticSlide()){ _e("Static / Global Layers",REVSLIDER_TEXTDOMAIN); }else{ ?><?php _e("Slide",REVSLIDER_TEXTDOMAIN); }?></span>
 			</h3>
 			<div class="layer-editor-toolbar">
 				<span class="setting_text_3"><?php _e("Helper Grid:",REVSLIDER_TEXTDOMAIN) ?></span>
@@ -278,8 +271,6 @@
 							<a href="javascript:void(0)" id="button_add_layer" 		 data-isstatic="<?php echo $add_static; ?>" class="button-primary revblue"><i class="revicon-layers-alt"></i><?php _e("Add Layer",REVSLIDER_TEXTDOMAIN)?></a>
 							<a href="javascript:void(0)" id="button_add_layer_image" data-isstatic="<?php echo $add_static; ?>" class="button-primary revblue"><i class="revicon-picture-1"></i><?php _e("Add Layer: Image",REVSLIDER_TEXTDOMAIN)?> </a>
 							<a href="javascript:void(0)" id="button_add_layer_video" data-isstatic="<?php echo $add_static; ?>" class="button-primary revblue"><i class="revicon-video"></i><?php _e("Add Layer: Video",REVSLIDER_TEXTDOMAIN)?> </a>
-							<!--a href="javascript:void(0)" id="button_add_layer_image_static" class="button-primary revblue"><i class="revicon-picture-1"></i><?php _e("Add Static Layer: Image",REVSLIDER_TEXTDOMAIN)?> </a>
-							<a href="javascript:void(0)" id="button_add_layer_video_static" class="button-primary revblue"><i class="revicon-video"></i><?php _e("Add Static Layer: Video",REVSLIDER_TEXTDOMAIN)?> </a-->
 							<a href="javascript:void(0)" id="button_duplicate_layer" class="button-primary revyellow button-disabled"><i class="revicon-picture"></i><?php _e("Duplicate Layer",REVSLIDER_TEXTDOMAIN)?></a>
 						</div>
 						<div style="float:right;">
@@ -487,7 +478,6 @@
 										
 										<li id="layer_scale_title_row" style="clear:both;">
 											<span class="setting_text_2 text-disabled" original-title=""><?php _e("Image Scale (dimensions in pixel)",REVSLIDER_TEXTDOMAIN)?></span>
-											<!--<hr>-->
 										</li>
 										<a id="reset-scale" class="revred button-primary" href="javascript:void(0);"><?php echo _e("Reset Size",REVSLIDER_TEXTDOMAIN)?></a>
 										<?php
@@ -503,7 +493,6 @@
 										
 										<li id="layer_2d_title_row" style="clear:both;">
 											<span class="setting_text_2 text-disabled" original-title=""><?php _e("Final Rotation",REVSLIDER_TEXTDOMAIN)?></span>
-											<!--<hr>-->
 										</li>
 										<div style="clear: both;">
 											<?php
@@ -516,7 +505,6 @@
 										<div id="parallax_wrapper_div" style="<?php echo $show_parallax; ?>">
 											<li id="parallax_title_row" style="clear:both;">
 												<span class="setting_text_2 text-disabled" original-title=""><?php _e("Parallax Setting",REVSLIDER_TEXTDOMAIN)?></span>
-												<!--hr-->
 											</li>
 											<?php
 												$s->drawSettingsByNames("parallax_level");
@@ -540,7 +528,6 @@
 										<!--LAYER START ANIMATION -->
 										<li id="end_layer_sap" class="attribute_title" style="margin-top:-10px;">
 											<span class="setting_text_2 text-disabled" original-title=""><?php _e("Preview Transition (Star end Endtime is Ignored during Demo)",REVSLIDER_TEXTDOMAIN)?></span>
-											<!--<hr>-->
 										</li>
 										<div id="preview_caption_transition">
 
@@ -556,7 +543,6 @@
 										<!--LAYER START ANIMATION -->
 										<li id="end_layer_sap" class="attribute_title" style="">
 											<span class="setting_text_2 text-disabled" original-title=""><?php _e("Start Transition",REVSLIDER_TEXTDOMAIN)?></span>
-											<!--<hr>-->
 										</li>
 										<div class="layer-animations">
 											<div style="float:left;margin-right:10px;"><?php
@@ -572,7 +558,6 @@
 										<!--LAYER END ANIMATION -->
 										<li id="end_layer_sap" class="attribute_title" style="">
 											<span class="setting_text_2 text-disabled" original-title=""><?php _e("End Transition (optional)",REVSLIDER_TEXTDOMAIN)?></span>
-											<!--<hr>-->
 										</li>
 										<div class="layer-animations">
 										<div style="float:left;margin-right:10px;"><?php
@@ -590,7 +575,6 @@
 										<!--LAYER LOOP ANIMATION -->
 										<li id="loop_layer_sap" class="attribute_title" style="">
 											<span class="setting_text_2 text-disabled" original-title=""><?php _e("Loop Animation",REVSLIDER_TEXTDOMAIN)?></span>
-											<!--<hr>-->
 										</li>
 										<?php
 											$s->drawSettingsByNames("layer_loop_animation");
@@ -674,7 +658,6 @@
 									<table style="border-spacing:0px">
 
 										<!-- TRANSITION -->
-
 										<tr class="css-edit-title graybasicbg" ><td colspan="6" style="padding:10px"><?php _e("Transition",REVSLIDER_TEXTDOMAIN)?></td></tr>
 
 										<tr class="graybasicbg">
@@ -933,7 +916,6 @@
 
 										<li id="" class="custom attributes_title" style="">
 											<span class="setting_text_2 text-disabled" original-title=""><?php _e("Advanced Responsive Settings",REVSLIDER_TEXTDOMAIN)?></span>
-											<!--<hr>-->
 										</li>
 										<div class="layer-links">
 											<?php
@@ -945,7 +927,6 @@
 
 										<li id="custom_attributes" class="custom attributes_title" style="">
 											<span class="setting_text_2 text-disabled" original-title=""><?php _e("Attributes (optional)",REVSLIDER_TEXTDOMAIN)?></span>
-											<!--<hr>-->
 										</li>
 										<?php
 											$s = $settingsLayerOutput;

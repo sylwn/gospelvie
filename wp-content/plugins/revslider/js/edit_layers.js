@@ -83,10 +83,17 @@ $.widget("ui.rotatable", $.ui.mouse, {
     },
 
     performRotation: function(angle) {
-        this.element.css('transform','rotate(' + angle + 'rad)');
+    	
+    	var deg = angle * 180 / Math.PI;
+        this.element.css('transform','rotate(' + deg + 'deg)');
+        this.element.css('-moz-transform','rotate(' + deg + 'deg)');
+        this.element.css('-webkit-transform','rotate(' + deg + 'deg)');
+        this.element.css('-o-transform','rotate(' + deg + 'deg)');
+        
+/*        this.element.css('transform','rotate(' + angle + 'rad)');
         this.element.css('-moz-transform','rotate(' + angle + 'rad)');
         this.element.css('-webkit-transform','rotate(' + angle + 'rad)');
-        this.element.css('-o-transform','rotate(' + angle + 'rad)');
+        this.element.css('-o-transform','rotate(' + angle + 'rad)');*/
     },
 
     getElementOffset: function() {
@@ -1490,10 +1497,14 @@ var UniteLayersRev = new function(){
 		});
 
 		//set events:
-		jQuery("#form_layers select").change(function(){
+		jQuery("#form_layers select, #layer_proportional_scale").change(function(){
 			t.updateLayerFromFields();
 		});
-		jQuery("#layer_text").keyup(function(){t.updateLayerFromFields();});
+		// UPDATE LAYER TEXT FIELD
+		jQuery("#layer_text").keyup(function(){				
+			updateLayerTextField("",jQuery('#sortlist li.ui-state-hover .tl-fullanim'),jQuery(this).val());			
+		});
+		
 		var pressEnterFields = "#form_layers input, #form_layers textarea";
 		jQuery(pressEnterFields).blur(function(){t.updateLayerFromFields();});
 		jQuery(pressEnterFields).keypress(function(event){
@@ -2415,7 +2426,6 @@ var UniteLayersRev = new function(){
 					grid: [grid_size,grid_size],	//set the grid to 1 pixel
 /*					stop: function() {
 						updateHtmlLayersFromObject(getSerialFromID(jQuery(this).attr("id")),true);
-						console.log("Stopped");
 					}*/
 				});
 
@@ -2841,13 +2851,13 @@ var UniteLayersRev = new function(){
 		if(objLayer.endsplitdelay == undefined)
 			objLayer.endsplitdelay = jQuery("#layer_endsplitdelay").val();
 
-		if(objLayer.max_height == undefined)
+		if(objLayer.max_height == undefined && isInit)
 			objLayer.max_height = jQuery("#layer_max_height").val();
 
-		if(objLayer.max_width == undefined)
+		if(objLayer.max_width == undefined && isInit)
 			objLayer.max_width = jQuery("#layer_max_width").val();
 
-		if(objLayer['2d_rotation'] == undefined)
+		if(objLayer['2d_rotation'] == undefined && isInit)
 			objLayer['2d_rotation'] = jQuery("#layer_2d_rotation").val();
 
 		if(objLayer['2d_origin_x'] == undefined)
@@ -2991,6 +3001,7 @@ var UniteLayersRev = new function(){
 
 		//select the layer
 		if(isInit == false && !isDemo){
+
 			setLayerSelected(objLayer.serial);
 			jQuery("#layer_text").focus();
 		}
@@ -3403,7 +3414,7 @@ var UniteLayersRev = new function(){
 	t.updateLayerFromFields = function(){
 
 		if(selectedLayerSerial == -1){
-			UniteAdminRev.showErrorMessage("No layer selected, can't update.");
+			//UniteAdminRev.showErrorMessage("No layer selected, can't update.");
 			return(false);
 		}
 
@@ -3421,14 +3432,12 @@ var UniteLayersRev = new function(){
 		objUpdate.max_width = jQuery("#layer_max_width").val();
 		objUpdate.parallax_level = jQuery("#parallax_level").val();
 		objUpdate['2d_rotation'] = jQuery("#layer_2d_rotation").val();
+
 		objUpdate['2d_origin_x'] = jQuery("#layer_2d_origin_x").val();
 		objUpdate['2d_origin_y'] = jQuery("#layer_2d_origin_y").val();
 		objUpdate['static_start'] = jQuery("#layer_static_start option:selected").val();
 		objUpdate['static_end'] = jQuery("#layer_static_end option:selected").val();
-
 		
-
-		//console.log("yeah:"+jQuery("#layer_whitespace option:selected").val()+"  "+objUpdate.whitespace);
 
 		//set Loop Animations
 		objUpdate.loop_animation = jQuery("#layer_loop_animation option:selected").val();
@@ -3488,7 +3497,7 @@ var UniteLayersRev = new function(){
 		objUpdate.corner_right = jQuery("#layer_cornerright").val();
 
 
-		//update object
+		//update object 
 		updateCurrentLayer(objUpdate);
 
 
@@ -3536,10 +3545,19 @@ var UniteLayersRev = new function(){
 
 		switch(type){
 			case 'text':
-			case 'image':
-				var rotation = parseFloat(objUpdate['2d_rotation']);
-				var trorigin = parseFloat(objUpdate['2d_origin_x'])+ '% '+ parseFloat(objUpdate['2d_origin_y'])+'%';
-				punchgs.TweenLite.set(jQuery('#slide_layer_' + selectedLayerSerial+' .innerslide_layer'),{rotationZ:rotation,transformOrigin:trorigin,overwrite:"auto"});
+			case 'image':	
+
+				var rotation = parseFloat(objUpdate['2d_rotation']),
+					trorigin = parseFloat(objUpdate['2d_origin_x'])+ '% '+ parseFloat(objUpdate['2d_origin_y'])+'%',
+					element = jQuery('#slide_layer_' + selectedLayerSerial+' .innerslide_layer');
+					angle = rotation;
+				punchgs.TweenLite.set(jQuery('#slide_layer_' + selectedLayerSerial+' .innerslide_layer'),{transformOrigin:trorigin,overwrite:"auto"});
+				
+				element.css('transform','rotate(' + angle + 'deg)');
+				element.css('-moz-transform','rotate(' + angle + 'deg)');
+				element.css('-webkit-transform','rotate(' + angle + 'deg)');
+				element.css('-o-transform','rotate(' + angle + 'deg)');
+
 			break;
 		}
 
@@ -3805,6 +3823,7 @@ var UniteLayersRev = new function(){
 				jQuery("#layer_2d_origin_x_row").show();
 				jQuery("#layer_2d_origin_y_row").show();
 
+
 				if(jQuery("#layer_proportional_scale").is(":checked"))
 					var aspectratio = true;
 				else
@@ -3815,6 +3834,7 @@ var UniteLayersRev = new function(){
 					handles:"all",
 					start:function(event,ui) {
 						ui.element.css({width:ui.originalSize.width,height:ui.originalSize.height});
+
 						ui.element.find('img').css({width:"100%",height:"100%"});
 						ui.element.find('.innerslide_layer').css({width:"100%",height:"100%"});	
 					},
@@ -4330,7 +4350,7 @@ var UniteLayersRev = new function(){
 			break;
 		}
 
-		htmlSortbox += '"></i>'+sortboxText + '</span>';
+		htmlSortbox += '"></i><span class="timer-layer-text">'+sortboxText + '</span></span>';
 		htmlSortbox += '<div class="timeline">';
 		htmlSortbox += '<div class="tl-fullanim"><div class="tl-startanim"></div><div class="tl-endanim"></div></div>';
 		htmlSortbox += '</div>';
@@ -4456,6 +4476,8 @@ var UniteLayersRev = new function(){
 					ft = g_slideTime;
 					if (objLayer.realEndTime=="undefined" || objLayer.realEndTime==undefined)
 						objLayer = getLayerExtendedParams(objLayer);
+						
+					//console.log(objLayer);
 
 					dragfull.css({width:((objLayer.realEndTime - objLayer.time) / ft)*100+"%",
 								  left: ((objLayer.time) / ft) *100+"%"});
@@ -4468,6 +4490,13 @@ var UniteLayersRev = new function(){
 					jQuery('#layer_endtime').val((objLayer.realEndTime-objLayer.endSpeedFinal));
 	}
 
+	var updateLayerTextField = function(event,timerobj,txt) {
+		
+				var li = timerobj.closest("li");	
+				txt = getSortboxText(txt);			
+				li.find('.timer-layer-text').html(txt);
+
+	}
 	/**
 		Update the Current Timelines
 	*/
@@ -5050,6 +5079,7 @@ var UniteLayersRev = new function(){
 				layer.resizable("destroy").resizable({
 					aspectRatio:aspectratio,
 					resize:function(event,ui) {
+
 						ui.element.find('img').css({width:"100%",height:"100%"});
 						jQuery('#layer_scaleX').val(ui.size.width);
 						jQuery('#layer_scaleY').val(ui.size.height);
@@ -5065,6 +5095,7 @@ var UniteLayersRev = new function(){
 
 
 			jQuery("#reset-scale").click(function(){
+
 				resetImageDimensions();
 				jQuery("#layer_proportional_scale").attr('checked', false);
 				jQuery("#layer_scaleX_text").html(jQuery("#layer_scaleX_text").data("textnormal")).css("width", "10px");
@@ -5102,6 +5133,7 @@ var UniteLayersRev = new function(){
 			jQuery("#slide_layer_" + serial).css("width", jQuery("#slide_layer_" + serial + " img").width() + "px");
 			jQuery("#slide_layer_" + serial).css("height", jQuery("#slide_layer_" + serial + " img").height() + "px");
 
+
 			jQuery("#slide_layer_" + serial + " img").css("width", "100%");
 			jQuery("#slide_layer_" + serial + " img").css("height", "100%");
 
@@ -5112,14 +5144,16 @@ var UniteLayersRev = new function(){
 		var scaleNormal = function(){
 			var serial = selectedLayerSerial;
 
-			resetImageDimensions();
+			var imgdims = resetImageDimensions();
 
 			jQuery("#slide_layer_" + serial + " img").css("width", jQuery("#layer_scaleX").val() + "px");
 			jQuery("#slide_layer_" + serial + " img").css("height", jQuery("#layer_scaleY").val() + "px");
 
 			jQuery("#slide_layer_" + serial).css("width", jQuery("#slide_layer_" + serial + " img").width() + "px");
 			jQuery("#slide_layer_" + serial).css("height", jQuery("#slide_layer_" + serial + " img").height() + "px");
+			
 
+			
 			jQuery("#slide_layer_" + serial + " img").css("width", "100%");
 			jQuery("#slide_layer_" + serial + " img").css("height", "100%");
 		}
@@ -5130,6 +5164,9 @@ var UniteLayersRev = new function(){
 
 			jQuery("#slide_layer_" + selectedLayerSerial).css("width", imgObj.width + "px");
 			jQuery("#slide_layer_" + selectedLayerSerial).css("height", imgObj.height + "px");
+			
+			var imgdims = {width:imgObj.width, height:imgObj.height};
+			return imgdims;
 		}
 
 	//======================================================
@@ -5355,6 +5392,13 @@ var UniteLayersRev = new function(){
 					jQuery("#layer_degree_wrapper").show();
 					jQuery("#layer_origin_wrapper").show();
 				break;
+				case 'rs-rotate':
+					jQuery("#layer_easing_wrapper").show();
+					jQuery("#layer_speed_wrapper").show();
+					jQuery("#layer_degree_wrapper").show();
+					jQuery("#layer_origin_wrapper").show();
+				break;
+				
 				case 'rs-slideloop':
 					jQuery("#layer_easing_wrapper").show();
 					jQuery("#layer_speed_wrapper").show();

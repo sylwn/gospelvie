@@ -21,7 +21,7 @@
 		 * 
 		 * get array of slide classes, between two sections.
 		 */
-		public function getArrClasses($startText = "",$endText=""){
+		public function getArrClasses($startText = "",$endText="",$explodeonspace=false){
 			
 			$content = $this->cssContent;
 			
@@ -44,10 +44,8 @@
 			$arrClasses = array();
 			foreach($lines as $key=>$line){
 				$line = trim($line);
-				
 				if(strpos($line, "{") === false)
 					continue;
-
 				//skip unnessasary links
 				if(strpos($line, ".caption a") !== false)
 					continue;
@@ -60,9 +58,14 @@
 				$class = trim($class);
 				
 				//skip captions like this: .tp-caption.imageclass img
-				if(strpos($class," ") !== false)
-					continue;
-				
+				if(strpos($class," ") !== false){
+					if(!$explodeonspace){
+						continue;
+					}else{
+						$class = explode(',', $class);
+						$class = $class[0];
+					}
+				}
 				//skip captions like this: .tp-caption.imageclass:hover, :before, :after
 				if(strpos($class,":") !== false)
 					continue;
@@ -92,12 +95,13 @@
 				$end = strpos($css, '*/') + 2;
 				$css = str_replace(substr($css, $start, $end - $start), '', $css);
 			}
-			
-			preg_match_all( '/(?ims)([a-z0-9\s\.\:#_\-@]+)\{([^\}]*)\}/', $css, $arr);
+			//preg_match_all( '/(?ims)([a-z0-9\s\.\:#_\-@]+)\{([^\}]*)\}/', $css, $arr);
+			preg_match_all( '/(?ims)([a-z0-9\,\s\.\:#_\-@]+)\{([^\}]*)\}/', $css, $arr);
 
 			$result = array();
 			foreach ($arr[0] as $i => $x){
 				$selector = trim($arr[1][$i]);
+				
 				if(strpos($selector, '{') !== false || strpos($selector, '}') !== false) return false;
 				$rules = explode(';', trim($arr[2][$i]));
 				$result[$selector] = array();
@@ -114,15 +118,22 @@
 						$result[$selector][trim($key)] = trim(str_replace("'", '"', $values));
 					}
 				}
-			}   
+			}
+			
 			return($result);
 		}
 		
 		public static function parseDbArrayToCss($cssArray, $nl = "\n\r"){
 			$css = '';
 			foreach($cssArray as $id => $attr){
+				$stripped = '';
+				if(strpos($attr['handle'], '.tp-caption') !== false){
+					$stripped = trim(str_replace('.tp-caption', '', $attr['handle']));
+				}
 				$styles = json_decode(str_replace("'", '"', $attr['params']), true);
-				$css.= $attr['handle']." {".$nl;
+				$css.= $attr['handle'];
+				if(!empty($stripped)) $css.= ', '.$stripped;
+				$css.= " {".$nl;
 				if(is_array($styles)){
 					foreach($styles as $name => $style){
 						$css.= $name.':'.$style.";".$nl;
@@ -135,7 +146,9 @@
 				if(@$setting['hover'] == 'true'){
 					$hover = json_decode(str_replace("'", '"', $attr['hover']), true);
 					if(is_array($hover)){
-						$css.= $attr['handle'].":hover {".$nl;
+						$css.= $attr['handle'].":hover";
+						if(!empty($stripped)) $css.= ', '.$stripped.':hover';
+						$css.= " {".$nl;
 						foreach($hover as $name => $style){
 							$css.= $name.':'.$style.";".$nl;
 						}
@@ -146,11 +159,22 @@
 			return $css;
 		}
 		
-		public static function parseArrayToCss($cssArray, $nl = "\n\r"){
+		public static function parseArrayToCss($cssArray, $nl = "\n\r", $do_short = true){
 			$css = '';
 			foreach($cssArray as $id => $attr){
+				if($do_short){
+					$stripped = '';
+					if(strpos($attr['handle'], '.tp-caption') !== false){
+						$stripped = trim(str_replace('.tp-caption', '', $attr['handle']));
+					}
+				}
 				$styles = (array)$attr['params'];
-				$css.= $attr['handle']." {".$nl;
+				$css.= $attr['handle'];
+				if($do_short){
+					if(!empty($stripped)) $css.= ', '.$stripped;
+				}
+				$css.= " {".$nl;
+				
 				if(is_array($styles) && !empty($styles)){
 					foreach($styles as $name => $style){
 						if($name == 'background-color' && strpos($style, 'rgba') !== false){ //rgb && rgba
@@ -169,7 +193,9 @@
 				if(@$setting['hover'] == 'true'){
 					$hover = (array)$attr['hover'];
 					if(is_array($hover)){
-						$css.= $attr['handle'].":hover {".$nl;
+						$css.= $attr['handle'].":hover";
+						if(!empty($stripped)) $css.= ', '.$stripped.":hover";
+						$css.= " {".$nl;
 						foreach($hover as $name => $style){
 							if($name == 'background-color' && strpos($style, 'rgba') !== false){ //rgb && rgba
 								$rgb = explode(',', str_replace('rgba', 'rgb', $style));

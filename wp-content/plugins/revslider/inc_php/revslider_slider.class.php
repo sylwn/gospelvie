@@ -161,7 +161,7 @@
 			}
 			
 			$value = UniteFunctionsRev::getVal($this->arrParams, $name,$default);
-						
+			
 			//validation:
 			switch($validateType){
 				case self::VALIDATE_NUMERIC:
@@ -232,9 +232,9 @@
 		 */
 		public static function isAliasExists($alias){
             global $wpdb;
-            
+			
             $response = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".GlobalsRevSlider::$table_sliders." WHERE alias = %s", $alias));
-                                     
+			
 			return(!empty($response));
 		}
         
@@ -391,7 +391,7 @@
 			//insert a new slider
 			$sqlSelect = "select ".GlobalsRevSlider::FIELDS_SLIDER." from ".GlobalsRevSlider::$table_sliders." where id=".$this->id."";
 			$sqlInsert = "insert into ".GlobalsRevSlider::$table_sliders." (".GlobalsRevSlider::FIELDS_SLIDER.") ($sqlSelect)";
-						
+			
 			$this->db->runSql($sqlInsert);
 			$lastID = $this->db->getLastInsertID();
 			UniteFunctionsRev::validateNotEmpty($lastID);
@@ -475,7 +475,7 @@
 				$maxOrder = $targetSlider->getMaxOrder();
 				$newOrder = $maxOrder+1;
 				$arrUpdate = array("slider_id"=>$targetSliderID,"slide_order"=>$newOrder);	
-								
+				
 				//update children
 				$arrChildren = $this->getArrSlideChildren($slideID);
 				foreach($arrChildren as $child){
@@ -526,22 +526,17 @@
 			if(function_exists("unzip_file") == false){				
 				if( UniteZipRev::isZipExists() == false)
 					$export_zip = false;
-					//UniteFunctionsRev::throwError("The ZipArchive php extension not exists, can't create the export file. Please turn it on in php ini.");
 			}
 			
 			if(!class_exists('ZipArchive')) $export_zip = false;
-			//if(!class_exists('ZipArchive')) UniteFunctionsRev::throwError("The ZipArchive php extension not exists, can't create the export file. Please turn it on in php ini.");
 			
 			if($export_zip){
 				$zip = new ZipArchive;
 				$success = $zip->open(GlobalsRevSlider::$urlExportZip, ZIPARCHIVE::CREATE | ZipArchive::OVERWRITE);
 				
-				//echo GlobalsRevSlider::$urlExportZip;
-				
 				if($success !== true)
 					throwError("Can't create zip file: ".GlobalsRevSlider::$urlExportZip);
 				
-				//exit;
 				$this->validateInited();
 				
 				$sliderParams = $this->getParamsForExport();
@@ -598,7 +593,7 @@
 						if(!empty($cap))
 							$captions[] = $cap;
 					}
-					$styles = UniteCssParserRev::parseArrayToCss($captions, "\n");
+					$styles = UniteCssParserRev::parseArrayToCss($captions, "\n", false);
 				}
 				
 				$animations = '';
@@ -615,32 +610,42 @@
 				//add images to zip
 				if(!empty($usedImages)){
 					$upload_dir = UniteFunctionsWPRev::getPathUploads();
+					$upload_dir_multisiteless = wp_upload_dir();
+					$cont_url = $upload_dir_multisiteless['baseurl'];
+					$cont_url_no_www = str_replace('www.', '', $upload_dir_multisiteless['baseurl']);
+					$upload_dir_multisiteless = $upload_dir_multisiteless['basedir'].'/';
+					
 					
 					foreach($usedImages as $file => $val){
 						if($useDummy == "true"){ //only use dummy images
 							
 						}else{ //use the real images
 							if(strpos($file, 'http') !== false){
-
+								$checkpath = str_replace(array($cont_url, $cont_url_no_www), '', $file);
+								
+								if(is_file($upload_dir.$checkpath)){
+									$zip->addFile($upload_dir.$checkpath, 'images/'.$checkpath);
+								}elseif(is_file($upload_dir_multisiteless.$checkpath)){
+									$zip->addFile($upload_dir_multisiteless.$checkpath, 'images/'.$checkpath);
+								}
 							}else{
-								if(is_file($upload_dir.$file))
+								if(is_file($upload_dir.$file)){
 									$zip->addFile($upload_dir.$file, 'images/'.$file);
+								}elseif(is_file($upload_dir_multisiteless.$file)){
+									$zip->addFile($upload_dir_multisiteless.$file, 'images/'.$file);
+								}
 							}
 						}
 					}
 				}
 				
+				
 				$zip->addFromString("slider_export.txt", $strExport); //add slider settings
 				if(strlen(trim($animations)) > 0) $zip->addFromString("custom_animations.txt", $animations); //add custom animations
 				if(strlen(trim($styles)) > 0) $zip->addFromString("dynamic-captions.css", $styles); //add dynamic styles
 				
-				//$zip->addFromString("custom_animations.txt", $strExportAnim); //add custom animations
-				//$zip->addFile(GlobalsRevSlider::$filepath_dynamic_captions,'dynamic-captions.css'); //add dynamic styles
-				
-				
 				$static_css = RevOperations::getStaticCss();
 				$zip->addFromString("static-captions.css", $static_css); //add slider settings
-				//$zip->addFile(GlobalsRevSlider::$filepath_static_captions,'static-captions.css'); //add static styles
 				$zip->close();
 				
 				header("Content-type: application/zip");
@@ -674,17 +679,21 @@
 		 * 
 		 * import slider from multipart form
 		 */
-		public function importSliderFromPost($updateAnim = true, $updateStatic = true){
+		public function importSliderFromPost($updateAnim = true, $updateStatic = true, $exactfilepath = false){
 			
 			try{
- 					
+ 				
 				$sliderID = UniteFunctionsRev::getPostVariable("sliderid");
 				$sliderExists = !empty($sliderID);
 				
 				if($sliderExists)
 					$this->initByID($sliderID);
-					
-				$filepath = $_FILES["import_file"]["tmp_name"];
+				
+				if($exactfilepath !== false){
+					$filepath = $exactfilepath;
+				}else{
+					$filepath = $_FILES["import_file"]["tmp_name"];
+				}
 				
 				if(file_exists($filepath) == false)
 					UniteFunctionsRev::throwError("Import file not found!!!");
@@ -695,7 +704,19 @@
 				}else{
 					$zip = new ZipArchive;
 					$importZip = $zip->open($filepath, ZIPARCHIVE::CREATE);
+					
 				}
+				
+				// Added by ThemeFuzz ( Stefan )
+				if ( $importZip === 0  ) {
+					if(!$zip->getStream('slider_export.txt')){
+						$upload_dir = wp_upload_dir();
+						$new_path =  $upload_dir['basedir'].'/'.$_FILES['import_file']['name'];
+						move_uploaded_file( $_FILES["import_file"]["tmp_name"], $new_path) ;
+						$importZip = $zip->open( $new_path, ZIPARCHIVE::CREATE);
+					}
+				}
+				
 				if($importZip === true){ //true or integer. If integer, its not a correct zip file
 					
 					//check if files all exist in zip
@@ -705,9 +726,6 @@
 					$static_captions = $zip->getStream('static-captions.css');
 					
 					if(!$slider_export)  UniteFunctionsRev::throwError("slider_export.txt does not exist!");
-					//if(!$custom_animations)  UniteFunctionsRev::throwError("custom_animations.txt does not exist!");
-					//if(!$dynamic_captions) UniteFunctionsRev::throwError("dynamic-captions.css does not exist!");
-					//if(!$static_captions)  UniteFunctionsRev::throwError("static-captions.css does not exist!");
 					
 					$content = '';
 					$animations = '';
@@ -782,11 +800,18 @@
 					//overwrite/create dynamic-captions.css
 					//parse css to classes
 					$dynamicCss = UniteCssParserRev::parseCssToArray($dynamic);
-					
+
 					if(is_array($dynamicCss) && $dynamicCss !== false && count($dynamicCss) > 0){
 						foreach($dynamicCss as $class => $styles){
 							//check if static style or dynamic style
 							$class = trim($class);
+							
+							if(strpos($class, ',') !== false && strpos($class, '.tp-caption') !== false){ //we have something like .tp-caption.redclass, .redclass
+								$class_t = explode(',', $class);
+								foreach($class_t as $k => $cl){
+									if(strpos($cl, '.tp-caption') !== false) $class = $cl;
+								}
+							}
 							
 							if((strpos($class, ':hover') === false && strpos($class, ':') !== false) || //before, after
 								strpos($class," ") !== false || // .tp-caption.imageclass img or .tp-caption .imageclass or .tp-caption.imageclass .img
@@ -822,11 +847,13 @@
 					}
 				}
 				
-				$content = preg_replace('!s:(\d+):"(.*?)";!e', "'s:'.strlen('$2').':\"$2\";'", $content); //clear errors in string
+				
+				//$content = preg_replace('!s:(\d+):"(.*?)";!e', "'s:'.strlen('$2').':\"$2\";'", $content); //clear errors in string
+				$content = preg_replace_callback('!s:(\d+):"(.*?)";!', array('RevSlider', 'clear_error_in_string'), $content); //clear errors in string
 				
 				$arrSlider = @unserialize($content);
 					if(empty($arrSlider))
-						 UniteFunctionsRev::throwError("Wrong export slider file format! This could be caused because the ZipArchive extension is not enabled.");
+						UniteFunctionsRev::throwError("Wrong export slider file format! This could be caused because the ZipArchive extension is not enabled.");
 					
 				//update slider params
 				$sliderParams = $arrSlider["params"];
@@ -865,8 +892,10 @@
 				
 				$alreadyImported = array();
 				
+				//wpml compatibility
+				$slider_map = array();
+				
 				foreach($arrSlides as $slide){
-					
 					$params = $slide["params"];
 					$layers = $slide["layers"];
 					
@@ -950,7 +979,33 @@
 					$arrCreate["layers"] = $my_layers;
 					$arrCreate["params"] = $my_params;
 					
-					$this->db->insert(GlobalsRevSlider::$table_slides,$arrCreate);									
+					$last_id = $this->db->insert(GlobalsRevSlider::$table_slides,$arrCreate);
+					
+					if(isset($slide['id'])){
+						$slider_map[$slide['id']] = $last_id;
+					}
+				}
+				
+				//change for WPML the parent IDs if necessary
+				if(!empty($slider_map)){
+					foreach($arrSlides as $slide){
+						if(isset($slide['params']['parentid']) && isset($slider_map[$slide['params']['parentid']])){
+							$update_id = $slider_map[$slide['id']];
+							$parent_id = $slider_map[$slide['params']['parentid']];
+							
+							$arrCreate = array();
+							
+							$arrCreate["params"] = $slide['params'];
+							$arrCreate["params"]['parentid'] = $parent_id;
+							$my_params = json_encode($arrCreate["params"]);
+							if(empty($my_params))
+								$my_params = stripslashes(json_encode($arrCreate["params"]));
+							
+							$arrCreate["params"] = $my_params;
+							
+							$this->db->update(GlobalsRevSlider::$table_slides,$arrCreate,array("id"=>$update_id));
+						}
+					}
 				}
 				
 				//check if static slide exists and import
@@ -1053,9 +1108,6 @@
 				$errorMessage = $e->getMessage();
 				return(array("success"=>false,"error"=>$errorMessage,"sliderID"=>$sliderID));
 			}
-			
-			//update dynamic-captions.css
-			//RevOperations::updateDynamicCaptions();
 			
 			return(array("success"=>true,"sliderID"=>$sliderID));
 		}
@@ -1386,7 +1438,7 @@
 		 * 
 		 * get slides of the current slider
 		 */
-		public function getSlidesFromGallery($publishedOnly = false){
+		public function getSlidesFromGallery($publishedOnly = false, $allwpml = false){
 		
 			$this->validateInited();
 			
@@ -1404,8 +1456,9 @@
 
 				if($publishedOnly == true){
 					$state = $slide->getParam("state","published");
-					if($state == "unpublished")
+					if($state == "unpublished"){
 						continue;
+					}
 				}
 				
 				$parentID = $slide->getParam("parentid","");
@@ -1414,7 +1467,8 @@
 					if(!isset($arrChildren[$parentID]))
 						$arrChildren[$parentID] = array();
 					$arrChildren[$parentID][] = $slide;
-					continue;	//skip adding to main list
+					if(!$allwpml)
+						continue;	//skip adding to main list
 				}
 				
 				//init the children array
@@ -1425,14 +1479,14 @@
 			
 			//add children array to the parent slides
 			foreach($arrChildren as $parentID=>$arr){
-				if(!isset($arrSlides[$parentID]))
+				if(!isset($arrSlides[$parentID])){
 					continue;
+				}
 				$arrSlides[$parentID]->setArrChildren($arr);
 			}
 			
 			$this->arrSlides = $arrSlides;
-			
-			
+
 			return($arrSlides);
 		}
 		
@@ -1548,7 +1602,7 @@
 			}
 			return($arrSlideNumbers);
 		}
-				
+		
 		
 		/**
 		 * 
@@ -1571,10 +1625,12 @@
 		 * get slides for export
 		 */
 		private function getSlidesForExport($useDummy = false){
-			$arrSlides = $this->getSlidesFromGallery();
+			$arrSlides = $this->getSlidesFromGallery(false, true);
 			$arrSlidesExport = array();
+			
 			foreach($arrSlides as $slide){
 				$slideNew = array();
+				$slideNew["id"] = $slide->getID();
 				$slideNew["params"] = $slide->getParamsForExport();
 				$slideNew["slide_order"] = $slide->getOrder();
 				$slideNew["layers"] = $slide->getLayersForExport($useDummy);
@@ -1735,7 +1791,7 @@
 					
 				$sliderTitle = $slider->getTitle();
 				$arrSlides = $slider->getArrSlidesFromGalleryShort();
-								
+				
 				foreach($arrSlides as $slideID=>$slideName){
 					$output[$slideID] = $sliderName.", ".$slideName;
 				}
@@ -1834,11 +1890,7 @@
 				$arrAddition = UniteEmRev::getWPQuery($filterType, $sortBy);
 			}
 			
-			//dmp($arrAddition);exit();
-			
 			$arrPosts = UniteFunctionsWPRev::getPostsByCategory($catIDs,$sortBy,$sortDir,$maxPosts,$postTypes,$taxonomies,$arrAddition);
-			
-			//dmp($arrPosts);exit();
 			
 			return($arrPosts);
 		}  
@@ -1851,6 +1903,9 @@
 		private function getPostsFromSpecificList(){
 			
 			$strPosts = $this->getParam("posts_list","");
+			
+			$strPosts = apply_filters('revslider_set_posts_list', $strPosts);
+			
 			$arrPosts = UniteFunctionsWPRev::getPostsByIDs($strPosts);
 			
 			return($arrPosts);
@@ -1887,7 +1942,6 @@
 			
 			$arrSildes = $this->getSlides();
 			foreach($arrSildes as $slide){
-				//$slide1 = new RevSlide();
 				$slide->replaceImageUrls($urlFrom, $urlTo);
 			}
 		}
@@ -1906,6 +1960,9 @@
 			}
 		}
 		
+		public static function clear_error_in_string($m){
+			return 's:'.strlen($m[2]).':"'.$m[2].'";';
+		}
 	}
 
 ?>

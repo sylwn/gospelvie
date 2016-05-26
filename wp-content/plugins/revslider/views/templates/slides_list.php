@@ -130,7 +130,7 @@
 								$copyButtonClass = "button-primary revblue  button_copy_slide";
 								$copyButtonTitle = __("Open copy / move dialog",REVSLIDER_TEXTDOMAIN);
 								
-								 if($numSliders == 0){
+								if($numSliders == 0){
 								 	$copyButtonClass .= " button-disabled";
 								 	$copyButtonTitle = "Copy / move disabled, no more sliders found";
 							 	}

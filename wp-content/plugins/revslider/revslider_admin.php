@@ -74,7 +74,9 @@
 			//self::addAction(self::ACTION_ADMIN_INIT, "onAdminInit");
 			$validated = get_option('revslider-valid', 'false');
 			$notice = get_option('revslider-valid-notice', 'true');
-
+			
+			$upgrade = new UniteUpdateClassRev( GlobalsRevSlider::SLIDER_REVISION );
+			
 			if(!$revSliderAsTheme){
 				if($validated === 'false' && $notice === 'true'){
 					self::addAction('admin_notices', 'addActivateNotification');
@@ -84,14 +86,23 @@
 
 				if(isset($_GET['checkforupdates']) && $_GET['checkforupdates'] == 'true')
 					$upgrade->_retrieve_version_info(true);
-
+				
 				if(get_option('revslider-valid', 'false') === 'true') {
 					$upgrade->add_update_checks();
 				}
 			}
-
+			
+			
+			$upgrade->_retrieve_version_info();
+			self::addAction('admin_notices', 'add_notices');
+			
+			
 			self::addAction('admin_enqueue_scripts', 'enqueue_styles');
-
+			
+			
+			add_action('wp_ajax_revslider_ajax_call_front', array('RevSliderAdmin', 'onFrontAjaxAction'));
+			add_action('wp_ajax_nopriv_revslider_ajax_call_front', array('RevSliderAdmin', 'onFrontAjaxAction')); //for not logged in users
+			
 		}
 
 		public static function enqueue_styles(){
@@ -140,8 +151,81 @@
 				});
 			</script>
 			<?php
+			
 		}
+	
+		
+		/**
+		 * add notices from ThemePunch
+		 * @since: 4.6.8
+		 */
+		public function add_notices(){
+			$generalSettings = self::getSettings("general");
+			
+			$enable_newschannel = apply_filters('revslider_set_notifications', 'on');
+			$enable_newschannel = $generalSettings->getSettingValue("enable_newschannel",$enable_newschannel);
+			
+			if($enable_newschannel == 'on'){
+				
+				$nonce = wp_create_nonce("revslider_actions");
+				
+				$notices = get_option('revslider-notices', false);
 
+				if(!empty($notices) && is_array($notices)){
+					global $revslider_screens;
+					
+					$notices_discarded = get_option('revslider-notices-dc', array());
+					
+					$screen = get_current_screen();
+					
+					foreach($notices as $notice){
+						if($notice->is_global !== true && !in_array($screen->id, $revslider_screens)) continue; //check if global or just on plugin related pages
+							
+						if(!in_array($notice->code, $notices_discarded) && version_compare($notice->version, GlobalsRevSlider::SLIDER_REVISION, '>=')){
+
+							$text = '<div style="text-align:right;vertical-align:middle;display:table-cell; min-width:225px;border-left:1px solid #ddd; padding-left:15px;"><a href="javascript:void(0);"  class="rs-notices-button rs-notice-'. esc_attr($notice->code) .'">'. __('Close & don\'t show again<b>X</b>',REVSLIDER_TEXTDOMAIN) .'</a></div>';
+							if($notice->disable == true) $text = '';
+							?>
+							<style>
+							.rs-notices-button			{	color:#999; text-decoration: none !important; font-size:14px;font-weight: 400;}
+							.rs-notices-button:hover 	{	color:#3498DB !important;}
+
+							.rs-notices-button b 		{	font-weight:800; vertical-align:bottom;line-height:15px;font-size:10px;margin-left:10px;margin-right:10px;border:2px solid #999; display:inline-block; width:15px;height:15px; text-align: center; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;}
+							.rs-notices-button:hover b  { 	border-color:#3498DB;}
+							</style>
+							<div class="<?php echo $notice->color; ?> below-h2 rs-update-notice-wrap" id="message" style="clear:both;display: block;position:relative;margin:35px 20px 25px 0px"><div style="display:table;width:100%;"><div style="vertical-align:middle;display:table-cell;min-width:100%;padding-right:15px;"><?php echo $notice->text; ?></div><?php echo $text; ?></div></div>
+
+							<?php
+						}
+					}
+					?>
+					<script type="text/javascript">
+						jQuery('.rs-notices-button').click(function(){
+							
+							var notice_id = jQuery(this).attr('class').replace('rs-notices-button', '').replace('rs-notice-', '');
+							
+							var objData = {
+											action:"<?php echo self::$dir_plugin; ?>_ajax_action",
+											client_action: 'dismiss_dynamic_notice',
+											nonce:'<?php echo $nonce; ?>',
+											data:{'id':notice_id}
+											};
+
+							jQuery.ajax({
+								type:"post",
+								url:ajaxurl,
+								dataType: 'json',
+								data:objData
+							});
+
+							jQuery(this).closest('.rs-update-notice-wrap').slideUp(200);
+						});
+					</script>
+					<?php
+				}
+			}
+		}
+		
 		/**
 		 *
 		 * add wildcards metabox variables to posts
@@ -252,11 +336,6 @@
 			$styles = UniteCssParserRev::compress_css($styles);
 			wp_add_inline_style( 'rs-plugin-settings', $style_pre.$styles.$style_post );
 
-			// KRISZTIAN MODIFICATION FOR INNERLAYERS
-			$stylesinnerlayers = str_replace('.tp-caption', '',$styles);
-			wp_add_inline_style( 'rs-plugin-settings', $style_pre.$stylesinnerlayers.$style_post );
-			// END MODIFICATION
-
 			$custom_css = RevOperations::getStaticCss();
 			$custom_css = UniteCssParserRev::compress_css($custom_css);
 			wp_add_inline_style( 'rs-plugin-settings', $style_pre.$custom_css.$style_post );
@@ -324,26 +403,15 @@
 			if(UniteFunctionsWPRev::isDBTableExists($tableRealName))
 				return(false);
 
-			$charset_collate = '';
-
-			if(method_exists($wpdb, "get_charset_collate"))
-				$charset_collate = $wpdb->get_charset_collate();
-			else{
-				if ( ! empty($wpdb->charset) )
-					$charset_collate = "DEFAULT CHARACTER SET $wpdb->charset";
-				if ( ! empty($wpdb->collate) )
-					$charset_collate .= " COLLATE $wpdb->collate";
-			}
-
 			switch($tableName){
 				case GlobalsRevSlider::TABLE_SLIDERS_NAME:
-				$sql = "CREATE TABLE " .self::$table_prefix.$tableName ." (
-							  id int(9) NOT NULL AUTO_INCREMENT,
-							  title tinytext NOT NULL,
-							  alias tinytext,
-							  params text NOT NULL,
-							  PRIMARY KEY (id)
-							)$charset_collate;";
+					$sql = "CREATE TABLE " .self::$table_prefix.$tableName ." (
+								  id int(9) NOT NULL AUTO_INCREMENT,
+								  title tinytext NOT NULL,
+								  alias tinytext,
+								  params text NOT NULL,
+								  UNIQUE KEY id (id)
+								);";
 				break;
 				case GlobalsRevSlider::TABLE_SLIDES_NAME:
 					$sql = "CREATE TABLE " .self::$table_prefix.$tableName ." (
@@ -352,8 +420,8 @@
 								  slide_order int not NULL,
 								  params text NOT NULL,
 								  layers text NOT NULL,
-								  PRIMARY KEY (id)
-								)$charset_collate;";
+								  UNIQUE KEY id (id)
+								);";
 				break;
 				case GlobalsRevSlider::TABLE_STATIC_SLIDES_NAME:
 					$sql = "CREATE TABLE " .self::$table_prefix.$tableName ." (
@@ -361,16 +429,16 @@
 								  slider_id int(9) NOT NULL,
 								  params text NOT NULL,
 								  layers text NOT NULL,
-								  PRIMARY KEY (id)
-								)$charset_collate;";
+								  UNIQUE KEY id (id)
+								);";
 				break;
 				case GlobalsRevSlider::TABLE_SETTINGS_NAME:
 					$sql = "CREATE TABLE " .self::$table_prefix.$tableName ." (
 								  id int(9) NOT NULL AUTO_INCREMENT,
 								  general TEXT NOT NULL,
 								  params TEXT NOT NULL,
-								  PRIMARY KEY (id)
-								)$charset_collate;";
+								  UNIQUE KEY id (id)
+								);";
 				break;
 				case GlobalsRevSlider::TABLE_CSS_NAME:
 					$sql = "CREATE TABLE " .self::$table_prefix.$tableName ." (
@@ -379,8 +447,8 @@
 								  settings TEXT,
 								  hover TEXT,
 								  params TEXT NOT NULL,
-								  PRIMARY KEY (id)
-								)$charset_collate;";
+								  UNIQUE KEY id (id)
+								);";
 					$parseCssToDb = true;
 				break;
 				case GlobalsRevSlider::TABLE_LAYER_ANIMS_NAME:
@@ -388,8 +456,8 @@
 								  id int(9) NOT NULL AUTO_INCREMENT,
 								  handle TEXT NOT NULL,
 								  params TEXT NOT NULL,
-								  PRIMARY KEY (id)
-								)$charset_collate;";
+								  UNIQUE KEY id (id)
+								);";
 				break;
 
 				default:
@@ -473,7 +541,7 @@
 
 				if($isVerified == false)
 					UniteFunctionsRev::throwError("Wrong request");
-
+				
 				switch($action){
 					case 'add_google_fonts':
 						$f = new ThemePunch_Fonts();
@@ -554,7 +622,6 @@
 						$slider->updateSliderFromOptions($data,$settingsMain,$settingsParams);
 						self::ajaxResponseSuccess(__("Slider updated",REVSLIDER_TEXTDOMAIN));
 					break;
-
 					case "delete_slider":
 
 						$isDeleted = $slider->deleteSliderFromData($data);
@@ -604,7 +671,7 @@
 					break;
 					case "update_static_slide":
 						$slide->updateStaticSlideFromData($data);
-						self::ajaxResponseSuccess(__("Static Layers updated",REVSLIDER_TEXTDOMAIN));
+						self::ajaxResponseSuccess(__("Static Global Layers updated",REVSLIDER_TEXTDOMAIN));
 					break;
 					case "delete_slide":
 						$isPost = $slide->deleteSlideFromData($data);
@@ -696,9 +763,6 @@
 						$responseData = $slide->doSlideLangOperation($data);
 						self::ajaxResponseData($responseData);
 					break;
-					case "update_plugin":
-						self::updatePlugin(self::DEFAULT_VIEW);
-					break;
 					case "update_text":
 						self::updateSettingsText();
 						self::ajaxResponseSuccess(__("All files successfully updated",REVSLIDER_TEXTDOMAIN));
@@ -733,9 +797,7 @@
 						}
 
 						if($result){
-							self::ajaxResponseSuccessRedirect(
-						            __("Purchase Code Successfully Activated",REVSLIDER_TEXTDOMAIN),
-									self::getViewUrl(self::VIEW_SLIDERS));
+							self::ajaxResponseSuccessRedirect(__("Purchase Code Successfully Activated",REVSLIDER_TEXTDOMAIN), self::getViewUrl(self::VIEW_SLIDERS));
 						}else{
 							UniteFunctionsRev::throwError(__('Purchase Code is invalid', REVSLIDER_TEXTDOMAIN));
 						}
@@ -744,18 +806,58 @@
 						$result = $operations->doPurchaseDeactivation($data);
 
 						if($result){
-							self::ajaxResponseSuccessRedirect(
-						            __("Successfully removed validation",REVSLIDER_TEXTDOMAIN),
-									self::getViewUrl(self::VIEW_SLIDERS));
+							self::ajaxResponseSuccessRedirect(__("Successfully removed validation",REVSLIDER_TEXTDOMAIN), self::getViewUrl(self::VIEW_SLIDERS));
 						}else{
 							UniteFunctionsRev::throwError(__('Could not remove Validation!', REVSLIDER_TEXTDOMAIN));
 						}
 					break;
-					case "dismiss_notice":
+					case 'dismiss_notice':
 						update_option('revslider-valid-notice', 'false');
 						self::ajaxResponseSuccess(__(".",REVSLIDER_TEXTDOMAIN));
 					break;
-
+					case 'dismiss_dynamic_notice':
+						$notices_discarded = get_option('revslider-notices-dc', array());
+						$notices_discarded[] = esc_attr(trim($data['id']));
+						update_option('revslider-notices-dc', $notices_discarded);
+						
+						self::ajaxResponseSuccess(__(".",REVSLIDER_TEXTDOMAIN));
+					break;
+					case "subscribe_to_newsletter":
+						if(isset($data['email']) && !empty($data['email'])){
+							$return = ThemePunch_Newsletter::subscribe($data['email']);
+							
+							if($return !== false){
+								if(!isset($return['status']) || $return['status'] === 'error'){
+									$error = (isset($return['message']) && !empty($return['message'])) ? $return['message'] : __('Invalid Email', REVSLIDER_TEXTDOMAIN);
+									self::ajaxResponseError($error);
+								}else{
+									self::ajaxResponseSuccess(__("Success! Please check your Emails to finish the subscribtion", REVSLIDER_TEXTDOMAIN), $return);
+								}
+							}else{
+								self::ajaxResponseError(__('Invalid Email/Could not connect to the Newsletter server', REVSLIDER_TEXTDOMAIN));
+							}	
+						}else{
+							self::ajaxResponseError(__('No Email given', REVSLIDER_TEXTDOMAIN));
+						}
+					break;
+					case "unsubscribe_to_newsletter":
+						if(isset($data['email']) && !empty($data['email'])){
+							$return = ThemePunch_Newsletter::unsubscribe($data['email']);
+							
+							if($return !== false){
+								if(!isset($return['status']) || $return['status'] === 'error'){
+									$error = (isset($return['message']) && !empty($return['message'])) ? $return['message'] : __('Invalid Email', REVSLIDER_TEXTDOMAIN);
+									self::ajaxResponseError($error);
+								}else{
+									self::ajaxResponseSuccess(__("Success! Please check your Emails to finish the process", REVSLIDER_TEXTDOMAIN), $return);
+								}
+							}else{
+								self::ajaxResponseError(__('Invalid Email/Could not connect to the Newsletter server', REVSLIDER_TEXTDOMAIN));
+							}	
+						}else{
+							self::ajaxResponseError(__('No Email given', REVSLIDER_TEXTDOMAIN));
+						}
+					break;
 					default:
 						self::ajaxResponseError("wrong ajax action: $action ");
 					break;
@@ -777,6 +879,86 @@
 			self::ajaxResponseError("No response output on <b> $action </b> action. please check with the developer.");
 			exit();
 		}
+		
+		/**
+		 * Set the option to add a delay to the revslider javascript output
+		 */
+		public static function rev_set_js_delay($do_delay){
+			return '300';
+		}
+		
+		/**
+		 * onAjax action handler
+		 */
+		public static function onFrontAjaxAction(){
+			$db = new UniteDBRev();
+			$slider = new RevSlider();
+			$slide = new RevSlide();
+			$operations = new RevOperations();
+			
+			$token = self::getPostVar("token", false);
+			
+			//verify the token
+			$isVerified = wp_verify_nonce($token, 'RevSlider_Front');
+			
+			$error = false;
+			if($isVerified){
+				$data = self::getPostVar('data', false);
+				switch(self::getPostVar('client_action', false)){
+					case 'get_slider_html':
+						$id = intval(self::getPostVar('id', 0));
+						if($id > 0){
+							$html = '';
+							add_filter('revslider_add_js_delay', array('RevSliderAdmin', 'rev_set_js_delay'));
+							ob_start();
+							$slider_class = RevSliderOutput::putSlider($id);
+							$html = ob_get_contents();
+							
+							//add styling
+							$custom_css = RevOperations::getStaticCss();
+							$custom_css = UniteCssParserRev::compress_css($custom_css);
+							$styles = $db->fetch(GlobalsRevSlider::$table_css);
+							$styles = UniteCssParserRev::parseDbArrayToCss($styles, "\n");
+							$styles = UniteCssParserRev::compress_css($styles);
+							
+							$html .= '<style type="text/css">'.$custom_css.'</style>';
+							$html .= '<style type="text/css">'.$styles.'</style>';
+							
+							ob_clean();
+							ob_end_clean();
+							
+							$result = (!empty($slider_class) && $html !== '') ? true : false;
+							
+							if(!$result){
+								$error = __('Slider not found', REVSLIDER_TEXTDOMAIN);
+							}else{
+								
+								if($html !== false){
+									self::ajaxResponseData($html);
+								}else{
+									$error = __('Slider not found', REVSLIDER_TEXTDOMAIN);
+								}
+							}
+						}else{
+							$error = __('No Data Received', REVSLIDER_TEXTDOMAIN);
+						}
+					break;
+				}
+				
+			}else{
+				$error = true;
+			}
+			
+			if($error !== false){
+				$showError = __('Loading Error', REVSLIDER_TEXTDOMAIN);
+				if($error !== true)
+					$showError = __('Loading Error: ', REVSLIDER_TEXTDOMAIN).$error;
+				
+				self::ajaxResponseError($showError, false);
+			}
+			exit();
+		}
+		
 
 	}
 

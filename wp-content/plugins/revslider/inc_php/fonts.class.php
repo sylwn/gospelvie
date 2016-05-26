@@ -145,8 +145,8 @@ if(!class_exists('ThemePunch_Fonts')) {
 			
 			$fonts = get_option('tp-google-fonts', array());
 			
-			if(!empty($fonts)){
-				foreach($default as $d_key => $d_font){
+			if(!empty($fonts)){ // do nothing
+				/*foreach($default as $d_key => $d_font){
 					$found = false;
 					foreach($fonts as $font){
 						if($font['handle'] == $d_font['handle']){
@@ -160,7 +160,7 @@ if(!class_exists('ThemePunch_Fonts')) {
 				}
 				
 				update_option('tp-google-fonts', $fonts);
-				
+				*/
 			}else{
 				
 				update_option('tp-google-fonts', $default);

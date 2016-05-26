@@ -1,5 +1,6 @@
 html	{	background: #ddd !important}
 
+
 /******************************
 	-	GENERAL SETTINGS	-
 ********************************/
@@ -236,7 +237,8 @@ div.bugfix:before 	  {  content: '\f308'; font-family: "dashicons"; color:#E74C3
 .revgray.rev-uibuttons						{	padding:0px !important; height:20px !important}
 
 
-.button-primary.revgray i.eg-icon-lock:before			{	color:#fff !important}
+.button-primary.revgray i.eg-icon-lock:before,
+.button-primary.revgray i.eg-icon-dribbble:before {	color:#fff !important}
 
 .wrap .title_line{
 	height:50px;
@@ -397,7 +399,6 @@ div.bugfix:before 	  {  content: '\f308'; font-family: "dashicons"; color:#E74C3
 
 
 .postbox {
-			/*background:url(../images/grain.png) repeat #f1f1f1;*/
 			background:#fff;
 			border:none !important;
 }
@@ -2432,3 +2433,33 @@ line-height:30px;
 
 
 #tp-validation-box i.revicon-info-circled.redrevicon:before		{  color: #bdc3c7 !important}
+
+
+
+
+/********************************
+	-	NEWSLETTER STYLING		-
+********************************/
+
+#eg-newsletter-wrapper{
+	border:1px solid #e5e5e5;
+	padding:15px 15px 15px 80px;
+	border-radius:0px;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	position:relative;
+	overflow:hidden;
+	background:url(../images/tp_newsletter_bg.png) no-repeat 75px 10px #FFFFFF;
+}
+
+div.star_red { font-size:13px; font-weight:700; color:#222;line-height:18px;margin-top:30px;margin-bottom:10px;font-family: "Open Sans",sans; text-transform: uppercase;}
+div.star_red:before { content: '\f155'; font-family: "dashicons"; color:#e03301; font-size:17px;margin-right:10px; vertical-align: middle;}
+
+#why-subscribe-wrapper li {
+	list-style-type: disc;
+	margin-left: 20px;
+}
+
+.iconttowhite[class^="eg-icon-"]::before, .iconttowhite[class*=" eg-icon-"]::before, .iconttowhite::before {
+    color: #fff;
+}

@@ -25,8 +25,7 @@
 		
 		/**
 		 * 
-		 * a must function. you can not use it, but the function must stay there!.
-		 *   
+		 * a must function. you can not use it, but the function must stay there!
 		 */		
 		public static function onAddScripts(){
 			global $wp_version;
@@ -61,22 +60,6 @@
 			$custom_css = RevOperations::getStaticCss();
 			$custom_css = UniteCssParserRev::compress_css($custom_css);
 			wp_add_inline_style( 'rs-plugin-settings', $style_pre.$custom_css.$style_post );
-			
-			
-			/*
-			
-			*/
-			/*
-			$styles = $db->fetch(GlobalsRevSlider::$table_css);
-			$styles = UniteCssParserRev::parseDbArrayToCss($styles, "\n");
-			$styles = UniteCssParserRev::compress_css($styles);
-			wp_add_inline_style( 'rs-plugin-settings', $style_pre.$styles.$style_post );
-			
-			// KRISZTIAN MODIFICATION FOR INNERLAYERS
-			$stylesinnerlayers = str_replace('.tp-caption', '',$styles);´
-			wp_add_inline_style( 'rs-plugin-settings', $style_pre.$stylesinnerlayers.$style_post );
-			// END MODIFICATION
-			*/
 			
 			$setBase = (is_ssl()) ? "https://" : "http://";
 			

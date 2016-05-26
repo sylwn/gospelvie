@@ -76,7 +76,7 @@ var jvideo = jQuery(this);
 														});
 
 														video.addEventListener("ended",function() {
-																console.log("FUCKER");
+
 																html5vid.removeClass("videoisplaying");
 																opt.videoplaying=false;
 																opt.container.trigger('starttimer');

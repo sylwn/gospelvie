@@ -51,7 +51,7 @@
 			$filename = str_replace(".php","",$baseName);
 			
 			self::$dir_plugin = $filename;			
-					
+			
 			self::$url_plugin = plugins_url(self::$dir_plugin)."/";			
 			self::$url_ajax = admin_url("admin-ajax.php");
 			self::$url_ajax_actions = self::$url_ajax . "?action=".self::$dir_plugin."_ajax_action";
@@ -145,11 +145,11 @@
 		 * register script helper function
 		 * @param $scriptFilename
 		 */
-		protected static function addScript($scriptName,$folder="js",$handle=null){
+		protected static function addScript($scriptName,$folder="js",$handle=null,$waitfor = array()){
 			if($handle == null)
 				$handle = self::$dir_plugin."-".$scriptName;
 			
-			wp_register_script($handle , self::$url_plugin .$folder."/".$scriptName.".js?rev=". GlobalsRevSlider::SLIDER_REVISION );
+			wp_register_script($handle , self::$url_plugin .$folder."/".$scriptName.".js", $waitfor, GlobalsRevSlider::SLIDER_REVISION );
 			wp_enqueue_script($handle);
 		}
 		
@@ -162,7 +162,7 @@
 			if($handle == null)
 				$handle = self::$dir_plugin."-".$scriptName;
 			
-			wp_enqueue_script($handle, self::$url_plugin .$folder."/".$scriptName.".js?rev=". GlobalsRevSlider::SLIDER_REVISION, $waitfor);
+			wp_enqueue_script($handle, self::$url_plugin .$folder."/".$scriptName.".js", $waitfor, GlobalsRevSlider::SLIDER_REVISION );
 		}
 		
 		/**
@@ -196,7 +196,7 @@
 			if($handle == null)
 				$handle = self::$dir_plugin."-".$styleName;
 			
-			wp_register_style($handle , self::$url_plugin .$folder."/".$styleName.".css?rev=". GlobalsRevSlider::SLIDER_REVISION);
+			wp_register_style($handle , self::$url_plugin .$folder."/".$styleName.".css", array(), GlobalsRevSlider::SLIDER_REVISION);
 			wp_enqueue_style($handle);
 		}
 		
@@ -209,7 +209,7 @@
 			if($handle == null)
 				$handle = self::$dir_plugin."-".$styleName;
 			
-			wp_register_style($handle , self::$url_plugin .$folder."/".$styleName.".php?rev=". GlobalsRevSlider::SLIDER_REVISION );
+			wp_register_style($handle , self::$url_plugin .$folder."/".$styleName.".php", array(), GlobalsRevSlider::SLIDER_REVISION );
 			wp_enqueue_style($handle);
 		}
 		

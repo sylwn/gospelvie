@@ -643,25 +643,26 @@ var UniteAdminRev = new function(){
 		var desc_small_size = 200;
 		
 		//prepare data
-		var entry = obj.entry;
 		var data = {};
 		data.id = jQuery("#youtube_id").val();
 		data.id = jQuery.trim(data.id);
 		data.video_type = "youtube";
-		data.title = entry.title.$t;
-		data.author = entry.author[0].name.$t;
-		data.link = entry.link[0].href;
-		data.description = entry.media$group.media$description.$t;
-		data.desc_small = data.description;
+		if(obj[0].width <= 170 || obj[0].height <= 140){
+			data.title = 'YouTube: Maybe wrong YoutTube ID given';
+		}else{
+			data.title = 'YouTube';
+		}
+		data.author = 'YouTube';
+		data.link = '';
+		data.description = '';
+		data.desc_small = '';
 		
 		if(data.description.length > desc_small_size)
 			data.desc_small = data.description.slice(0,desc_small_size)+"...";
 		
-		var thumbnails = entry.media$group.media$thumbnail;
-		
-		data.thumb_small = {url:thumbnails[0].url,width:thumbnails[0].width,height:thumbnails[0].height};
-		data.thumb_medium = {url:thumbnails[1].url,width:thumbnails[1].width,height:thumbnails[1].height};
-		data.thumb_big = {url:thumbnails[2].url,width:thumbnails[2].width,height:thumbnails[2].height};
+		data.thumb_small = {url:obj[0].src,width:320,height:240};
+		data.thumb_medium = {url:obj[0].src,width:320,height:240};
+		data.thumb_big = {url:obj[0].src,width:obj[0].width,height:obj[0].height};
 		
 		//set html in dialog
 		setYoutubeDialogHtml(data);
@@ -798,6 +799,7 @@ var UniteAdminRev = new function(){
 		jQuery('#input_video_speed option[value="1"]').attr("selected",true);
 		jQuery('#input_video_loop option[value="none"]').attr("selected",true);
 		jQuery("#input_video_preview").val("");
+		jQuery("#input_use_poster_on_mobile").prop("checked","");
 		
 		
 		jQuery("#youtube_id").val("");
@@ -877,6 +879,12 @@ var UniteAdminRev = new function(){
 		}else{
 			jQuery("#input_video_autoplay").prop("checked","");
 			jQuery("#showautoplayfirsttime").hide();
+		}
+		
+		if(data.use_poster_on_mobile && data.use_poster_on_mobile == true){
+			jQuery("#input_use_poster_on_mobile").prop("checked","checked");
+		}else{
+			jQuery("#input_use_poster_on_mobile").prop("checked","");
 		}
 		
 		if(data.autoplayonlyfirsttime && data.autoplayonlyfirsttime == true)
@@ -981,6 +989,7 @@ var UniteAdminRev = new function(){
 		obj.args = jQuery("#input_video_arguments").val();
 		obj.previewimage = jQuery("#input_video_preview").val();
 		obj.autoplay = jQuery("#input_video_autoplay").is(":checked");
+		obj.use_poster_on_mobile = jQuery("#input_use_poster_on_mobile").is(":checked");
 		obj.autoplayonlyfirsttime = jQuery("#input_video_autoplay_first_time").is(":checked");
 		obj.nextslide = jQuery("#input_video_nextslide").is(":checked");
 		obj.forcerewind = jQuery("#input_video_force_rewind").is(":checked");
@@ -1078,9 +1087,12 @@ var UniteAdminRev = new function(){
 			
 			youtubeID = getYoutubeIDFromUrl(youtubeID);
 			
-			var urlAPI = "https://gdata.youtube.com/feeds/api/videos/"+youtubeID+"?v=2&alt=json-in-script&callback=UniteAdminRev.onYoutubeCallback";
-			
-			jQuery.getScript(urlAPI);
+			var img = new Image();
+			img.onload = function() {
+				var img = jQuery(this)
+				UniteAdminRev.onYoutubeCallback(img);
+			}
+			img.src = "https://img.youtube.com/vi/"+youtubeID+"/sddefault.jpg"
 			
 			jQuery("#video_content").show();
 			
@@ -1141,7 +1153,7 @@ var UniteAdminRev = new function(){
 			vimeoID = jQuery.trim(vimeoID);
 			vimeoID = getVimeoIDFromUrl(vimeoID);
 			
-			var urlAPI = 'http://www.vimeo.com/api/v2/video/' + vimeoID + '.json?callback=UniteAdminRev.onVimeoCallback'; 
+			var urlAPI = '//www.vimeo.com/api/v2/video/' + vimeoID + '.json?callback=UniteAdminRev.onVimeoCallback'; 
 			jQuery.getScript(urlAPI);
 		});
 		

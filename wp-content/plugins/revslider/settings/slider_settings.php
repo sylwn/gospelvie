@@ -101,6 +101,7 @@
 				
 				$arrParams = array("description"=>__("",REVSLIDER_TEXTDOMAIN));
 				$sliderMainSettings->addTextBox("min_height", "0",__("Min. Height",REVSLIDER_TEXTDOMAIN), $arrParams);
+				$sliderMainSettings->addControl("slider_type", "min_height", UniteSettingsRev::CONTROL_TYPE_HIDE, "fullscreen");
 				
 				$paramsSize = array("width"=>960,"height"=>350,"datatype"=>UniteSettingsRev::DATATYPE_NUMBER,"description"=>__('
 - The <span class="prevxmpl">LAYERS GRID</span> is the container of layers within the <span class="prevxmpl">SLIDER</span> <br>

@@ -79,7 +79,7 @@
 
 .layer_selected .resizer-boxes	{	display:block}
 
-.innerslide_layer	{	width:auto;height:auto; position: relative; z-index:500; display:inline-block;}
+.innerslide_layer	{	width:auto;height:auto; position: relative !important; z-index:500; display:inline-block;}
 
 .innerslide_layer .ui-rotatable-handle.ui-draggable.ui-draggable-dragging	{	display:none !important}
 

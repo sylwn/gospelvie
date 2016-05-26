@@ -4,7 +4,7 @@ Plugin Name: Revolution Slider
 Plugin URI: http://www.themepunch.com/revolution/
 Description: Revolution Slider - Premium responsive slider
 Author: ThemePunch
-Version: 4.6.0
+Version: 4.6.93
 Author URI: http://themepunch.com
 */
 
@@ -14,7 +14,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 if(class_exists('RevSliderFront')) {
-	die('ERROR: It looks like you have more then one instance of Revolution Slider installed. Please remove additional instances for this plugin to work again.');
+	die('ERROR: It looks like you have more than one instance of Revolution Slider installed. Please remove additional instances for this plugin to work again.');
 }
 
 if(isset($_GET['revSliderAsTheme'])){
@@ -26,10 +26,11 @@ if(isset($_GET['revSliderAsTheme'])){
 }
 
 
-$revSliderVersion = "4.6.0";
+$revSliderVersion = "4.6.93";
 $currentFile = __FILE__;
 $currentFolder = dirname($currentFile);
 $revSliderAsTheme = false;
+$revslider_screens = array();
 
 //set the RevSlider Plugin as a Theme. This hides the activation notice and the activation area in the Slider Overview
 function set_revslider_as_theme(){
@@ -67,6 +68,7 @@ require_once $currentFolder . '/inc_php/revslider_tinybox.class.php';
 
 require_once $currentFolder . '/inc_php/fonts.class.php'; //punchfonts
 
+require_once $currentFolder . '/inc_php/extension.class.php';
 
 
 try{
@@ -89,10 +91,19 @@ try{
 		// Do not output Slider if we are on mobile
 		$disable_on_mobile = $slider->getParam("disable_on_mobile","off");
 		if($disable_on_mobile == 'on'){
-			$mobile = strstr($_SERVER['HTTP_USER_AGENT'],'Android') || strstr($_SERVER['HTTP_USER_AGENT'],'webOS') || strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') ||strstr($_SERVER['HTTP_USER_AGENT'],'iPod') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad') ? true : false;
+			$mobile = (strstr($_SERVER['HTTP_USER_AGENT'],'Android') || strstr($_SERVER['HTTP_USER_AGENT'],'webOS') || strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') ||strstr($_SERVER['HTTP_USER_AGENT'],'iPod') || strstr($_SERVER['HTTP_USER_AGENT'],'iPad') || wp_is_mobile()) ? true : false;
 			
 			if($mobile)
 				return false;
+		}
+		
+		$show_alternate = $slider->getParam("show_alternative_type","off");
+		
+		if($show_alternate == 'mobile' || $show_alternate == 'mobile-ie8'){
+			if(wp_is_mobile()){
+				$show_alternate_image = $slider->getParam("show_alternate_image","");
+				return '<img class="tp-slider-alternative-image" src="'.$show_alternate_image.'">';
+			}
 		}
 		
 		//handle slider output types
@@ -120,17 +131,21 @@ try{
 
 	//add tiny box dropdown menu
 	$tinybox = new RevSlider_TinyBox();
-
-
-
+	
+	
+	/**
+	 * Call Extensions
+	 */
+	$revext = new RevSliderExtension();
+	
 	if(is_admin()){		//load admin part
 	
 		require_once $currentFolder . '/inc_php/framework/update.class.php';
-
+		require_once $currentFolder . '/inc_php/framework/newsletter.class.php';
 		require_once $currentFolder."/revslider_admin.php";
 
 		$productAdmin = new RevSliderAdmin($currentFile);
-
+		
 	}else{		//load front part
 
 		/**
@@ -177,3 +192,5 @@ try{
 	$trace = $e->getTraceAsString();
 	echo _e("Revolution Slider Error:",REVSLIDER_TEXTDOMAIN)."<b>".$message."</b>";
 }
+
+?>

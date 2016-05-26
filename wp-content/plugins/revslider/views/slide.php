@@ -183,4 +183,3 @@
 	}
 	require self::getPathTemplate("slide");
 ?>
-	

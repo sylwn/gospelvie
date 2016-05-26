@@ -86,7 +86,7 @@
 	$layerSettings->addTextBox("layer_align_hor", "left",__("Hor Align",REVSLIDER_TEXTDOMAIN),array("hidden"=>true));
 	$layerSettings->addTextBox("layer_align_vert", "top",__("Vert Align",REVSLIDER_TEXTDOMAIN),array("hidden"=>true));
 
-	$para = array("unit"=>__("&nbsp;(example: 50px, 50%, auto)",REVSLIDER_TEXTDOMAIN), 'hidden'=>true);
+	$para = array("unit"=>__("&nbsp;(example: 50px, auto)",REVSLIDER_TEXTDOMAIN), 'hidden'=>true);
 	$layerSettings->addTextBox("layer_max_width", "auto",__("Max Width",REVSLIDER_TEXTDOMAIN),$para);
 	$layerSettings->addTextBox("layer_max_height", "auto",__("Max Height",REVSLIDER_TEXTDOMAIN),$para);
 	
@@ -145,6 +145,7 @@
 	//Loop Animation
 	$arrAnims = array("none"=>__("Disabled",REVSLIDER_TEXTDOMAIN),
 						"rs-pendulum"=>__("Pendulum",REVSLIDER_TEXTDOMAIN),
+						"rs-rotate"=>__("Rotate",REVSLIDER_TEXTDOMAIN),						
 						"rs-slideloop"=>__("Slideloop",REVSLIDER_TEXTDOMAIN),
 						"rs-pulse"=>__("Pulse",REVSLIDER_TEXTDOMAIN),
 						"rs-wave"=>__("Wave",REVSLIDER_TEXTDOMAIN)

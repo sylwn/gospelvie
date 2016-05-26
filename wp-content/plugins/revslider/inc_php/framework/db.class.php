@@ -2,7 +2,6 @@
 	
 	class UniteDBRev{
 		
-		private $wpdb;
 		private $lastRowID;
 		
 		/**
@@ -10,8 +9,6 @@
 		 * constructor - set database object
 		 */
 		public function __construct(){
-			global $wpdb;
-			$this->wpdb = $wpdb;
 		}
 		
 		/**
@@ -25,10 +22,11 @@
 		//------------------------------------------------------------
 		// validate for errors
 		private function checkForErrors($prefix = ""){
+			global $wpdb;
 			
-			if(mysql_error()){
-				$query = $this->wpdb->last_query;
-				$message = $this->wpdb->last_error;
+			if($wpdb->last_error !== ''){
+				$query = $wpdb->last_query;
+				$message = $wpdb->last_error;
 				
 				if($prefix) $message = $prefix.' - <b>'.$message.'</b>';
 				if($query) $message .=  '<br>---<br> Query: ' . $query;
@@ -45,11 +43,11 @@
 		public function insert($table,$arrItems){
 			global $wpdb;
 			
-			$this->wpdb->insert($table, $arrItems);
+			$wpdb->insert($table, $arrItems);
 			$this->checkForErrors("Insert query error");
 			
 			$this->lastRowID = $wpdb->insert_id;
-						
+			
 			return($this->lastRowID);
 		}
 		
@@ -70,13 +68,14 @@
 		 * delete rows
 		 */
 		public function delete($table,$where){
+			global $wpdb;
 			
 			UniteFunctionsRev::validateNotEmpty($table,"table name");
 			UniteFunctionsRev::validateNotEmpty($where,"where");
 			
 			$query = "delete from $table where $where";
 			
-			$this->wpdb->query($query);
+			$wpdb->query($query);
 			
 			$this->checkForErrors("Delete query error");
 		}
@@ -87,8 +86,9 @@
 		 * run some sql query
 		 */
 		public function runSql($query){
+			global $wpdb;
 			
-			$this->wpdb->query($query);			
+			$wpdb->query($query);			
 			$this->checkForErrors("Regular query error");
 		}
 		
@@ -98,14 +98,15 @@
 		 * insert variables to some table
 		 */
 		public function update($table,$arrItems,$where){
+			global $wpdb;
 			
-			$response = $this->wpdb->update($table, $arrItems, $where);
-			if($response === false)
-				UniteFunctionsRev::throwError("no update action taken!");
-				
+			$response = $wpdb->update($table, $arrItems, $where);
+			//if($response === false)
+			//	UniteFunctionsRev::throwError("no update action taken!");
+			
 			$this->checkForErrors("Update query error");
 			
-			return($this->wpdb->num_rows);
+			return($wpdb->num_rows);
 		}
 		
 		
@@ -115,14 +116,15 @@
 		 * 
 		 */
 		public function fetch($tableName,$where="",$orderField="",$groupByField="",$sqlAddon=""){
-		
+			global $wpdb;
+			
 			$query = "select * from $tableName";
 			if($where) $query .= " where $where";
 			if($orderField) $query .= " order by $orderField";
 			if($groupByField) $query .= " group by $groupByField";
 			if($sqlAddon) $query .= " ".$sqlAddon;
 			
-			$response = $this->wpdb->get_results($query,ARRAY_A);
+			$response = $wpdb->get_results($query,ARRAY_A);
 			
 			$this->checkForErrors("fetch");
 			

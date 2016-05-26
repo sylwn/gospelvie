@@ -51,7 +51,7 @@
 				?>
 				<ul class="list_static_slide_links">
 					<li class="revgray nowrap">
-						<a href="<?php echo self::getViewUrl(RevSliderAdmin::VIEW_SLIDE,"id=static_$sID"); ?>" class="add_slide"><i class="eg-icon-lock"></i><span><?php _e("Static Layer",REVSLIDER_TEXTDOMAIN)?></span></a>
+						<a href="<?php echo self::getViewUrl(RevSliderAdmin::VIEW_SLIDE,"id=static_$sID"); ?>" class="add_slide"><i class="eg-icon-dribbble"></i><span><?php _e("Static / Global Layers",REVSLIDER_TEXTDOMAIN)?></span></a>
 					</li>
 				</ul>
 				<?php
@@ -96,13 +96,16 @@
 		<div class="clear"></div>
 		<!--<hr class="tabdivider">-->
 
-		<?php if($wpmlActive == true && count($arrChildLangs) > 1):?>
-		<div class="clear"></div>
-		<div class="divide220"></div>
-		<div class="slide_langs_selector">
-			<span class="float_left ptop_15"> <?php _e("Choose slide language",REVSLIDER_TEXTDOMAIN)?>: </span>
-			<ul class="list_slide_view_icons float_left">
-				<?php foreach($arrChildLangs as $arrLang):
+		<?php
+		if($wpmlActive == true && count($arrChildLangs) > 1){
+			?>
+			<div class="clear"></div>
+			<div class="divide220"></div>
+			<div class="slide_langs_selector">
+				<span class="float_left ptop_15"> <?php _e("Choose slide language",REVSLIDER_TEXTDOMAIN)?>: </span>
+				<ul class="list_slide_view_icons float_left">
+					<?php
+					foreach($arrChildLangs as $arrLang){
 						$childSlideID = $arrLang["slideid"];
 						$lang = $arrLang["lang"];
 						$urlFlag = UniteWpmlRev::getFlagUrl($lang);
@@ -115,22 +118,29 @@
 							$class = "lang-selected";
 							$urlEditSlide = "javascript:void(0)";
 						}
-				?>
-				<li>
-					<a href="<?php echo $urlEditSlide?>" class="tipsy_enabled_top <?php echo $class?>" title="<?php echo $langTitle?>">
-						<img class="icon_slide_lang" src="<?php echo $urlFlag?>" >
-					</a>
-				</li>
-				<?php endforeach?>
-			</ul>
-			<span class="float_left ptop_15 pleft_20"> <?php _e("All the language related operations are from",REVSLIDER_TEXTDOMAIN)?> <a href="<?php echo $closeUrl?>"><?php _e("slides view",REVSLIDER_TEXTDOMAIN)?></a>. </span>
-		</div>
-		<div class="clear"></div>
-		<?php else:?>
+						
+						?>
+						<li>
+							<a href="<?php echo $urlEditSlide; ?>" class="tipsy_enabled_top <?php echo $class; ?>" title="<?php echo $langTitle; ?>">
+								<img class="icon_slide_lang" src="<?php echo $urlFlag; ?>" >
+							</a>
+						</li>
+						<?php
+					}
+					?>
+				</ul>
+				<span class="float_left ptop_15 pleft_20"> <?php _e("All the language related operations are from",REVSLIDER_TEXTDOMAIN)?> <a href="<?php echo $closeUrl?>"><?php _e("slides view",REVSLIDER_TEXTDOMAIN)?></a>. </span>
+			</div>
+			<div class="clear"></div>
+			<?php
+		}else{
+			?>
 
 			<div class="divide220"></div>
 
-		<?php endif?>
+			<?php
+		}
+		?>
 		
 		<?php
 		if(!$slide->isStaticSlide()){

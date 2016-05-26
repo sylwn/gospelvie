@@ -38,7 +38,7 @@
 		<?php
 		if($useStaticLayers == 'on'){
 			?>		
-			<a class='button-primary revgray' href='<?php echo self::getViewUrl(RevSliderAdmin::VIEW_SLIDE,"id=static_".$slider->getID()); ?>' style="width:150px; "><i class="eg-icon-lock"></i><?php _e("Edit Static Layers",REVSLIDER_TEXTDOMAIN)?></a>
+			<a class='button-primary revgray' href='<?php echo self::getViewUrl(RevSliderAdmin::VIEW_SLIDE,"id=static_".$slider->getID()); ?>' style="width:190px; "><i class="eg-icon-dribbble"></i><?php _e("Edit Static/Global Layers",REVSLIDER_TEXTDOMAIN)?></a>
 			<?php
 		}
 		?>
